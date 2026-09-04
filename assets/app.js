@@ -23,7 +23,7 @@ function renderHistory() {
   if (!series.length) { byId("history-stats").innerHTML = '<div class="history-stat"><span>Istoric</span><strong>—</strong></div>'; if (byId("history-legend")) byId("history-legend").innerHTML = ""; if (byId("history-comparison")) byId("history-comparison").innerHTML = ""; svg.innerHTML = '<text x="450" y="135" text-anchor="middle" class="axis-label">Bifează cel puțin un ETF pentru istoric.</text>'; return; }
   const latestScores = series.map((row) => row.allObservations.at(-1).score);
   byId("history-stats").innerHTML = [["ETF-uri selectate", series.length], ["Scor mediu curent", (latestScores.reduce((sum, score) => sum + score, 0) / latestScores.length).toFixed(1)], ["Cel mai bun", `${series.reduce((best, row) => row.allObservations.at(-1).score > best.allObservations.at(-1).score ? row : best).symbol} ${scoreText(Math.max(...latestScores))}`], ["Observații afișate", `${shownDates.length} / ${dates.length}`]].map(([label, value]) => `<div class="history-stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
-  const width = 900, height = 270, left = 42, right = 18, top = 20, bottom = 35, innerWidth = width - left - right, innerHeight = height - top - bottom;
+  const width = 1200, height = 420, left = 56, right = 28, top = 26, bottom = 48, innerWidth = width - left - right, innerHeight = height - top - bottom;
   const x = (index) => left + (shownDates.length === 1 ? innerWidth / 2 : index * innerWidth / (shownDates.length - 1));
   const y = (score) => top + (10 - score) * innerHeight / 20;
   const grid = [-10, -5, 0, 5, 10].map((value) => `<line class="grid-line" x1="${left}" x2="${width - right}" y1="${y(value)}" y2="${y(value)}"/><text class="axis-label" x="${left - 8}" y="${y(value) + 4}" text-anchor="end">${value > 0 ? "+" : ""}${value}</text>`).join("");
@@ -41,26 +41,26 @@ async function load() {
   state.rows = data.rows || [];
   state.history = history || {};
   const select = byId("sector-filter");
-  const sectors = [...new Set(state.rows.map((row) => row.sector))].sort();
-  select.innerHTML = '<option value="all">Toate sectoarele</option>' + sectors.map((sector) => `<option>${sector}</option>`).join("");
+  if (select) { const sectors = [...new Set(state.rows.map((row) => row.sector))].sort(); select.innerHTML = '<option value="all">Toate sectoarele</option>' + sectors.map((sector) => `<option>${sector}</option>`).join(""); }
   byId("status").textContent = data.updatedAt ? `Piața: ${data.marketDate} · Actualizat: ${new Date(data.updatedAt).toLocaleString("ro-RO")} · Sursă: ${data.source}` : (data.message || "Încă nu există date.");
-  state.historySymbols = new Set([...state.historySymbols].filter((symbol) => state.rows.some((row) => row.symbol === symbol)));
-  if (!state.historySymbols.size && state.rows.length) state.historySymbols.add("SPY");
-  const historyOptions = byId("history-options");
-  if (historyOptions) {
-    historyOptions.innerHTML = state.rows.map((row) => `<label><input type="checkbox" data-history-symbol="${row.symbol}" ${state.historySymbols.has(row.symbol) ? "checked" : ""} /> ${row.symbol}</label>`).join("");
-    loadPickerState();
-  } else {
-    // Compatibility for an older cached page while GitHub Pages refreshes its CDN.
-    const legacySelect = byId("history-etf");
-    if (legacySelect) { legacySelect.innerHTML = state.rows.map((row) => `<option value="${row.symbol}">${row.symbol} — ${row.name}</option>`).join(""); legacySelect.value = [...state.historySymbols][0] || "SPY"; }
+  if (byId("history-chart")) {
+    state.historySymbols = new Set([...state.historySymbols].filter((symbol) => state.rows.some((row) => row.symbol === symbol)));
+    if (!state.historySymbols.size && state.rows.length) state.historySymbols.add("SPY");
+    const historyOptions = byId("history-options");
+    if (historyOptions) {
+      historyOptions.innerHTML = state.rows.map((row) => `<label><input type="checkbox" data-history-symbol="${row.symbol}" ${state.historySymbols.has(row.symbol) ? "checked" : ""} /> ${row.symbol}</label>`).join("");
+      loadPickerState();
+    } else {
+      const legacySelect = byId("history-etf");
+      if (legacySelect) { legacySelect.innerHTML = state.rows.map((row) => `<option value="${row.symbol}">${row.symbol} — ${row.name}</option>`).join(""); legacySelect.value = [...state.historySymbols][0] || "SPY"; }
+    }
   }
-  render();
-  renderHistory();
+  if (byId("rows")) render();
+  if (byId("history-chart")) renderHistory();
 }
-byId("sector-filter").addEventListener("change", (event) => { state.sector = event.target.value; render(); });
-byId("search").addEventListener("input", (event) => { state.search = event.target.value.trim().toLocaleLowerCase(); render(); });
-byId("reload").addEventListener("click", load);
+if (byId("sector-filter")) byId("sector-filter").addEventListener("change", (event) => { state.sector = event.target.value; render(); });
+if (byId("search")) byId("search").addEventListener("input", (event) => { state.search = event.target.value.trim().toLocaleLowerCase(); render(); });
+if (byId("reload")) byId("reload").addEventListener("click", load);
 document.querySelectorAll("[data-history-window]").forEach((button) => button.addEventListener("click", () => { state.historyWindow = Number(button.dataset.historyWindow); document.querySelectorAll("[data-history-window]").forEach((item) => item.classList.toggle("active", item === button)); renderHistory(); }));
 if (byId("history-all")) byId("history-all").addEventListener("change", (event) => { state.historySymbols = event.target.checked ? new Set(state.rows.map((row) => row.symbol)) : new Set(); renderHistory(); loadPickerState(); });
 if (byId("history-options")) byId("history-options").addEventListener("change", (event) => { const symbol = event.target.dataset.historySymbol; if (!symbol) return; if (event.target.checked) state.historySymbols.add(symbol); else state.historySymbols.delete(symbol); renderHistory(); loadPickerState(); });
