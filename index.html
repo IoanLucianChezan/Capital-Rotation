@@ -49,10 +49,16 @@
       <section class="history-card" aria-labelledby="history-title">
         <div class="history-heading">
           <div><p class="eyebrow">Evoluție</p><h2 id="history-title">Istoric scor</h2></div>
-          <label>ETF urmărit <select id="history-etf" aria-label="ETF urmărit"></select></label>
+          <details class="multi-select" id="history-picker">
+            <summary>ETF-uri afișate <span id="history-picker-label">SPY</span></summary>
+            <label class="check-all"><input id="history-all" type="checkbox" /> Selectează toate</label>
+            <div id="history-options" class="history-options"></div>
+          </details>
         </div>
         <div id="history-stats" class="history-stats"></div>
         <div class="chart-wrap"><svg id="history-chart" viewBox="0 0 900 270" role="img" aria-label="Grafic istoric scor"></svg></div>
+        <div class="chart-legend" id="history-legend"></div>
+        <div class="history-table-wrap"><table class="history-table"><thead><tr><th>ETF</th><th>Scor curent</th><th>Δ ultima sesiune</th><th>Direcție 3 săpt.</th></tr></thead><tbody id="history-comparison"></tbody></table></div>
         <p class="chart-note">Date zilnice păstrate automat. „Direcție 3 săpt.” compară scorul curent cu cel de acum aproximativ 15 sesiuni de tranzacționare.</p>
       </section>
 
