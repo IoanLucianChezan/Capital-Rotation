@@ -1,0 +1,10 @@
+{
+  "updatedAt": null,
+  "rows": [
+    ["SPY", "S&P 500", "State Street / SPDR"], ["QQQ", "Nasdaq 100", "Invesco"], ["RSP", "S&P 500 echiponderat", "Invesco"], ["IWM", "Russell 2000 – companii mici", "iShares"], ["DIA", "Dow Jones 30", "State Street / SPDR"],
+    ["SMH", "Semiconductori – mega-cap", "VanEck"], ["XSD", "Semiconductori – echiponderat", "State Street / SPDR"], ["IGV", "Software", "iShares"], ["XLK", "Tehnologia informației", "State Street / SPDR"], ["AIQ", "Inteligență artificială – tematic", "Global X"],
+    ["XLF", "Financiare", "State Street / SPDR"], ["KRE", "Bănci regionale", "State Street / SPDR"], ["XLI", "Industriale", "State Street / SPDR"], ["XLY", "Consum discreționar", "State Street / SPDR"], ["XLB", "Materiale", "State Street / SPDR"], ["XLE", "Energie", "State Street / SPDR"], ["XLC", "Servicii de comunicații", "State Street / SPDR"], ["XLV", "Sănătate", "State Street / SPDR"], ["XLP", "Consum de bază", "State Street / SPDR"], ["XLU", "Utilități", "State Street / SPDR"], ["XLRE", "Imobiliare / REIT", "State Street / SPDR"],
+    ["IWF", "Russell 1000 Growth", "iShares"], ["IWD", "Russell 1000 Value", "iShares"], ["QUAL", "Factor calitate", "iShares"], ["MTUM", "Factor momentum", "iShares"], ["GRID", "Rețele electrice și infrastructură energetică", "First Trust"], ["PAVE", "Infrastructură SUA / capex industrial", "Global X"],
+    ["SGOV", "Bonuri de trezorerie 0–3 luni", "iShares"], ["IEF", "Obligațiuni de stat SUA 7–10 ani", "iShares"], ["TLT", "Obligațiuni de stat SUA 20+ ani", "iShares"], ["HYG", "Obligațiuni corporative high yield", "iShares"], ["GLD", "Aur fizic", "State Street / SPDR"], ["IBIT", "Bitcoin", "iShares"], ["VXUS", "Acțiuni globale, exclusiv SUA", "Vanguard"], ["EEM", "Piețe emergente", "iShares"]
+  ]
+}

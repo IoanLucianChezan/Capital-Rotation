@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fluxuri de capital validate prin shares outstanding pentru ETF-uri." />
+    <title>Flux capital · Rotație de capital</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell flow-page">
+      <header>
+        <div class="topbar"><p class="eyebrow">ETF market monitor</p><nav class="site-nav" aria-label="Navigație principală"><a href="./">Panou</a><a href="history.html">Istoric</a><a class="active" href="capital-flow.html">Flux capital</a></nav></div>
+        <h1>Flux capital</h1>
+        <p id="flow-status" class="status">Se încarcă sursele…</p>
+      </header>
+      <section id="flow-summary" class="summary" aria-label="Rezumat flux capital"></section>
+      <section class="flow-intro">
+        <strong>Ce măsurăm.</strong> Unități în circulație („shares outstanding”), nu AUM împărțit la preț. O creștere a unităților indică creații de ETF, iar o scădere indică răscumpărări. Fluxul USD este estimat cu unitățile net create/răscumpărate × prețul/NAV de referință.
+      </section>
+      <section class="table-card">
+        <div class="table-wrap"><table><thead><tr><th>ETF</th><th>Emitent / sursă</th><th>Unități curente</th><th>Δ unități</th><th>Δ%</th><th>Flux net USD</th><th>Data sursei</th><th>Stare</th></tr></thead><tbody id="flow-rows"></tbody></table></div>
+      </section>
+      <aside class="methodology"><strong>Regulă de siguranță.</strong> Un ETF este afișat ca „Validat” numai după ce colectorul citește o valoare publicată de emitent, cu dată „as of”. Dacă sursa nu răspunde, nu afișăm un flux estimat și nu înlocuim datele lipsă cu AUM.</aside>
+    </main>
+    <script type="module" src="assets/flows.js"></script>
+  </body>
+</html>
