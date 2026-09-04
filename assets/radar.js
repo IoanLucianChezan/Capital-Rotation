@@ -4,6 +4,13 @@ const scoreText = (value) => value == null ? "—" : `${value > 0 ? "+" : ""}${v
 const tone = (value) => value > 0 ? "pos" : value < 0 ? "neg" : "";
 let rows = [], sort = "radarScore", descending = true;
 
+function syncRadarScroll() {
+  const top = byId("radar-scroll-top"), spacer = byId("radar-scroll-spacer"), wrap = document.querySelector(".radar-table")?.closest(".table-wrap");
+  if (!top || !spacer || !wrap) return;
+  spacer.style.width = `${wrap.scrollWidth}px`;
+  top.scrollLeft = wrap.scrollLeft;
+}
+
 function radar(row, history) {
   const trend = (row.vs50 > 0 ? 12.5 : 0) + (row.vs200 > 0 ? 12.5 : 0);
   const relative = (row.relative1m > 0 ? 12.5 : 0) + (row.relative3m > 0 ? 12.5 : 0);
@@ -32,6 +39,7 @@ function render() {
   document.querySelectorAll("th[data-sort]").forEach((th) => th.classList.toggle("sorted", th.dataset.sort === sort && descending));
   const accelerating = shown.filter((r) => r.radarScore >= 75).length, leaders = shown.filter((r) => r.radarScore >= 55).length, emerging = shown.filter((r) => r.radarScore >= 40 && r.radarScore < 55).length;
   byId("radar-summary").innerHTML = [["ETF-uri analizate", shown.length], ["Continuare probabilă", accelerating], ["Pozitiv, dar matur", leaders - accelerating], ["Posibilă rotație", emerging]].map(([label, value]) => `<div class="metric"><span>${label}</span><strong>${value}</strong></div>`).join("");
+  requestAnimationFrame(syncRadarScroll);
 }
 async function load() {
   const [latestResponse, historyResponse] = await Promise.all([fetch(`data/latest.json?cache=${Date.now()}`), fetch(`data/history.json?cache=${Date.now()}`)]);
@@ -42,4 +50,7 @@ async function load() {
 }
 document.querySelectorAll("th[data-sort]").forEach((th) => th.addEventListener("click", () => { const field = th.dataset.sort; descending = sort === field ? !descending : true; sort = field; render(); }));
 byId("reload-radar").addEventListener("click", load);
+byId("radar-scroll-top").addEventListener("scroll", (event) => { const wrap = document.querySelector(".radar-table")?.closest(".table-wrap"); if (wrap) wrap.scrollLeft = event.currentTarget.scrollLeft; });
+document.querySelector(".radar-table").closest(".table-wrap").addEventListener("scroll", (event) => { byId("radar-scroll-top").scrollLeft = event.currentTarget.scrollLeft; });
+window.addEventListener("resize", syncRadarScroll);
 load().catch((error) => { byId("radar-status").textContent = `Nu pot încărca datele: ${error.message}`; });
