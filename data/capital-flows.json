@@ -1,10 +1,288 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-09-04T09:58:25.216Z",
+  "methodology": "Shares outstanding publicate de emitent; flux USD ≈ variația unităților × ultimul preț de închidere.",
   "rows": [
-    ["SPY", "S&P 500", "State Street / SPDR"], ["QQQ", "Nasdaq 100", "Invesco"], ["RSP", "S&P 500 echiponderat", "Invesco"], ["IWM", "Russell 2000 – companii mici", "iShares"], ["DIA", "Dow Jones 30", "State Street / SPDR"],
-    ["SMH", "Semiconductori – mega-cap", "VanEck"], ["XSD", "Semiconductori – echiponderat", "State Street / SPDR"], ["IGV", "Software", "iShares"], ["XLK", "Tehnologia informației", "State Street / SPDR"], ["AIQ", "Inteligență artificială – tematic", "Global X"],
-    ["XLF", "Financiare", "State Street / SPDR"], ["KRE", "Bănci regionale", "State Street / SPDR"], ["XLI", "Industriale", "State Street / SPDR"], ["XLY", "Consum discreționar", "State Street / SPDR"], ["XLB", "Materiale", "State Street / SPDR"], ["XLE", "Energie", "State Street / SPDR"], ["XLC", "Servicii de comunicații", "State Street / SPDR"], ["XLV", "Sănătate", "State Street / SPDR"], ["XLP", "Consum de bază", "State Street / SPDR"], ["XLU", "Utilități", "State Street / SPDR"], ["XLRE", "Imobiliare / REIT", "State Street / SPDR"],
-    ["IWF", "Russell 1000 Growth", "iShares"], ["IWD", "Russell 1000 Value", "iShares"], ["QUAL", "Factor calitate", "iShares"], ["MTUM", "Factor momentum", "iShares"], ["GRID", "Rețele electrice și infrastructură energetică", "First Trust"], ["PAVE", "Infrastructură SUA / capex industrial", "Global X"],
-    ["SGOV", "Bonuri de trezorerie 0–3 luni", "iShares"], ["IEF", "Obligațiuni de stat SUA 7–10 ani", "iShares"], ["TLT", "Obligațiuni de stat SUA 20+ ani", "iShares"], ["HYG", "Obligațiuni corporative high yield", "iShares"], ["GLD", "Aur fizic", "State Street / SPDR"], ["IBIT", "Bitcoin", "iShares"], ["VXUS", "Acțiuni globale, exclusiv SUA", "Vanguard"], ["EEM", "Piețe emergente", "iShares"]
+    {
+      "symbol": "SPY",
+      "name": "S&P 500",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "QQQ",
+      "name": "Nasdaq 100",
+      "issuer": "Invesco",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "RSP",
+      "name": "S&P 500 echiponderat",
+      "issuer": "Invesco",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "IWM",
+      "name": "Russell 2000 – companii mici",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 271900000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "DIA",
+      "name": "Dow Jones 30",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "SMH",
+      "name": "Semiconductori – mega-cap",
+      "issuer": "VanEck",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XSD",
+      "name": "Semiconductori – echiponderat",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "IGV",
+      "name": "Software",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 135500000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/239771/ishares-north-american-techsoftware-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "XLK",
+      "name": "Tehnologia informației",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "AIQ",
+      "name": "Inteligență artificială – tematic",
+      "issuer": "Global X",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLF",
+      "name": "Financiare",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "KRE",
+      "name": "Bănci regionale",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLI",
+      "name": "Industriale",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLY",
+      "name": "Consum discreționar",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLB",
+      "name": "Materiale",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLE",
+      "name": "Energie",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLC",
+      "name": "Servicii de comunicații",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLV",
+      "name": "Sănătate",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLP",
+      "name": "Consum de bază",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLU",
+      "name": "Utilități",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "XLRE",
+      "name": "Imobiliare / REIT",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "IWF",
+      "name": "Russell 1000 Growth",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 1020900000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/239706/ishares-russell-1000-growth-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "IWD",
+      "name": "Russell 1000 Value",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 326300000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/239708/ishares-russell-1000-value-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "QUAL",
+      "name": "Factor calitate",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 213550000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/256101/ishares-msci-usa-quality-factor-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "MTUM",
+      "name": "Factor momentum",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 80600000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/251614/ishares-msci-usa-momentum-factor-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "GRID",
+      "name": "Rețele electrice și infrastructură energetică",
+      "issuer": "First Trust",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "PAVE",
+      "name": "Infrastructură SUA / capex industrial",
+      "issuer": "Global X",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "SGOV",
+      "name": "Bonuri de trezorerie 0–3 luni",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 1067450000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/314116/ishares-0-3-month-treasury-bond-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "IEF",
+      "name": "Obligațiuni de stat SUA 7–10 ani",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 456300000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/239456/ishares-710-year-treasury-bond-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "TLT",
+      "name": "Obligațiuni de stat SUA 20+ ani",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 573300000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/239454/ishares-20-year-treasury-bond-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "HYG",
+      "name": "Obligațiuni corporative high yield",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 194700000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/239565/ishares-iboxx-high-yield-corporate-bond-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "GLD",
+      "name": "Aur fizic",
+      "issuer": "State Street / SPDR",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "IBIT",
+      "name": "Bitcoin",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 1375120000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/333011/ishares-bitcoin-trust-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    },
+    {
+      "symbol": "VXUS",
+      "name": "Acțiuni globale, exclusiv SUA",
+      "issuer": "Vanguard",
+      "status": "În pregătire"
+    },
+    {
+      "symbol": "EEM",
+      "name": "Piețe emergente",
+      "issuer": "iShares",
+      "status": "Validat",
+      "shares": 464850000,
+      "asOf": "2026-09-03",
+      "sourceUrl": "https://www.ishares.com/us/products/239637/ishares-msci-emerging-markets-etf",
+      "sharesChange": null,
+      "sharesChangePercent": null,
+      "netFlowUsd": null
+    }
   ]
 }
