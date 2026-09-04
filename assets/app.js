@@ -19,7 +19,7 @@ function renderHistory() {
   const selected = state.rows.filter((row) => state.historySymbols.has(row.symbol));
   const svg = byId("history-chart");
   const series = selected.map((row) => ({ ...row, observations: dates.map((date) => ({ date, score: state.history[date]?.[row.symbol] })).filter(({ score }) => Number.isFinite(score)) })).filter((row) => row.observations.length);
-  if (!series.length) { byId("history-stats").innerHTML = '<div class="history-stat"><span>Istoric</span><strong>—</strong></div>'; byId("history-legend").innerHTML = ""; byId("history-comparison").innerHTML = ""; svg.innerHTML = '<text x="450" y="135" text-anchor="middle" class="axis-label">Bifează cel puțin un ETF pentru istoric.</text>'; return; }
+  if (!series.length) { byId("history-stats").innerHTML = '<div class="history-stat"><span>Istoric</span><strong>—</strong></div>'; if (byId("history-legend")) byId("history-legend").innerHTML = ""; if (byId("history-comparison")) byId("history-comparison").innerHTML = ""; svg.innerHTML = '<text x="450" y="135" text-anchor="middle" class="axis-label">Bifează cel puțin un ETF pentru istoric.</text>'; return; }
   const latestScores = series.map((row) => row.observations.at(-1).score);
   byId("history-stats").innerHTML = [["ETF-uri selectate", series.length], ["Scor mediu curent", (latestScores.reduce((sum, score) => sum + score, 0) / latestScores.length).toFixed(1)], ["Cel mai bun", `${series.reduce((best, row) => row.observations.at(-1).score > best.observations.at(-1).score ? row : best).symbol} ${scoreText(Math.max(...latestScores))}`], ["Observații", Math.max(...series.map((row) => row.observations.length))]].map(([label, value]) => `<div class="history-stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
   const width = 900, height = 270, left = 42, right = 18, top = 20, bottom = 35, innerWidth = width - left - right, innerHeight = height - top - bottom;
@@ -29,8 +29,8 @@ function renderHistory() {
   const labels = [...new Set([0, Math.floor((dates.length - 1) / 2), dates.length - 1])].map((index) => `<text class="axis-label" x="${x(index)}" y="${height - 11}" text-anchor="middle">${dates[index].slice(5)}</text>`).join("");
   const colors = ["#59a6ff", "#53d399", "#f5c45a", "#ff7e8b", "#b78bff", "#4dd8df", "#fb923c", "#f472b6", "#a3e635", "#e2e8f0"];
   svg.innerHTML = `${grid}${series.map((row, seriesIndex) => { const color = colors[seriesIndex % colors.length]; const line = row.observations.map((point, index) => { const dateIndex = dates.indexOf(point.date); return `${index ? "L" : "M"}${x(dateIndex).toFixed(1)},${y(point.score).toFixed(1)}`; }).join(" "); return `<path class="score-line" stroke="${color}" d="${line}"><title>${row.symbol}</title></path>`; }).join("")}${labels}`;
-  byId("history-legend").innerHTML = series.map((row, index) => `<span class="legend-item"><i class="legend-dot" style="background:${colors[index % colors.length]}"></i>${row.symbol}</span>`).join("");
-  byId("history-comparison").innerHTML = series.map((row) => { const scores = row.observations.map((item) => item.score), latest = scores.at(-1), delta = scores.length > 1 ? latest - scores.at(-2) : null, direction = scores.length > 1 ? latest - scores.at(Math.max(0, scores.length - 16)) : null; return `<tr><td>${row.symbol}</td><td class="${scoreClass(latest)}">${scoreText(latest)}</td><td class="${delta == null ? "" : scoreClass(delta)}">${delta == null ? "—" : scoreText(delta)}</td><td class="${direction == null ? "" : scoreClass(direction)}">${direction == null ? "—" : scoreText(direction)}</td></tr>`; }).join("");
+  if (byId("history-legend")) byId("history-legend").innerHTML = series.map((row, index) => `<span class="legend-item"><i class="legend-dot" style="background:${colors[index % colors.length]}"></i>${row.symbol}</span>`).join("");
+  if (byId("history-comparison")) byId("history-comparison").innerHTML = series.map((row) => { const scores = row.observations.map((item) => item.score), latest = scores.at(-1), delta = scores.length > 1 ? latest - scores.at(-2) : null, direction = scores.length > 1 ? latest - scores.at(Math.max(0, scores.length - 16)) : null; return `<tr><td>${row.symbol}</td><td class="${scoreClass(latest)}">${scoreText(latest)}</td><td class="${delta == null ? "" : scoreClass(delta)}">${delta == null ? "—" : scoreText(delta)}</td><td class="${direction == null ? "" : scoreClass(direction)}">${direction == null ? "—" : scoreText(direction)}</td></tr>`; }).join("");
 }
 async function load() {
   const [response, historyResponse] = await Promise.all([fetch(`data/latest.json?cache=${Date.now()}`), fetch(`data/history.json?cache=${Date.now()}`)]);
@@ -43,18 +43,24 @@ async function load() {
   byId("status").textContent = data.updatedAt ? `Piața: ${data.marketDate} · Actualizat: ${new Date(data.updatedAt).toLocaleString("ro-RO")} · Sursă: ${data.source}` : (data.message || "Încă nu există date.");
   state.historySymbols = new Set([...state.historySymbols].filter((symbol) => state.rows.some((row) => row.symbol === symbol)));
   if (!state.historySymbols.size && state.rows.length) state.historySymbols.add("SPY");
-  byId("history-options").innerHTML = state.rows.map((row) => `<label><input type="checkbox" data-history-symbol="${row.symbol}" ${state.historySymbols.has(row.symbol) ? "checked" : ""} /> ${row.symbol}</label>`).join("");
-  byId("history-all").checked = state.historySymbols.size === state.rows.length;
-  byId("history-all").indeterminate = state.historySymbols.size > 0 && state.historySymbols.size < state.rows.length;
-  byId("history-picker-label").textContent = state.historySymbols.size === state.rows.length ? "Toate" : state.historySymbols.size === 1 ? [...state.historySymbols][0] : `${state.historySymbols.size} selectate`;
+  const historyOptions = byId("history-options");
+  if (historyOptions) {
+    historyOptions.innerHTML = state.rows.map((row) => `<label><input type="checkbox" data-history-symbol="${row.symbol}" ${state.historySymbols.has(row.symbol) ? "checked" : ""} /> ${row.symbol}</label>`).join("");
+    loadPickerState();
+  } else {
+    // Compatibility for an older cached page while GitHub Pages refreshes its CDN.
+    const legacySelect = byId("history-etf");
+    if (legacySelect) { legacySelect.innerHTML = state.rows.map((row) => `<option value="${row.symbol}">${row.symbol} — ${row.name}</option>`).join(""); legacySelect.value = [...state.historySymbols][0] || "SPY"; }
+  }
   render();
   renderHistory();
 }
 byId("sector-filter").addEventListener("change", (event) => { state.sector = event.target.value; render(); });
 byId("search").addEventListener("input", (event) => { state.search = event.target.value.trim().toLocaleLowerCase(); render(); });
 byId("reload").addEventListener("click", load);
-byId("history-all").addEventListener("change", (event) => { state.historySymbols = event.target.checked ? new Set(state.rows.map((row) => row.symbol)) : new Set(); renderHistory(); loadPickerState(); });
-byId("history-options").addEventListener("change", (event) => { const symbol = event.target.dataset.historySymbol; if (!symbol) return; if (event.target.checked) state.historySymbols.add(symbol); else state.historySymbols.delete(symbol); renderHistory(); loadPickerState(); });
-function loadPickerState() { byId("history-options").querySelectorAll("input").forEach((input) => { input.checked = state.historySymbols.has(input.dataset.historySymbol); }); byId("history-all").checked = state.historySymbols.size === state.rows.length; byId("history-all").indeterminate = state.historySymbols.size > 0 && state.historySymbols.size < state.rows.length; byId("history-picker-label").textContent = state.historySymbols.size === state.rows.length ? "Toate" : state.historySymbols.size === 1 ? [...state.historySymbols][0] : `${state.historySymbols.size} selectate`; }
+if (byId("history-all")) byId("history-all").addEventListener("change", (event) => { state.historySymbols = event.target.checked ? new Set(state.rows.map((row) => row.symbol)) : new Set(); renderHistory(); loadPickerState(); });
+if (byId("history-options")) byId("history-options").addEventListener("change", (event) => { const symbol = event.target.dataset.historySymbol; if (!symbol) return; if (event.target.checked) state.historySymbols.add(symbol); else state.historySymbols.delete(symbol); renderHistory(); loadPickerState(); });
+if (byId("history-etf")) byId("history-etf").addEventListener("change", (event) => { state.historySymbols = new Set([event.target.value]); renderHistory(); });
+function loadPickerState() { const options = byId("history-options"), all = byId("history-all"), label = byId("history-picker-label"); if (!options || !all || !label) return; options.querySelectorAll("input").forEach((input) => { input.checked = state.historySymbols.has(input.dataset.historySymbol); }); all.checked = state.historySymbols.size === state.rows.length; all.indeterminate = state.historySymbols.size > 0 && state.historySymbols.size < state.rows.length; label.textContent = state.historySymbols.size === state.rows.length ? "Toate" : state.historySymbols.size === 1 ? [...state.historySymbols][0] : `${state.historySymbols.size} selectate`; }
 document.querySelectorAll("th[data-sort]").forEach((th) => th.addEventListener("click", () => { const field = th.dataset.sort; state.descending = state.sort === field ? !state.descending : true; state.sort = field; render(); }));
 load().catch((error) => { byId("status").textContent = `Nu pot încărca datele: ${error.message}`; });
