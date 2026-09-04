@@ -216,7 +216,7 @@
     {
       "symbol": "XLF",
       "name": "Financiare",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Financiare",
       "date": "2026-09-03",
       "price": 58.56,
       "volume": 32643053,
@@ -237,7 +237,7 @@
     {
       "symbol": "KRE",
       "name": "Bănci regionale",
-      "sector": "Sectoare S&P",
+      "sector": "S&P · Bănci regionale",
       "date": "2026-09-03",
       "price": 74.87,
       "volume": 10600200,
@@ -258,7 +258,7 @@
     {
       "symbol": "XLI",
       "name": "Industriale",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Industriale",
       "date": "2026-09-03",
       "price": 174.56,
       "volume": 8340600,
@@ -279,7 +279,7 @@
     {
       "symbol": "XLY",
       "name": "Consum discreționar",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Consum discreționar",
       "date": "2026-09-03",
       "price": 116.46,
       "volume": 5658526,
@@ -300,7 +300,7 @@
     {
       "symbol": "XLB",
       "name": "Materiale",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Materiale",
       "date": "2026-09-03",
       "price": 52.62,
       "volume": 14287443,
@@ -321,7 +321,7 @@
     {
       "symbol": "XLE",
       "name": "Energie",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Energie",
       "date": "2026-09-03",
       "price": 64.62,
       "volume": 24069781,
@@ -342,7 +342,7 @@
     {
       "symbol": "XLC",
       "name": "Servicii de comunicații",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Comunicații",
       "date": "2026-09-03",
       "price": 113.38,
       "volume": 3366972,
@@ -363,7 +363,7 @@
     {
       "symbol": "XLV",
       "name": "Sănătate",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Sănătate",
       "date": "2026-09-03",
       "price": 173.25999,
       "volume": 5933824,
@@ -384,7 +384,7 @@
     {
       "symbol": "XLP",
       "name": "Consum de bază",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Consum de bază",
       "date": "2026-09-03",
       "price": 85.26,
       "volume": 10264950,
@@ -405,7 +405,7 @@
     {
       "symbol": "XLU",
       "name": "Utilități",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Utilități",
       "date": "2026-09-03",
       "price": 43.029999,
       "volume": 22875638,
@@ -426,7 +426,7 @@
     {
       "symbol": "XLRE",
       "name": "Imobiliare / REIT",
-      "sector": "Sectoare S&P",
+      "sector": "S&P 500 · Imobiliare",
       "date": "2026-09-03",
       "price": 44.25,
       "volume": 4414470,
