@@ -1,4 +1,22 @@
 {
+  "2026-08-18": {
+    "SPY": 3, "QQQ": 5, "RSP": 4, "IWM": 6, "DIA": 4, "SMH": 9, "XSD": 1, "IGV": 7, "XLK": 9, "AIQ": 8,
+    "XLF": 4, "KRE": 5, "XLI": 6, "XLY": -5, "XLB": 1, "XLE": 8, "XLC": -3, "XLV": 4, "XLP": -1, "XLU": -7,
+    "XLRE": -2, "IWF": 4, "IWD": 4, "QUAL": 4, "MTUM": 9, "GRID": 5, "PAVE": 7, "SGOV": 1, "IEF": -9, "TLT": -9,
+    "HYG": -9, "GLD": 0, "IBIT": -3, "VXUS": 7, "EEM": 6
+  },
+  "2026-08-23": {
+    "SPY": 1, "QQQ": -4, "RSP": 6, "IWM": 4, "DIA": 4, "SMH": -5, "XSD": -5, "IGV": 7, "XLK": 1, "AIQ": 3,
+    "XLF": 6, "KRE": -1, "XLI": 0, "XLY": 2, "XLB": 9, "XLE": 9, "XLC": -4, "XLV": 9, "XLP": 1, "XLU": -9,
+    "XLRE": 0, "IWF": 0, "IWD": 6, "QUAL": 5, "MTUM": -5, "GRID": -4, "PAVE": -1, "SGOV": 1, "IEF": -9, "TLT": -7,
+    "HYG": -9, "GLD": 7, "IBIT": 6, "VXUS": 7, "EEM": 5
+  },
+  "2026-08-31": {
+    "SPY": 3, "QQQ": 5, "RSP": 3, "IWM": -4, "DIA": 5, "SMH": -2, "XSD": -4, "IGV": 9, "XLK": 5, "AIQ": 5,
+    "XLF": 5, "KRE": -1, "XLI": -4, "XLY": 2, "XLB": 2, "XLE": 7, "XLC": -2, "XLV": 4, "XLP": 0, "XLU": -9,
+    "XLRE": -4, "IWF": 4, "IWD": 6, "QUAL": 5, "MTUM": -4, "GRID": -2, "PAVE": -5, "SGOV": 2, "IEF": -7, "TLT": -7,
+    "HYG": -3, "GLD": -1, "IBIT": 9, "VXUS": 3, "EEM": 5
+  },
   "2026-09-03": {
     "SPY": 3,
     "QQQ": 0,
