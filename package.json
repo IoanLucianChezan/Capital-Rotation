@@ -1,0 +1,9 @@
+{
+  "name": "capital-rotation-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "refresh": "node scripts/refresh-market-data.mjs",
+    "check": "node --check scripts/refresh-market-data.mjs && node --check assets/app.js"
+  }
+}

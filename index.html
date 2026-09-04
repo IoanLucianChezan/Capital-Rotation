@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard pentru rotația de capital între ETF-uri." />
+    <title>Rotație de capital</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header>
+        <p class="eyebrow">ETF market monitor</p>
+        <h1>Rotație de capital</h1>
+        <p id="status" class="status">Se încarcă datele…</p>
+      </header>
+
+      <section class="controls" aria-label="Filtre">
+        <label>
+          Sector
+          <select id="sector-filter"><option value="all">Toate sectoarele</option></select>
+        </label>
+        <label>
+          Caută simbol sau nume
+          <input id="search" type="search" placeholder="ex. semiconductori" autocomplete="off" />
+        </label>
+        <button id="reload" type="button">Reîncarcă</button>
+      </section>
+
+      <section id="summary" class="summary" aria-label="Rezumat"></section>
+
+      <section class="table-card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-sort="symbol">ETF</th><th data-sort="sector">Sector</th><th data-sort="price">Preț</th>
+                <th data-sort="change">1D</th><th data-sort="fiveDay">5D</th><th data-sort="oneMonth">1M</th>
+                <th data-sort="threeMonths">3M</th><th data-sort="sixMonths">6M</th><th data-sort="vs50">vs 50D</th>
+                <th data-sort="vs200">vs 200D</th><th data-sort="relative1m">1M vs SPY</th><th data-sort="rvol">RVOL</th>
+                <th data-sort="score" class="sorted">Scor</th><th data-sort="classification">Clasificare</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="methodology">
+        <strong>Metodologie.</strong> Scorul reproduce modelul din Excel: trend 40% (50D/200D), forță relativă 40% (1M/3M față de SPY), direcție și volum 20%. Randamentul pe 1 an este de preț, nu total return. Datele despre AUM și fluxuri reale nu sunt incluse până nu există o sursă verificată de shares outstanding.
+      </aside>
+    </main>
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>
