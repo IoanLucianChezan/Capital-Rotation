@@ -46,6 +46,16 @@
         </div>
       </section>
 
+      <section class="history-card" aria-labelledby="history-title">
+        <div class="history-heading">
+          <div><p class="eyebrow">Evoluție</p><h2 id="history-title">Istoric scor</h2></div>
+          <label>ETF urmărit <select id="history-etf" aria-label="ETF urmărit"></select></label>
+        </div>
+        <div id="history-stats" class="history-stats"></div>
+        <div class="chart-wrap"><svg id="history-chart" viewBox="0 0 900 270" role="img" aria-label="Grafic istoric scor"></svg></div>
+        <p class="chart-note">Date zilnice păstrate automat. „Direcție 3 săpt.” compară scorul curent cu cel de acum aproximativ 15 sesiuni de tranzacționare.</p>
+      </section>
+
       <aside class="methodology">
         <strong>Metodologie.</strong> Scorul reproduce modelul din Excel: trend 40% (50D/200D), forță relativă 40% (1M/3M față de SPY), direcție și volum 20%. Randamentul pe 1 an este de preț, nu total return. Datele despre AUM și fluxuri reale nu sunt incluse până nu există o sursă verificată de shares outstanding.
       </aside>
