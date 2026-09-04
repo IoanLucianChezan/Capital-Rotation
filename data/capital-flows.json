@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T11:27:35.227Z",
+  "updatedAt": "2026-09-04T23:49:49.554Z",
   "methodology": "Shares outstanding publicate de emitent; flux USD ≈ variația unităților × ultimul preț de închidere.",
   "rows": [
     {
@@ -146,11 +146,11 @@
       "issuer": "iShares",
       "status": "Validat",
       "shares": 1020900000,
-      "asOf": "2026-09-03",
+      "asOf": "2026-09-04",
       "sourceUrl": "https://www.ishares.com/us/products/239706/ishares-russell-1000-growth-etf",
-      "sharesChange": null,
-      "sharesChangePercent": null,
-      "netFlowUsd": null
+      "sharesChange": 0,
+      "sharesChangePercent": 0,
+      "netFlowUsd": 0
     },
     {
       "symbol": "IWD",
@@ -158,11 +158,11 @@
       "issuer": "iShares",
       "status": "Validat",
       "shares": 326300000,
-      "asOf": "2026-09-03",
+      "asOf": "2026-09-04",
       "sourceUrl": "https://www.ishares.com/us/products/239708/ishares-russell-1000-value-etf",
-      "sharesChange": null,
-      "sharesChangePercent": null,
-      "netFlowUsd": null
+      "sharesChange": 0,
+      "sharesChangePercent": 0,
+      "netFlowUsd": 0
     },
     {
       "symbol": "QUAL",
@@ -170,11 +170,11 @@
       "issuer": "iShares",
       "status": "Validat",
       "shares": 213550000,
-      "asOf": "2026-09-03",
+      "asOf": "2026-09-04",
       "sourceUrl": "https://www.ishares.com/us/products/256101/ishares-msci-usa-quality-factor-etf",
-      "sharesChange": null,
-      "sharesChangePercent": null,
-      "netFlowUsd": null
+      "sharesChange": 0,
+      "sharesChangePercent": 0,
+      "netFlowUsd": 0
     },
     {
       "symbol": "MTUM",
@@ -241,12 +241,12 @@
       "name": "Obligațiuni corporative high yield",
       "issuer": "iShares",
       "status": "Validat",
-      "shares": 194700000,
-      "asOf": "2026-09-03",
+      "shares": 194500000,
+      "asOf": "2026-09-04",
       "sourceUrl": "https://www.ishares.com/us/products/239565/ishares-iboxx-high-yield-corporate-bond-etf",
-      "sharesChange": null,
-      "sharesChangePercent": null,
-      "netFlowUsd": null
+      "sharesChange": -200000,
+      "sharesChangePercent": -0.001027221366204417,
+      "netFlowUsd": -15832000
     },
     {
       "symbol": "GLD",

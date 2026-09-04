@@ -2,12 +2,12 @@
   "2026-09-03": {
     "IWM": {
       "shares": 271900000,
-      "price": 295.19,
+      "price": 296.01001,
       "sourceUrl": "https://www.ishares.com/us/products/239710/ishares-russell-2000-etf"
     },
     "IGV": {
       "shares": 135500000,
-      "price": 106.95,
+      "price": 104.57,
       "sourceUrl": "https://www.ishares.com/us/products/239771/ishares-north-american-techsoftware-etf"
     },
     "IWF": {
@@ -27,22 +27,22 @@
     },
     "MTUM": {
       "shares": 80600000,
-      "price": 299.42001,
+      "price": 304.85999,
       "sourceUrl": "https://www.ishares.com/us/products/251614/ishares-msci-usa-momentum-factor-etf"
     },
     "SGOV": {
       "shares": 1067450000,
-      "price": 100.43,
+      "price": 100.47,
       "sourceUrl": "https://www.ishares.com/us/products/314116/ishares-0-3-month-treasury-bond-etf"
     },
     "IEF": {
       "shares": 456300000,
-      "price": 92.28,
+      "price": 92.25,
       "sourceUrl": "https://www.ishares.com/us/products/239456/ishares-710-year-treasury-bond-etf"
     },
     "TLT": {
       "shares": 573300000,
-      "price": 82.07,
+      "price": 82.21,
       "sourceUrl": "https://www.ishares.com/us/products/239454/ishares-20-year-treasury-bond-etf"
     },
     "HYG": {
@@ -52,13 +52,35 @@
     },
     "IBIT": {
       "shares": 1375120000,
-      "price": 46.35,
+      "price": 45.23,
       "sourceUrl": "https://www.ishares.com/us/products/333011/ishares-bitcoin-trust-etf"
     },
     "EEM": {
       "shares": 464850000,
-      "price": 67.47,
+      "price": 68.7,
       "sourceUrl": "https://www.ishares.com/us/products/239637/ishares-msci-emerging-markets-etf"
+    }
+  },
+  "2026-09-04": {
+    "IWF": {
+      "shares": 1020900000,
+      "price": 123.41,
+      "sourceUrl": "https://www.ishares.com/us/products/239706/ishares-russell-1000-growth-etf"
+    },
+    "IWD": {
+      "shares": 326300000,
+      "price": 257.63,
+      "sourceUrl": "https://www.ishares.com/us/products/239708/ishares-russell-1000-value-etf"
+    },
+    "QUAL": {
+      "shares": 213550000,
+      "price": 222.58,
+      "sourceUrl": "https://www.ishares.com/us/products/256101/ishares-msci-usa-quality-factor-etf"
+    },
+    "HYG": {
+      "shares": 194500000,
+      "price": 79.16,
+      "sourceUrl": "https://www.ishares.com/us/products/239565/ishares-iboxx-high-yield-corporate-bond-etf"
     }
   }
 }
