@@ -27,7 +27,7 @@ async function fetchSeries(id, meta) {
   const latest = values.at(-1);
   if (!latest) throw new Error(`${id}: fără observații valide`);
   const makeChange = (sessions) => { const prior = pointAt(values, sessions); return prior ? latest.value - prior.value : null; };
-  return { ...meta, latest, change5: makeChange(5), change20: makeChange(20), change60: makeChange(60) };
+  return { ...meta, latest, change3: makeChange(3), change5: makeChange(5), change20: makeChange(20), change60: makeChange(60) };
 }
 
 const entries = await Promise.all(Object.entries(SERIES).map(async ([id, meta]) => [id, await fetchSeries(id, meta)]));
