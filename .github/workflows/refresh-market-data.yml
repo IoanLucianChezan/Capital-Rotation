@@ -36,7 +36,6 @@ jobs:
       - run: node scripts/refresh-macro-data.mjs
       - run: node scripts/refresh-sector-rotation-history.mjs
       - name: Generează raportul AI
-        if: ${{ secrets.CEREBRAS_API_KEY != '' }}
         run: node scripts/generate-ai-report.mjs
         env:
           CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
