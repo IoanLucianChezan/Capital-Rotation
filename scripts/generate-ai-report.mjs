@@ -22,7 +22,7 @@ try {
   if (!model) throw new Error(`Niciun model compatibil nu este disponibil. Modele primite: ${availableModels.slice(0, 12).join(", ") || "niciunul"}`);
   selectedModel = model;
   const completionOptions = { model, stream: false, temperature: 0.15, max_tokens: 1800, messages: [{ role: "system", content: "Returnează exclusiv un obiect JSON valid." }, { role: "user", content: prompt }] };
-  if (model.startsWith("openai/gpt-oss")) completionOptions.reasoning_effort = "none";
+  if (model.startsWith("openai/gpt-oss")) completionOptions.reasoning_effort = "low";
   const response = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers, body: JSON.stringify(completionOptions) });
   if (!response.ok) throw new Error(`Groq HTTP ${response.status}: ${(await response.text()).slice(0, 300)}`);
   const completion = await response.json();
