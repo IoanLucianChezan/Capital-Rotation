@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-07T15:48:43.114Z",
+  "updatedAt": "2026-09-07T16:07:58.206Z",
   "marketDate": "2026-09-04",
   "source": "Groq",
-  "error": "Raportul AI va apărea după următoarea actualizare automată.",
-  "diagnostic": "Cerebras HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}"
+  "error": "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini.",
+  "diagnostic": "Groq HTTP 404: {\"error\":{\"message\":\"The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\"}}\n"
 }
