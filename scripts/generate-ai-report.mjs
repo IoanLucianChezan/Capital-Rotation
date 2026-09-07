@@ -17,7 +17,7 @@ try {
   const completion = await response.json();
   const content = completion.choices?.[0]?.message?.content?.trim() || "";
   const json = content.match(/\{[\s\S]*\}/)?.[0];
-  if (!json) throw new Error("Cerebras nu a returnat un obiect JSON valid.");
+  if (!json) throw new Error("Groq nu a returnat un obiect JSON valid.");
   const report = JSON.parse(json);
   await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Groq llama-3.3-70b-versatile", report }, null, 2)}\n`);
   console.log("Raport AI generat.");

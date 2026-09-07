@@ -6,21 +6,20 @@ const TWELVE_KEY = process.env.TWELVE_DATA_API_KEY;
 const DATA_DIR = new URL("../data/", import.meta.url);
 const DAILY_MS = 1_100;
 const TWELVE_MS = 7_600; // 8 requests/minute, with a small safety margin
+const NASDAQ_MS = 350;
 let lastFinnhubRequest = 0;
 let lastTwelveRequest = 0;
-
-if (!FINNHUB_KEY && !TWELVE_KEY) {
-  throw new Error("Set FINNHUB_API_KEY and/or TWELVE_DATA_API_KEY before refreshing data.");
-}
+let lastNasdaqRequest = 0;
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 async function rateLimit(provider) {
   const now = Date.now();
-  const minGap = provider === "finnhub" ? DAILY_MS : TWELVE_MS;
-  const previous = provider === "finnhub" ? lastFinnhubRequest : lastTwelveRequest;
+  const minGap = provider === "finnhub" ? DAILY_MS : provider === "twelve" ? TWELVE_MS : NASDAQ_MS;
+  const previous = provider === "finnhub" ? lastFinnhubRequest : provider === "twelve" ? lastTwelveRequest : lastNasdaqRequest;
   await sleep(Math.max(0, minGap - (now - previous)));
   if (provider === "finnhub") lastFinnhubRequest = Date.now();
-  else lastTwelveRequest = Date.now();
+  else if (provider === "twelve") lastTwelveRequest = Date.now();
+  else lastNasdaqRequest = Date.now();
 }
 
 function requireSeries(points, symbol) {
@@ -55,8 +54,35 @@ async function fetchTwelve(symbol) {
   })).filter((p) => Number.isFinite(p.close) && p.close > 0).reverse(), symbol);
 }
 
+// Nasdaq exposes end-of-day ETF history publicly. It keeps the daily job working
+// when a key-based provider's free plan does not include historical candles.
+async function fetchNasdaq(symbol) {
+  await rateLimit("nasdaq");
+  const today = new Date();
+  const from = new Date(today);
+  from.setUTCDate(from.getUTCDate() - 730);
+  const formatDate = (date) => date.toISOString().slice(0, 10);
+  const url = new URL(`https://api.nasdaq.com/api/quote/${symbol}/historical`);
+  url.search = new URLSearchParams({ assetclass: "etf", fromdate: formatDate(from), todate: formatDate(today), limit: "5000" });
+  const response = await fetch(url, { headers: { "User-Agent": "Mozilla/5.0 (compatible; CapitalRotation/1.0)", Accept: "application/json" } });
+  const body = await response.json();
+  const rows = body?.data?.tradesTable?.rows;
+  if (!response.ok || !Array.isArray(rows)) throw new Error(body?.status?.bCodeMessage?.[0]?.errorMessage || `HTTP ${response.status}`);
+  const points = rows.map((row) => ({
+    date: (() => {
+      const [month, day, year] = String(row.date || "").split("/");
+      return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    })(),
+    close: Number(String(row.close || "").replace(/[$,]/g, "")),
+    volume: Number(String(row.volume || "").replace(/,/g, ""))
+  })).filter((point) => Number.isFinite(point.close) && point.close > 0).reverse();
+  return requireSeries(points, symbol);
+}
+
 async function fetchSeries(symbol) {
   const errors = [];
+  try { return { provider: "Nasdaq (EOD)", points: await fetchNasdaq(symbol) }; }
+  catch (error) { errors.push(`Nasdaq: ${error.message}`); }
   if (FINNHUB_KEY) {
     try { return { provider: "Finnhub", points: await fetchFinnhub(symbol) }; }
     catch (error) { errors.push(`Finnhub: ${error.message}`); }
