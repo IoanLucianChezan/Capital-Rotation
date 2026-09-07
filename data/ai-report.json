@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-09-07T15:48:43.114Z",
   "marketDate": "2026-09-04",
-  "source": "Cerebras",
-  "error": "Contul Cerebras are nevoie de credit sau plan activ pentru a genera raportul AI. După activare, următoarea actualizare zilnică va genera automat raportul.",
+  "source": "Groq",
+  "error": "Raportul AI va apărea după următoarea actualizare automată.",
   "diagnostic": "Cerebras HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}"
 }
