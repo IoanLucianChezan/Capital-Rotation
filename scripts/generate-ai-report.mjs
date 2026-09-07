@@ -22,6 +22,7 @@ try {
   await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Cerebras qwen-3.8-27b", report }, null, 2)}\n`);
   console.log("Raport AI generat.");
 } catch (error) {
-  await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Cerebras", error: "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini." }, null, 2)}\n`);
+  const diagnostic = error.message.replace(/Bearer\s+[^\s]+/gi, "Bearer [redacted]").slice(0, 240);
+  await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Cerebras", error: "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini.", diagnostic }, null, 2)}\n`);
   console.warn(`Raport AI indisponibil: ${error.message}`);
 }
