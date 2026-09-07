@@ -23,6 +23,7 @@ try {
   console.log("Raport AI generat.");
 } catch (error) {
   const diagnostic = error.message.replace(/Bearer\s+[^\s]+/gi, "Bearer [redacted]").slice(0, 240);
-  await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Cerebras", error: "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini.", diagnostic }, null, 2)}\n`);
+  const userMessage = error.message.includes("HTTP 402") ? "Contul Cerebras are nevoie de credit sau plan activ pentru a genera raportul AI. După activare, următoarea actualizare zilnică va genera automat raportul." : "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini.";
+  await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Cerebras", error: userMessage, diagnostic }, null, 2)}\n`);
   console.warn(`Raport AI indisponibil: ${error.message}`);
 }
