@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-07T16:07:58.206Z",
+  "updatedAt": "2026-09-07T16:10:43.137Z",
   "marketDate": "2026-09-04",
   "source": "Groq",
   "error": "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini.",
-  "diagnostic": "Groq HTTP 404: {\"error\":{\"message\":\"The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\"}}\n"
+  "diagnostic": "Groq nu a returnat un obiect JSON valid."
 }
