@@ -1,0 +1,25 @@
+import { readFile, writeFile } from "node:fs/promises";
+
+const DATA_DIR = new URL("../data/", import.meta.url);
+const SECTORS = new Set(["XLF", "XLI", "XLY", "XLB", "XLE", "XLC", "XLV", "XLP", "XLU", "XLRE", "XLK"]);
+const read = async (name) => JSON.parse(await readFile(new URL(name, DATA_DIR), "utf8"));
+const apiKey = process.env.CEREBRAS_API_KEY;
+if (!apiKey) { console.log("CEREBRAS_API_KEY lipsește; raportul AI nu este generat."); process.exit(0); }
+const [latest, macro, rotationHistory] = await Promise.all([read("latest.json"), read("macro.json"), read("sector-rotation-history.json")]);
+const snapshot = rotationHistory[latest.marketDate] || {};
+const sectors = latest.rows.filter((row) => SECTORS.has(row.symbol)).map((row) => ({ symbol: row.symbol, sector: row.name, rotationScore: snapshot[row.symbol]?.score ?? null, macroAdjustment: snapshot[row.symbol]?.macroAdjustment ?? 0, relative1m: row.relative1m, relative3m: row.relative3m, fiveDay: row.fiveDay, oneMonth: row.oneMonth, threeMonths: row.threeMonths, vs50: row.vs50, vs200: row.vs200, rvol: row.rvol, score: row.score }));
+const macroFacts = Object.fromEntries(Object.entries(macro.series || {}).map(([id, item]) => [id, { name: item.name, latest: item.latest, change3: item.change3, change20: item.change20 }]));
+const input = { marketDate: latest.marketDate, sectors, macro: macroFacts, crossAsset: latest.rows.filter((row) => ["RSP", "IWM", "HYG", "IEF", "GLD", "IBIT"].includes(row.symbol)).map((row) => ({ symbol: row.symbol, oneMonth: row.oneMonth, relative1m: row.relative1m, relative3m: row.relative3m })) };
+const prompt = `Ești analist de rotație sectorială pentru piața SUA. Folosește EXCLUSIV datele JSON primite. Nu inventa date, știri, earnings revisions, breadth sau cauze macro care nu sunt în date. Separă faptele de interpretare prin formulări prudente: "datele sugerează", "confirmarea lipsește". Nu spune că un sector va crește și nu da recomandări de cumpărare. Returnează DOAR JSON valid, fără markdown, exact cu schema: {"marketRegime":"maxim 110 cuvinte","earlyRotation":[{"symbol":"ticker din date","thesis":"maxim 55 cuvinte","confirmation":"maxim 28 cuvinte","invalidation":"maxim 28 cuvinte"}],"leaders":[{"symbol":"ticker din date","comment":"maxim 45 cuvinte"}],"weakening":[{"symbol":"ticker din date","comment":"maxim 45 cuvinte"}],"crossAsset":"maxim 90 cuvinte","watchlist":["maxim 8 elemente, fiecare maxim 20 cuvinte"],"caveat":"maxim 45 cuvinte"}. Selectează maximum 3 elemente în fiecare listă. Date: ${JSON.stringify(input)}`;
+try {
+  const response = await fetch("https://api.cerebras.ai/v1/chat/completions", { method: "POST", headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` }, body: JSON.stringify({ model: "qwen-3.8-27b", stream: false, temperature: 0.15, max_tokens: 1800, messages: [{ role: "user", content: prompt }] }) });
+  if (!response.ok) throw new Error(`Cerebras HTTP ${response.status}: ${(await response.text()).slice(0, 300)}`);
+  const completion = await response.json();
+  const content = completion.choices?.[0]?.message?.content?.trim() || "";
+  const report = JSON.parse(content.replace(/^```json\s*|\s*```$/g, ""));
+  await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Cerebras qwen-3.8-27b", report }, null, 2)}\n`);
+  console.log("Raport AI generat.");
+} catch (error) {
+  await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Cerebras", error: "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini." }, null, 2)}\n`);
+  console.warn(`Raport AI indisponibil: ${error.message}`);
+}
