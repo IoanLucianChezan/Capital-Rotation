@@ -19,7 +19,7 @@ try {
   const preferredModels = ["llama-3.3-70b-versatile", "meta-llama/llama-4-scout-17b-16e-instruct", "llama-3.1-8b-instant", "openai/gpt-oss-20b", "openai/gpt-oss-120b"];
   const model = preferredModels.find((candidate) => availableModels.includes(candidate));
   if (!model) throw new Error(`Niciun model compatibil nu este disponibil. Modele primite: ${availableModels.slice(0, 12).join(", ") || "niciunul"}`);
-  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers, body: JSON.stringify({ model, stream: false, temperature: 0.15, max_tokens: 1800, messages: [{ role: "user", content: prompt }] }) });
+  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers, body: JSON.stringify({ model, stream: false, temperature: 0.15, max_tokens: 1800, response_format: { type: "json_object" }, messages: [{ role: "system", content: "Returnează exclusiv un obiect JSON valid." }, { role: "user", content: prompt }] }) });
   if (!response.ok) throw new Error(`Groq HTTP ${response.status}: ${(await response.text()).slice(0, 300)}`);
   const completion = await response.json();
   const content = completion.choices?.[0]?.message?.content?.trim() || "";
