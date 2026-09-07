@@ -1,0 +1,114 @@
+{
+  "updatedAt": "2026-09-07T13:58:27.709Z",
+  "source": "FRED",
+  "series": {
+    "DGS2": {
+      "name": "Randament SUA 2 ani",
+      "unit": "%",
+      "group": "Rate",
+      "latest": {
+        "date": "2026-09-03",
+        "value": 4.34
+      },
+      "change5": 0.13999999999999968,
+      "change20": 0.08999999999999986,
+      "change60": 0.29000000000000004
+    },
+    "DGS10": {
+      "name": "Randament SUA 10 ani",
+      "unit": "%",
+      "group": "Rate",
+      "latest": {
+        "date": "2026-09-03",
+        "value": 4.77
+      },
+      "change5": 0.09999999999999964,
+      "change20": 0.07999999999999918,
+      "change60": 0.3199999999999994
+    },
+    "DGS30": {
+      "name": "Randament SUA 30 ani",
+      "unit": "%",
+      "group": "Rate",
+      "latest": {
+        "date": "2026-09-03",
+        "value": 5.25
+      },
+      "change5": 0.05999999999999961,
+      "change20": 0.03000000000000025,
+      "change60": 0.2999999999999998
+    },
+    "BAMLH0A0HYM2": {
+      "name": "Spread credit High Yield",
+      "unit": "pp",
+      "group": "Credit",
+      "latest": {
+        "date": "2026-09-03",
+        "value": 2.65
+      },
+      "change5": 0.020000000000000018,
+      "change20": -0.06000000000000005,
+      "change60": -0.1299999999999999
+    },
+    "BAMLC0A0CM": {
+      "name": "Spread credit Investment Grade",
+      "unit": "pp",
+      "group": "Credit",
+      "latest": {
+        "date": "2026-09-03",
+        "value": 0.81
+      },
+      "change5": 0.020000000000000018,
+      "change20": 0.030000000000000027,
+      "change60": 0.06000000000000005
+    },
+    "INDPRO": {
+      "name": "Producție industrială",
+      "unit": "index",
+      "group": "Macro",
+      "latest": {
+        "date": "2026-07-01",
+        "value": 102.9939
+      },
+      "change5": 1.0885999999999996,
+      "change20": 3.7013999999999925,
+      "change60": 2.7419999999999902
+    },
+    "CPIAUCSL": {
+      "name": "CPI",
+      "unit": "index",
+      "group": "Macro",
+      "latest": {
+        "date": "2026-07-01",
+        "value": 332.813
+      },
+      "change5": 5.353000000000009,
+      "change20": 16.284999999999968,
+      "change60": 60.90999999999997
+    },
+    "PAYEMS": {
+      "name": "Payrolls non-farm",
+      "unit": "mii locuri",
+      "group": "Macro",
+      "latest": {
+        "date": "2026-08-01",
+        "value": 159075
+      },
+      "change5": 425,
+      "change20": 759,
+      "change60": 11761
+    },
+    "ICSA": {
+      "name": "Cereri inițiale șomaj",
+      "unit": "mii",
+      "group": "Macro",
+      "latest": {
+        "date": "2026-08-29",
+        "value": 206000
+      },
+      "change5": 8000,
+      "change20": -2000,
+      "change60": -22000
+    }
+  }
+}
