@@ -16,7 +16,9 @@ try {
   if (!response.ok) throw new Error(`Cerebras HTTP ${response.status}: ${(await response.text()).slice(0, 300)}`);
   const completion = await response.json();
   const content = completion.choices?.[0]?.message?.content?.trim() || "";
-  const report = JSON.parse(content.replace(/^```json\s*|\s*```$/g, ""));
+  const json = content.match(/\{[\s\S]*\}/)?.[0];
+  if (!json) throw new Error("Cerebras nu a returnat un obiect JSON valid.");
+  const report = JSON.parse(json);
   await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Cerebras qwen-3.8-27b", report }, null, 2)}\n`);
   console.log("Raport AI generat.");
 } catch (error) {
