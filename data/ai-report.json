@@ -1,6 +1,7 @@
 {
-  "updatedAt": "2026-09-07T15:35:49.296Z",
+  "updatedAt": "2026-09-07T15:42:08.307Z",
   "marketDate": "2026-09-04",
   "source": "Cerebras",
-  "error": "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini."
+  "error": "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini.",
+  "diagnostic": "Cerebras HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}"
 }
