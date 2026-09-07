@@ -11,6 +11,7 @@ const sectors = latest.rows.filter((row) => SECTORS.has(row.symbol)).map((row) =
 const macroFacts = Object.fromEntries(Object.entries(macro.series || {}).map(([id, item]) => [id, { name: item.name, latest: item.latest, change3: item.change3, change20: item.change20 }]));
 const input = { marketDate: latest.marketDate, sectors, macro: macroFacts, crossAsset: latest.rows.filter((row) => ["RSP", "IWM", "HYG", "IEF", "GLD", "IBIT"].includes(row.symbol)).map((row) => ({ symbol: row.symbol, oneMonth: row.oneMonth, relative1m: row.relative1m, relative3m: row.relative3m })) };
 const prompt = `Ești analist de rotație sectorială pentru piața SUA. Folosește EXCLUSIV datele JSON primite. Nu inventa date, știri, earnings revisions, breadth sau cauze macro care nu sunt în date. Separă faptele de interpretare prin formulări prudente: "datele sugerează", "confirmarea lipsește". Nu spune că un sector va crește și nu da recomandări de cumpărare. Returnează DOAR JSON valid, fără markdown, exact cu schema: {"marketRegime":"maxim 110 cuvinte","earlyRotation":[{"symbol":"ticker din date","thesis":"maxim 55 cuvinte","confirmation":"maxim 28 cuvinte","invalidation":"maxim 28 cuvinte"}],"leaders":[{"symbol":"ticker din date","comment":"maxim 45 cuvinte"}],"weakening":[{"symbol":"ticker din date","comment":"maxim 45 cuvinte"}],"crossAsset":"maxim 90 cuvinte","watchlist":["maxim 8 elemente, fiecare maxim 20 cuvinte"],"caveat":"maxim 45 cuvinte"}. Selectează maximum 3 elemente în fiecare listă. Date: ${JSON.stringify(input)}`;
+let selectedModel = "necunoscut";
 try {
   const headers = { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` };
   const modelsResponse = await fetch("https://api.groq.com/openai/v1/models", { headers });
@@ -19,18 +20,21 @@ try {
   const preferredModels = ["llama-3.3-70b-versatile", "meta-llama/llama-4-scout-17b-16e-instruct", "llama-3.1-8b-instant", "openai/gpt-oss-20b", "openai/gpt-oss-120b"];
   const model = preferredModels.find((candidate) => availableModels.includes(candidate));
   if (!model) throw new Error(`Niciun model compatibil nu este disponibil. Modele primite: ${availableModels.slice(0, 12).join(", ") || "niciunul"}`);
-  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers, body: JSON.stringify({ model, stream: false, temperature: 0.15, max_tokens: 1800, response_format: { type: "json_object" }, messages: [{ role: "system", content: "Returnează exclusiv un obiect JSON valid." }, { role: "user", content: prompt }] }) });
+  selectedModel = model;
+  const completionOptions = { model, stream: false, temperature: 0.15, max_tokens: 1800, messages: [{ role: "system", content: "Returnează exclusiv un obiect JSON valid." }, { role: "user", content: prompt }] };
+  if (model.startsWith("openai/gpt-oss")) completionOptions.reasoning_effort = "none";
+  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers, body: JSON.stringify(completionOptions) });
   if (!response.ok) throw new Error(`Groq HTTP ${response.status}: ${(await response.text()).slice(0, 300)}`);
   const completion = await response.json();
   const content = completion.choices?.[0]?.message?.content?.trim() || "";
   const json = content.match(/\{[\s\S]*\}/)?.[0];
-  if (!json) throw new Error("Groq nu a returnat un obiect JSON valid.");
+  if (!json) throw new Error(`${model} nu a returnat un obiect JSON valid: ${content.slice(0, 120) || "răspuns gol"}`);
   const report = JSON.parse(json);
   await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: `Groq ${model}`, report }, null, 2)}\n`);
   console.log("Raport AI generat.");
 } catch (error) {
   const diagnostic = error.message.replace(/Bearer\s+[^\s]+/gi, "Bearer [redacted]").slice(0, 240);
   const userMessage = "Raportul AI nu a putut fi generat momentan. Datele cantitative rămân disponibile în celelalte pagini.";
-  await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: "Groq", error: userMessage, diagnostic }, null, 2)}\n`);
+  await writeFile(new URL("ai-report.json", DATA_DIR), `${JSON.stringify({ updatedAt: new Date().toISOString(), marketDate: latest.marketDate, source: `Groq ${selectedModel}`, error: userMessage, diagnostic }, null, 2)}\n`);
   console.warn(`Raport AI indisponibil: ${error.message}`);
 }
