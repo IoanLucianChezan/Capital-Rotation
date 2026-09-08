@@ -1,68 +1,66 @@
 {
-  "updatedAt": "2026-09-07T17:01:32.440Z",
+  "updatedAt": "2026-09-08T00:04:02.310Z",
   "marketDate": "2026-09-04",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o piață cu rotație moderată, în care sectorul energiei și tehnologia prezintă cele mai puternice semnale de rotație, în timp ce industriile și consumul discreționar par să se confrunte cu presiuni.",
+    "marketRegime": "Datele indică un mediu cu randamente moderate pe termen scurt și creșteri ușoare pe termen lung, fără semne de volatilitate crescută.",
     "earlyRotation": [
       {
         "symbol": "XLE",
-        "thesis": "Sectorul energiei are cea mai ridicată scor de rotație și performanță relativă pe termen scurt, sugerând potențial de creștere.",
-        "confirmation": "Performanța relativă pe 1 lună de 9.93 și creșterea de 10.14% pe 3 luni confirmă tendința.",
-        "invalidation": "Scorul de rotație scăzut pe 3 luni ar putea indica o schimbare de sentiment."
+        "thesis": "Sectorul energiei prezintă performanță robustă, cu creșteri semnificative pe 1 și 3 luni.",
+        "confirmation": "Performanța de 9.93% pe 1 lună și 6.65% pe 3 luni confirmă tendința.",
+        "invalidation": "Scăderea de 0.02% pe 5 zile ar putea indica o corecție temporară."
       },
       {
         "symbol": "XLV",
-        "thesis": "Sectorul sănătății prezintă un scor de rotație ridicat și creșteri consistente pe termen scurt și mediu.",
-        "confirmation": "Performanța relativă pe 1 lună de 4.04 și pe 3 luni de 7.63% susține această perspectivă.",
-        "invalidation": "Scorul de rotație scăzut pe 3 luni ar putea semnala o potențială retragere."
+        "thesis": "Sectorul sănătății continuă să înregistreze creșteri consistente pe termen mediu.",
+        "confirmation": "Creșteri de 4.04% pe 1 lună și 7.63% pe 3 luni susțin această perspectivă."
       },
       {
         "symbol": "XLK",
-        "thesis": "Sectorul tehnologiei are un scor de rotație solid și performanță relativă pozitivă pe termen scurt.",
-        "confirmation": "Performanța relativă pe 1 lună de 0.84 și pe 3 luni de 3.87% confirmă tendința.",
-        "invalidation": "Scorul de rotație scăzut pe 3 luni ar putea indica o schimbare de sentiment."
+        "thesis": "Tehnologia informației are potențial de creștere, dar volatilitatea este moderată.",
+        "confirmation": "Performanța de 0.84% pe 1 lună și 3.87% pe 3 luni confirmă tendința pozitivă."
       }
     ],
     "leaders": [
       {
         "symbol": "XLE",
-        "comment": "Performanța relativă pe 1 lună de 9.93 și creșterea de 10.14% pe 3 luni indică un lider clar."
+        "comment": "Performanța de 9.93% pe 1 lună și 6.65% pe 3 luni indică un lider clar în sectorul energiei."
       },
       {
         "symbol": "XLV",
-        "comment": "Performanța relativă pe 1 lună de 4.04 și pe 3 luni de 7.63% îl plasează în top."
+        "comment": "Creșterile de 4.04% pe 1 lună și 7.63% pe 3 luni fac din sănătate un lider în performanță."
       },
       {
         "symbol": "XLK",
-        "comment": "Performanța relativă pe 1 lună de 0.84 și pe 3 luni de 3.87% îl poziționează în top."
+        "comment": "Tehnologia informației înregistrează creșteri de 0.84% pe 1 lună și 3.87% pe 3 luni."
       }
     ],
     "weakening": [
       {
         "symbol": "XLI",
-        "comment": "Performanța relativă pe 1 lună de -5.35 și pe 3 luni de -3.80% indică o slăbire semnificativă."
-      },
-      {
-        "symbol": "XLP",
-        "comment": "Performanța relativă pe 1 lună de -0.83 și pe 3 luni de -3.06% sugerează o slăbire."
+        "comment": "Performanța scăzută de -5.35% pe 1 lună și -3.80% pe 3 luni indică slăbiciune în sectorul industrial."
       },
       {
         "symbol": "XLY",
-        "comment": "Performanța relativă pe 1 lună de -2.91 și pe 3 luni de -4.38% indică o slăbire."
+        "comment": "Scăderile de -2.91% pe 1 lună și -4.38% pe 3 luni arată slăbiciune în consumul discreționar."
+      },
+      {
+        "symbol": "XLP",
+        "comment": "Performanța de -0.83% pe 1 lună și -3.06% pe 3 luni sugerează slăbiciune în consumul de bază."
       }
     ],
-    "crossAsset": "Datele indică o performanță pozitivă pentru GLD și IBIT pe termen scurt, în timp ce IWM și IEF prezintă scăderi. RSP și HYG au performanțe moderate, iar IEF are o scădere semnificativă pe termen scurt.",
+    "crossAsset": "Performanța activelor alternative este mixtă: GLD și IBIT înregistrează creșteri pe 1 lună, în timp ce IWM și IEF au scăderi, indicând divergență în preferințele de risc.",
     "watchlist": [
       "XLE",
       "XLV",
       "XLK",
-      "XLB",
-      "XLF",
-      "XLC",
       "XLI",
-      "XLP"
+      "XLY",
+      "XLP",
+      "XLB",
+      "XLC"
     ],
-    "caveat": "Datele nu confirmă un trend de creștere și nu oferă recomandări de cumpărare."
+    "caveat": "Datele nu oferă confirmare completă a tendințelor viitoare și pot fi influențate de factori macroeconomici neprevăzuți."
   }
 }
