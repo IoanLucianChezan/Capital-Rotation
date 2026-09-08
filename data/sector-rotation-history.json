@@ -1,14 +1,18 @@
 {
   "2026-09-04": {
     "XLK": {
-      "score": 70,
-      "macroAdjustment": 0,
-      "macroReasons": []
+      "score": 66,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
     },
     "XLF": {
-      "score": 64,
-      "macroAdjustment": 0,
-      "macroReasons": []
+      "score": 66,
+      "macroAdjustment": 2,
+      "macroReasons": [
+        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
+      ]
     },
     "XLI": {
       "score": 24,
@@ -37,9 +41,11 @@
       ]
     },
     "XLC": {
-      "score": 40,
-      "macroAdjustment": 0,
-      "macroReasons": []
+      "score": 36,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
     },
     "XLV": {
       "score": 76,
@@ -52,14 +58,18 @@
       "macroReasons": []
     },
     "XLU": {
-      "score": 19,
-      "macroAdjustment": 0,
-      "macroReasons": []
+      "score": 15,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
     },
     "XLRE": {
-      "score": 7,
-      "macroAdjustment": 0,
-      "macroReasons": []
+      "score": 3,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
     }
   }
 }
