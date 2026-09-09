@@ -71,5 +71,68 @@
         "ratele în creștere apasă activele sensibile la durată"
       ]
     }
+  },
+  "2026-09-08": {
+    "XLK": {
+      "score": 67,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLF": {
+      "score": 64,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLI": {
+      "score": 24,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "producția industrială susține ciclicele"
+      ]
+    },
+    "XLY": {
+      "score": 0,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLB": {
+      "score": 47,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "producția industrială susține ciclicele"
+      ]
+    },
+    "XLE": {
+      "score": 81,
+      "macroAdjustment": 3,
+      "macroReasons": [
+        "activitatea industrială susține cererea energetică"
+      ]
+    },
+    "XLC": {
+      "score": 58,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLV": {
+      "score": 66,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLP": {
+      "score": 18,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLU": {
+      "score": 34,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLRE": {
+      "score": 16,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    }
   }
 }
