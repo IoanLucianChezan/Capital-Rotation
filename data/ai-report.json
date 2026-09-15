@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-09-11T23:58:14.690Z",
-  "marketDate": "2026-09-10",
+  "updatedAt": "2026-09-15T00:23:45.577Z",
+  "marketDate": "2026-09-11",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o perioadă de volatilitate moderată, cu randamentele pe 2 și 10 ani stabile și un spread credit high‑yield ușor crescut.",
+    "marketRegime": "Datele indică un mediu de rate moderate, cu creșteri mici la 2 și 10 ani, și un spread credit high yield ușor scăzut. Indicii industriali și de consum discreționar sunt subperformanți, în timp ce energia și tehnologia prezintă potențial de rotație.",
     "earlyRotation": [
       {
-        "symbol": "XLK",
-        "thesis": "Sectorul tehnologiei prezintă un scor de rotație de 69 și creșteri relative de 1,18 pe 1 lună, sugerând potențial de creștere.",
-        "confirmation": "Performanța relative pe 3 luni de 0,40 și volatilitatea redusă confirmă interesul.",
-        "invalidation": "Scorul de rotație scăzut pe 1 lună de -0,0047 ar putea indica o corecție."
+        "symbol": "XLE",
+        "thesis": "Sectorul energiei ar putea beneficia de creșterea prețurilor la petrol și de performanța pozitivă a indicelui XLE, care a înregistrat 10,44% în ultimele 3 luni.",
+        "confirmation": "Performanța XLE a fost susținută de creșterea relative1m de 7,80% și de un rvol de 1,16.",
+        "invalidation": "O scădere a prețurilor petrolului ar putea reduce atractivitatea sectorului."
       },
       {
-        "symbol": "XLE",
-        "thesis": "Energie are un scor de rotație de 69 și creșteri relative de 8,22 pe 1 lună, indicând potențial de creștere.",
-        "confirmation": "Performanța relative pe 3 luni de 7,00 și volatilitatea ridicată susțin interesul.",
-        "invalidation": "Scorul de rotație scăzut pe 1 lună de 0,0656 ar putea semnala o corecție."
+        "symbol": "XLK",
+        "thesis": "Tehnologia informației ar putea fi atractivă datorită scorului de rotație ridicat și a creșterii relative1m de 43,14%.",
+        "confirmation": "XLE a înregistrat un rvol de 1,07, indicând volatilitate moderată.",
+        "invalidation": "Scăderea performanței pe termen scurt a sectorului ar putea diminua atractivitatea."
       },
       {
         "symbol": "XLF",
-        "thesis": "Sectorul financiar are un scor de rotație de 45 și creșteri relative de 0,04 pe 1 lună, sugerând potențial de creștere.",
-        "confirmation": "Performanța relative pe 3 luni de 4,42 și volatilitatea moderată confirmă interesul.",
-        "invalidation": "Scorul de rotație scăzut pe 1 lună de -0,0161 ar putea indica o corecție."
+        "thesis": "Sectorul financiar ar putea fi atractiv datorită creșterii relative3m de 5,20% și a unui rvol de 1,19.",
+        "confirmation": "XLF a înregistrat un scor de rotație de 45, indicând interes moderat.",
+        "invalidation": "Scăderea performanței pe termen scurt ar putea reduce atractivitatea."
       }
     ],
     "leaders": [
       {
-        "symbol": "XLK",
-        "comment": "Tehnologia informației are cea mai mare rotație și performanță relative pe 1 lună."
+        "symbol": "XLE",
+        "comment": "XLE a înregistrat cea mai mare creștere relative3m, indicând potențial de rotație."
       },
       {
-        "symbol": "XLE",
-        "comment": "Energie prezintă cea mai mare creștere relative pe 1 lună."
+        "symbol": "XLK",
+        "comment": "XLK a avut cel mai mare scor de rotație și creștere relative1m."
       },
       {
         "symbol": "XLF",
-        "comment": "Financiare au cea mai mare creștere relative pe 3 luni."
+        "comment": "XLF a înregistrat creșteri relative3m semnificative."
       }
     ],
     "weakening": [
       {
         "symbol": "XLI",
-        "comment": "Industriale au scăderi relative pe 1 și 3 luni și scor de rotație negativ."
+        "comment": "XLI a înregistrat scăderi relative1m și relative3m, indicând slăbire."
       },
       {
         "symbol": "XLY",
-        "comment": "Consum discreționar are scăderi relative pe 1 și 3 luni și scor de rotație negativ."
+        "comment": "XLY a înregistrat scăderi relative1m și relative3m, indicând slăbire."
       },
       {
         "symbol": "XLB",
-        "comment": "Materiale au scăderi relative pe 1 și 3 luni și scor de rotație negativ."
+        "comment": "XLB a înregistrat scăderi relative1m și relative3m, indicând slăbire."
       }
     ],
-    "crossAsset": "IBIT are cea mai mare creștere relative pe 1 lună, sugerând interes în activele de creștere, în timp ce GLD și HYG au creșteri relative moderate pe 1 lună.",
+    "crossAsset": "IBIT a înregistrat o creștere oneMonth de 21,96% și relative1m de 23,02%, sugerând potențial de rotație în sectorul tehnologic.",
     "watchlist": [
-      "XLK 1.18",
-      "XLE 8.22",
-      "XLF 0.04",
-      "XLI -6.51",
-      "XLY -4.45",
-      "XLB -3.01",
-      "XLE 7.00",
-      "XLF 4.42"
+      "XLE",
+      "XLK",
+      "XLF",
+      "XLI",
+      "XLY",
+      "XLB",
+      "IBIT",
+      "RSP"
     ],
-    "caveat": "Datele nu confirmă performanța viitoare și pot exista factori macroeconomici neprevăzuți."
+    "caveat": "Interpretarea se bazează exclusiv pe datele furnizate și nu include informații suplimentare."
   }
 }
