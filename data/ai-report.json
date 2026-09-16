@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-09-15T00:23:45.577Z",
-  "marketDate": "2026-09-11",
+  "updatedAt": "2026-09-16T00:02:59.939Z",
+  "marketDate": "2026-09-14",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică un mediu de rate moderate, cu creșteri mici la 2 și 10 ani, și un spread credit high yield ușor scăzut. Indicii industriali și de consum discreționar sunt subperformanți, în timp ce energia și tehnologia prezintă potențial de rotație.",
+    "marketRegime": "Datele indică o tendință de rotație favorabilă sectorului Energie, Servicii de comunicații și Financiare, în timp ce sectoarele Industriale și Utilități prezintă semne de slăbire.",
     "earlyRotation": [
       {
-        "symbol": "XLE",
-        "thesis": "Sectorul energiei ar putea beneficia de creșterea prețurilor la petrol și de performanța pozitivă a indicelui XLE, care a înregistrat 10,44% în ultimele 3 luni.",
-        "confirmation": "Performanța XLE a fost susținută de creșterea relative1m de 7,80% și de un rvol de 1,16.",
-        "invalidation": "O scădere a prețurilor petrolului ar putea reduce atractivitatea sectorului."
+        "symbol": "XLC",
+        "thesis": "Sectorul Servicii de comunicații are cea mai mare scor de rotație și performanță relativă pozitivă pe termen scurt.",
+        "confirmation": "Performanța relativă pe 1 lună de 4.42% susține această poziție.",
+        "invalidation": "Scorul de rotație scăzut pe termen lung ar putea indica o corecție."
       },
       {
-        "symbol": "XLK",
-        "thesis": "Tehnologia informației ar putea fi atractivă datorită scorului de rotație ridicat și a creșterii relative1m de 43,14%.",
-        "confirmation": "XLE a înregistrat un rvol de 1,07, indicând volatilitate moderată.",
-        "invalidation": "Scăderea performanței pe termen scurt a sectorului ar putea diminua atractivitatea."
+        "symbol": "XLE",
+        "thesis": "Sectorul Energie prezintă cea mai mare creștere relativă pe 1 lună și 3 luni, indicând potențial de creștere.",
+        "confirmation": "Scorul de rotație de 78 și rvol de 1.76 susțin interesul.",
+        "invalidation": "Macroadjustment de 3 ar putea reduce atractivitatea pe termen lung."
       },
       {
         "symbol": "XLF",
-        "thesis": "Sectorul financiar ar putea fi atractiv datorită creșterii relative3m de 5,20% și a unui rvol de 1,19.",
-        "confirmation": "XLF a înregistrat un scor de rotație de 45, indicând interes moderat.",
-        "invalidation": "Scăderea performanței pe termen scurt ar putea reduce atractivitatea."
+        "thesis": "Sectorul Financiare are scor de rotație de 50 și creștere relativă pe 3 luni de 4.34%.",
+        "confirmation": "Scorul de rotație și rvol de 1.29 confirmă potențialul.",
+        "invalidation": "Scorul de rotație moderat ar putea limita creșterea."
       }
     ],
     "leaders": [
       {
         "symbol": "XLE",
-        "comment": "XLE a înregistrat cea mai mare creștere relative3m, indicând potențial de rotație."
+        "comment": "Performanța relativă pe 1 lună de 7.87% și pe 3 luni de 9.55% indică un lider clar."
       },
       {
-        "symbol": "XLK",
-        "comment": "XLK a avut cel mai mare scor de rotație și creștere relative1m."
+        "symbol": "XLC",
+        "comment": "Creșterea relativă pe 1 lună de 4.42% susține poziția de lider."
       },
       {
         "symbol": "XLF",
-        "comment": "XLF a înregistrat creșteri relative3m semnificative."
+        "comment": "Performanța relativă pe 3 luni de 4.34% îl poziționează ca lider în sector."
       }
     ],
     "weakening": [
       {
         "symbol": "XLI",
-        "comment": "XLI a înregistrat scăderi relative1m și relative3m, indicând slăbire."
-      },
-      {
-        "symbol": "XLY",
-        "comment": "XLY a înregistrat scăderi relative1m și relative3m, indicând slăbire."
+        "comment": "Performanța relativă pe 1 lună de -6.35% indică slăbire semnificativă."
       },
       {
         "symbol": "XLB",
-        "comment": "XLB a înregistrat scăderi relative1m și relative3m, indicând slăbire."
+        "comment": "Performanța relativă pe 1 lună de -1.29% sugerează slăbire moderată."
+      },
+      {
+        "symbol": "XLY",
+        "comment": "Performanța relativă pe 1 lună de -2.54% indică slăbire în sector."
       }
     ],
-    "crossAsset": "IBIT a înregistrat o creștere oneMonth de 21,96% și relative1m de 23,02%, sugerând potențial de rotație în sectorul tehnologic.",
+    "crossAsset": "RSP și IWM prezintă scăderi pe 1 lună, în timp ce IBIT înregistrează creșteri semnificative, indicând potențial de rotație către active de creștere.",
     "watchlist": [
       "XLE",
-      "XLK",
+      "XLC",
       "XLF",
       "XLI",
-      "XLY",
       "XLB",
-      "IBIT",
-      "RSP"
+      "XLY",
+      "RSP",
+      "IWM"
     ],
-    "caveat": "Interpretarea se bazează exclusiv pe datele furnizate și nu include informații suplimentare."
+    "caveat": "Analiza se bazează exclusiv pe datele furnizate și nu include informații suplimentare."
   }
 }
