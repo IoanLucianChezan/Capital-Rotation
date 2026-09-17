@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T00:12:31.399Z",
+  "updatedAt": "2026-09-17T23:59:38.716Z",
   "source": "FRED",
   "series": {
     "DGS2": {
@@ -7,65 +7,65 @@
       "unit": "%",
       "group": "Rate",
       "latest": {
-        "date": "2026-09-15",
-        "value": 4.67
+        "date": "2026-09-16",
+        "value": 4.74
       },
       "change3": 0.11000000000000032,
-      "change5": 0.28000000000000025,
-      "change20": 0.47999999999999954,
-      "change60": 0.5099999999999998
+      "change5": 0.3100000000000005,
+      "change20": 0.5499999999999998,
+      "change60": 0.6299999999999999
     },
     "DGS10": {
       "name": "Randament SUA 10 ani",
       "unit": "%",
       "group": "Rate",
       "latest": {
-        "date": "2026-09-15",
-        "value": 5
+        "date": "2026-09-16",
+        "value": 5.01
       },
       "change3": 0.04999999999999982,
-      "change5": 0.20000000000000018,
-      "change20": 0.29000000000000004,
-      "change60": 0.5
+      "change5": 0.17999999999999972,
+      "change20": 0.35999999999999943,
+      "change60": 0.5999999999999996
     },
     "DGS30": {
       "name": "Randament SUA 30 ani",
       "unit": "%",
       "group": "Rate",
       "latest": {
-        "date": "2026-09-15",
-        "value": 5.36
+        "date": "2026-09-16",
+        "value": 5.35
       },
-      "change3": -0.009999999999999787,
-      "change5": 0.11000000000000032,
-      "change20": 0.08000000000000007,
-      "change60": 0.41999999999999993
+      "change3": 0,
+      "change5": 0.0699999999999994,
+      "change20": 0.15999999999999925,
+      "change60": 0.4899999999999993
     },
     "BAMLH0A0HYM2": {
       "name": "Spread credit High Yield",
       "unit": "pp",
       "group": "Credit",
       "latest": {
-        "date": "2026-09-15",
-        "value": 2.76
+        "date": "2026-09-16",
+        "value": 2.7
       },
-      "change3": 0.05999999999999961,
-      "change5": 0.08999999999999986,
-      "change20": 0.009999999999999787,
-      "change60": 0.04999999999999982
+      "change3": 0.050000000000000266,
+      "change5": -0.009999999999999787,
+      "change20": -0.029999999999999805,
+      "change60": -0.05999999999999961
     },
     "BAMLC0A0CM": {
       "name": "Spread credit Investment Grade",
       "unit": "pp",
       "group": "Credit",
       "latest": {
-        "date": "2026-09-15",
-        "value": 0.8
+        "date": "2026-09-16",
+        "value": 0.78
       },
-      "change3": 0,
-      "change5": -0.010000000000000009,
-      "change20": -0.019999999999999907,
-      "change60": 0.06000000000000005
+      "change3": -0.020000000000000018,
+      "change5": -0.030000000000000027,
+      "change20": -0.030000000000000027,
+      "change60": 0.030000000000000027
     },
     "INDPRO": {
       "name": "Producție industrială",
@@ -111,13 +111,13 @@
       "unit": "mii",
       "group": "Macro",
       "latest": {
-        "date": "2026-09-05",
-        "value": 206000
+        "date": "2026-09-12",
+        "value": 196000
       },
-      "change3": -1000,
-      "change5": 6000,
-      "change20": -9000,
-      "change60": -15000
+      "change3": -8000,
+      "change5": -16000,
+      "change20": 6000,
+      "change60": -22000
     }
   }
 }
