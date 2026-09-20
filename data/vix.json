@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T17:40:33.135Z",
+  "updatedAt": "2026-09-20T17:42:11.779Z",
   "indices": [
     {
       "name": "VIX9D",
@@ -35,12 +35,14 @@
     {
       "label": "M1",
       "value": null,
-      "unavailable": "Contractul nu este disponibil momentan prin furnizorul de date."
+      "unavailable": "Contractul nu este disponibil momentan prin furnizorul de date.",
+      "diagnostic": "VX1!: **symbol** or **figi** parameter is missing or invalid. Please provide a valid symbol according to API documentation: https://twelvedata.com/docs#reference-data | VX1: This symbol is available starting with the Grow or Venture plan. Consider upgrading now at https://twelvedata.com/pricing"
     },
     {
       "label": "M2",
       "value": null,
-      "unavailable": "Contractul nu este disponibil momentan prin furnizorul de date."
+      "unavailable": "Contractul nu este disponibil momentan prin furnizorul de date.",
+      "diagnostic": "VX2!: **symbol** or **figi** parameter is missing or invalid. Please provide a valid symbol according to API documentation: https://twelvedata.com/docs#reference-data | VX2: **symbol** or **figi** parameter is missing or invalid. Please provide a valid symbol according to API documentation: https://"
     }
   ],
   "futuresStructure": null,
