@@ -4,6 +4,6 @@
   "type": "module",
   "scripts": {
     "refresh": "node scripts/refresh-market-data.mjs",
-    "check": "node --check scripts/refresh-market-data.mjs && node --check assets/app.js"
+    "check": "node --check scripts/refresh-market-data.mjs && node --check scripts/refresh-sector-rotation-history.mjs && node --check scripts/generate-ai-report.mjs && node --check assets/weekly.js && node --check assets/cross-asset.js && node --check assets/ai-report.js"
   }
 }

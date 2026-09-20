@@ -1,18 +1,14 @@
 {
   "2026-09-04": {
     "XLK": {
-      "score": 66,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
+      "score": 70,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLF": {
-      "score": 66,
-      "macroAdjustment": 2,
-      "macroReasons": [
-        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
-      ]
+      "score": 64,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLI": {
       "score": 24,
@@ -41,11 +37,9 @@
       ]
     },
     "XLC": {
-      "score": 36,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
+      "score": 40,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLV": {
       "score": 76,
@@ -58,159 +52,19 @@
       "macroReasons": []
     },
     "XLU": {
-      "score": 15,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLRE": {
-      "score": 3,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    }
-  },
-  "2026-09-08": {
-    "XLK": {
-      "score": 67,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLF": {
-      "score": 64,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLI": {
-      "score": 24,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLY": {
-      "score": 0,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLB": {
-      "score": 47,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLE": {
-      "score": 81,
-      "macroAdjustment": 3,
-      "macroReasons": [
-        "activitatea industrială susține cererea energetică"
-      ]
-    },
-    "XLC": {
-      "score": 58,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLV": {
-      "score": 66,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLP": {
-      "score": 18,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLU": {
-      "score": 34,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLRE": {
-      "score": 16,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    }
-  },
-  "2026-09-09": {
-    "XLK": {
-      "score": 79,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLF": {
-      "score": 70,
-      "macroAdjustment": 2,
-      "macroReasons": [
-        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
-      ]
-    },
-    "XLI": {
       "score": 19,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLY": {
-      "score": 0,
       "macroAdjustment": 0,
       "macroReasons": []
-    },
-    "XLB": {
-      "score": 22,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLE": {
-      "score": 78,
-      "macroAdjustment": 3,
-      "macroReasons": [
-        "activitatea industrială susține cererea energetică"
-      ]
-    },
-    "XLC": {
-      "score": 38,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLV": {
-      "score": 58,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLP": {
-      "score": 0,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLU": {
-      "score": 30,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
     },
     "XLRE": {
-      "score": 10,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
+      "score": 7,
+      "macroAdjustment": 0,
+      "macroReasons": []
     }
   },
-  "2026-09-10": {
+  "2026-09-18": {
     "XLK": {
-      "score": 69,
+      "score": 63,
       "macroAdjustment": -4,
       "macroReasons": [
         "ratele în creștere apasă activele sensibile la durată"
@@ -224,45 +78,45 @@
       ]
     },
     "XLI": {
-      "score": 19,
+      "score": 21,
       "macroAdjustment": 4,
       "macroReasons": [
         "producția industrială susține ciclicele"
       ]
     },
     "XLY": {
-      "score": 3,
+      "score": 0,
       "macroAdjustment": 0,
       "macroReasons": []
     },
     "XLB": {
-      "score": 17,
+      "score": 9,
       "macroAdjustment": 4,
       "macroReasons": [
         "producția industrială susține ciclicele"
       ]
     },
     "XLE": {
-      "score": 69,
+      "score": 74,
       "macroAdjustment": 3,
       "macroReasons": [
         "activitatea industrială susține cererea energetică"
       ]
     },
     "XLC": {
-      "score": 41,
+      "score": 29,
       "macroAdjustment": -4,
       "macroReasons": [
         "ratele în creștere apasă activele sensibile la durată"
       ]
     },
     "XLV": {
-      "score": 48,
+      "score": 67,
       "macroAdjustment": 0,
       "macroReasons": []
     },
     "XLP": {
-      "score": 0,
+      "score": 17,
       "macroAdjustment": 0,
       "macroReasons": []
     },
@@ -274,372 +128,7 @@
       ]
     },
     "XLRE": {
-      "score": 0,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    }
-  },
-  "2026-09-11": {
-    "XLK": {
-      "score": 59,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLF": {
-      "score": 45,
-      "macroAdjustment": 2,
-      "macroReasons": [
-        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
-      ]
-    },
-    "XLI": {
-      "score": 16,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLY": {
-      "score": 0,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLB": {
-      "score": 9,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLE": {
-      "score": 81,
-      "macroAdjustment": 3,
-      "macroReasons": [
-        "activitatea industrială susține cererea energetică"
-      ]
-    },
-    "XLC": {
-      "score": 36,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLV": {
-      "score": 28,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLP": {
-      "score": 0,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLU": {
-      "score": 0,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLRE": {
-      "score": 7,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    }
-  },
-  "2026-09-14": {
-    "XLK": {
-      "score": 16,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLF": {
-      "score": 50,
-      "macroAdjustment": 2,
-      "macroReasons": [
-        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
-      ]
-    },
-    "XLI": {
-      "score": 4,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLY": {
-      "score": 0,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLB": {
-      "score": 14,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLE": {
-      "score": 78,
-      "macroAdjustment": 3,
-      "macroReasons": [
-        "activitatea industrială susține cererea energetică"
-      ]
-    },
-    "XLC": {
-      "score": 86,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLV": {
-      "score": 62,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLP": {
-      "score": 38,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLU": {
-      "score": 0,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLRE": {
-      "score": 0,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    }
-  },
-  "2026-09-15": {
-    "XLK": {
-      "score": 11,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLF": {
-      "score": 50,
-      "macroAdjustment": 2,
-      "macroReasons": [
-        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
-      ]
-    },
-    "XLI": {
-      "score": 4,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLY": {
-      "score": 3,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLB": {
-      "score": 9,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLE": {
-      "score": 90,
-      "macroAdjustment": 3,
-      "macroReasons": [
-        "activitatea industrială susține cererea energetică"
-      ]
-    },
-    "XLC": {
-      "score": 76,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLV": {
-      "score": 83,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLP": {
-      "score": 20,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLU": {
-      "score": 0,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLRE": {
-      "score": 0,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    }
-  },
-  "2026-09-16": {
-    "XLK": {
-      "score": 16,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLF": {
-      "score": 35,
-      "macroAdjustment": 2,
-      "macroReasons": [
-        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
-      ]
-    },
-    "XLI": {
-      "score": 11,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLY": {
-      "score": 3,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLB": {
-      "score": 12,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLE": {
-      "score": 71,
-      "macroAdjustment": 3,
-      "macroReasons": [
-        "activitatea industrială susține cererea energetică"
-      ]
-    },
-    "XLC": {
-      "score": 76,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLV": {
-      "score": 81,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLP": {
-      "score": 30,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLU": {
-      "score": 0,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLRE": {
-      "score": 0,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    }
-  },
-  "2026-09-17": {
-    "XLK": {
-      "score": 65,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLF": {
-      "score": 30,
-      "macroAdjustment": 2,
-      "macroReasons": [
-        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
-      ]
-    },
-    "XLI": {
-      "score": 9,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLY": {
-      "score": 5,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLB": {
-      "score": 22,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "producția industrială susține ciclicele"
-      ]
-    },
-    "XLE": {
-      "score": 72,
-      "macroAdjustment": 3,
-      "macroReasons": [
-        "activitatea industrială susține cererea energetică"
-      ]
-    },
-    "XLC": {
-      "score": 61,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLV": {
-      "score": 73,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLP": {
-      "score": 15,
-      "macroAdjustment": 0,
-      "macroReasons": []
-    },
-    "XLU": {
-      "score": 0,
-      "macroAdjustment": -4,
-      "macroReasons": [
-        "ratele în creștere apasă activele sensibile la durată"
-      ]
-    },
-    "XLRE": {
-      "score": 0,
+      "score": 6,
       "macroAdjustment": -4,
       "macroReasons": [
         "ratele în creștere apasă activele sensibile la durată"

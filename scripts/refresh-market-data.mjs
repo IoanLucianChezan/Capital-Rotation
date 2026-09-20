@@ -1,4 +1,4 @@
-import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
+import { mkdir, rename, writeFile } from "node:fs/promises";
 import { etfs } from "../config/etfs.mjs";
 
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
@@ -97,30 +97,21 @@ async function fetchSeries(symbol) {
 const average = (values) => values.reduce((sum, value) => sum + value, 0) / values.length;
 const pct = (newer, older) => newer / older - 1;
 function returnFor(closes, sessions) { return pct(closes.at(-1), closes.at(-1 - sessions)); }
-function scoreRow(etf, points, spy, index = points.length - 1) {
-  const availablePoints = points.slice(0, index + 1);
-  const closes = availablePoints.map((p) => p.close);
-  const latest = availablePoints.at(-1);
+function buildRow(etf, points, spy) {
+  const closes = points.map((p) => p.close);
+  const latest = points.at(-1);
   const change = returnFor(closes, 1);
   const oneMonth = returnFor(closes, 21);
   const threeMonths = returnFor(closes, 63);
-  const rvol = latest.volume > 0 ? latest.volume / average(availablePoints.slice(-21, -1).map((p) => p.volume).filter((v) => v > 0)) : null;
+  const priorVolumes = points.slice(-21, -1).map((p) => p.volume).filter((v) => v > 0);
+  const rvol = latest.volume > 0 && priorVolumes.length ? latest.volume / average(priorVolumes) : null;
   const vs50 = pct(latest.close, average(closes.slice(-50)));
   const vs200 = pct(latest.close, average(closes.slice(-200)));
   const relative1m = (oneMonth - spy.oneMonth) * 100;
   const relative3m = (threeMonths - spy.threeMonths) * 100;
-  const pointsScore = [vs200 > 0 ? 2 : -2, vs50 > 0 ? 2 : -2,
-    relative1m > 2 ? 2 : relative1m > 0 ? 1 : relative1m > -2 ? -1 : -2,
-    relative3m > 2 ? 2 : relative3m > 0 ? 1 : relative3m > -2 ? -1 : -2,
-    returnFor(closes, 5) > 0 ? 1 : -1,
-    rvol && rvol > 1.3 ? (change > 0 ? 1 : -1) : 0];
-  const score = pointsScore.reduce((sum, value) => sum + value, 0);
-  const classification = score >= 8 ? (returnFor(closes, 126) < 0.05 ? "Acumulare puternică" : "Leadership consacrat")
-    : score >= 5 ? "Leadership emergent" : score >= 2 ? "Trend sănătos" : score >= -1 ? "Neutru"
-    : score >= -4 ? "Slăbire" : score >= -7 ? "Distribuție" : "Ieșire de capital";
   return { ...etf, date: latest.date, price: latest.close, volume: latest.volume || null, rvol,
     change, fiveDay: returnFor(closes, 5), oneMonth, threeMonths, sixMonths: returnFor(closes, 126), oneYearPrice: closes.length > 252 ? returnFor(closes, 252) : null,
-    vs50, vs200, relative1m, relative3m, score, classification };
+    vs50, vs200, relative1m, relative3m };
 }
 
 async function atomicJson(fileName, value) {
@@ -140,31 +131,9 @@ for (const etf of etfs) {
 }
 const spyData = fetched.find((item) => item.etf.symbol === "SPY").points.map((p) => p.close);
 const spy = { oneMonth: returnFor(spyData, 21), threeMonths: returnFor(spyData, 63) };
-const rows = fetched.map(({ etf, points }) => scoreRow(etf, points, spy));
-
-let history = {};
-try { history = JSON.parse(await readFile(new URL("history.json", DATA_DIR), "utf8")); } catch { /* first run */ }
-const spyPoints = fetched.find((item) => item.etf.symbol === "SPY").points;
-const byDate = new Map(fetched.map((item) => [item.etf.symbol, new Map(item.points.map((point, pointIndex) => [point.date, pointIndex]))]));
-const historicalDates = spyPoints.slice(-126).map((point) => point.date);
-for (const date of historicalDates) {
-  const spyIndex = byDate.get("SPY").get(date);
-  if (spyIndex < 200) continue;
-  const spyCloses = spyPoints.slice(0, spyIndex + 1).map((point) => point.close);
-  const spyAtDate = { oneMonth: returnFor(spyCloses, 21), threeMonths: returnFor(spyCloses, 63) };
-  const scores = {};
-  for (const item of fetched) {
-    const pointIndex = byDate.get(item.etf.symbol).get(date);
-    if (pointIndex != null && pointIndex >= 200) scores[item.etf.symbol] = scoreRow(item.etf, item.points, spyAtDate, pointIndex).score;
-  }
-  if (Object.keys(scores).length === etfs.length) history[date] = scores;
-}
+const rows = fetched.map(({ etf, points }) => buildRow(etf, points, spy));
 const today = rows[0].date;
-history[today] = Object.fromEntries(rows.map((row) => [row.symbol, row.score]));
-const dates = Object.keys(history).sort().slice(-130);
-history = Object.fromEntries(dates.map((date) => [date, history[date]]));
 const providers = [...new Set(fetched.map((item) => item.provider))].join(" + ");
-await atomicJson("history.json", history);
 await atomicJson("latest.json", { updatedAt: new Date().toISOString(), marketDate: today, source: providers, rows,
   methodology: { close: "Ultimul close zilnic disponibil", windows: { fiveDay: 5, oneMonth: 21, threeMonths: 63, sixMonths: 126, oneYear: 252, volumeAverage: 20 }, totalReturn: false } });
 console.log(`Saved ${rows.length} instruments for ${today}.`);
