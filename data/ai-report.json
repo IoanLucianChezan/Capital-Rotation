@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-09-18T23:59:10.381Z",
-  "marketDate": "2026-09-17",
+  "updatedAt": "2026-09-20T16:59:21.917Z",
+  "marketDate": "2026-09-18",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică un regim de rotație mixt, cu sectorul tehnologiei informației și sănătății în top, iar energia în poziție de lider. Macro indicatorii arată o ușoară creștere a randamentului pe 2 ani și o scădere a spread-urilor de credit. În general, sentimentul este moderat.",
+    "marketRegime": "Datele indică o tendință de rotație favorabilă sectorului Energie, urmat de IT și Sănătate, în context de randamente moderate pe termen scurt și creșteri moderate ale PIB-ului industrial.",
     "earlyRotation": [
       {
+        "symbol": "XLE",
+        "thesis": "Sectorul Energie prezintă cea mai ridicată scor de rotație (74) și creșteri relative pozitive pe 1 și 3 luni.",
+        "confirmation": "Performanța pozitivă a sectorului pe 1 și 3 luni confirmă potențialul de creștere.",
+        "invalidation": "Scorul de rotație scăzut pe 5 zile ar putea indica volatilitate pe termen scurt."
+      },
+      {
         "symbol": "XLK",
-        "thesis": "Sectorul tehnologiei informației prezintă un scor de rotație de 65 și un relative 1M pozitiv, sugerând potențial de creștere.",
-        "confirmation": "Relative 1M de 1.95 și relative 3M de -1.70 indică volatilitate.",
-        "invalidation": "Score de 5 și rvol de 1.16 ar putea limita performanța."
+        "thesis": "Sectorul IT are un scor de rotație de 63 și creșteri relative pozitive pe 1 lună.",
+        "confirmation": "Creșterea relative pe 1 lună susține potențialul de rotație.",
+        "invalidation": "Scorul de rotație scăzut pe 3 luni ar putea semnala o corecție pe termen mediu."
       },
       {
         "symbol": "XLV",
-        "thesis": "Sectorul sănătății are un scor de rotație de 73 și relative 3M pozitiv de 9.09, indicând reziliență.",
-        "confirmation": "Relative 1M de 0.09 și relative 3M de 9.09 confirmă tendința.",
-        "invalidation": "Score de 8 și rvol de 0.74 ar putea restrânge creșterea."
-      },
-      {
-        "symbol": "XLE",
-        "thesis": "Energia are un scor de rotație de 72 și relative 3M de 15.02, sugerând potențial de creștere.",
-        "confirmation": "Relative 1M de 1.89 și relative 3M de 15.02 confirmă.",
-        "invalidation": "Score de 6 și rvol de 1.20 ar putea limita performanța."
+        "thesis": "Sectorul Sănătate are scor de rotație 67 și creșteri relative pozitive pe 3 luni.",
+        "confirmation": "Creșterea pe 3 luni susține potențialul de rotație.",
+        "invalidation": "Scorul de rotație scăzut pe 1 lună ar putea indica o corecție pe termen scurt."
       }
     ],
     "leaders": [
       {
         "symbol": "XLE",
-        "comment": "Energia se evidențiază cu un relative 3M de 15.02 și un scor de rotație de 72."
-      },
-      {
-        "symbol": "XLV",
-        "comment": "Sănătatea are un relative 3M de 9.09 și un scor de rotație de 73."
+        "comment": "Performanța pozitivă pe 1 și 3 luni și scorul ridicat de rotație îl fac liderul sectorului."
       },
       {
         "symbol": "XLK",
-        "comment": "Tehnologia informației are un relative 1M de 1.95 și un scor de rotație de 65."
+        "comment": "Scorul ridicat de rotație și creșterea pe 1 lună îl plasează în topul liderilor."
+      },
+      {
+        "symbol": "XLV",
+        "comment": "Creșterea pe 3 luni și scorul de rotație îl poziționează ca lider."
       }
     ],
     "weakening": [
       {
         "symbol": "XLI",
-        "comment": "Industriale prezintă relative 1M și 3M negative și un scor de rotație de 9."
+        "comment": "Scorul scăzut de rotație și performanța negativă pe 1 și 3 luni indică slăbire."
       },
       {
         "symbol": "XLY",
-        "comment": "Consum discreționar are relative 1M și 3M negative și un scor de rotație de 5."
+        "comment": "Scorul de rotație zero și performanța negativă pe 1 și 3 luni sugerează slăbire."
       },
       {
-        "symbol": "XLP",
-        "comment": "Consum de bază are relative 1M și 3M negative și un scor de rotație de 15."
+        "symbol": "XLB",
+        "comment": "Scorul scăzut de rotație și performanța negativă pe 1 și 3 luni indică slăbire."
       }
     ],
-    "crossAsset": "RSP și IWM au performanțe negative pe 1M, în timp ce IBIT are o creștere de 18.94% pe 1M, indicând potențial de diversificare. GLD rămâne stabil, iar IEF și HYG au scăderi moderate.",
+    "crossAsset": "IBIT are performanță pozitivă pe 1 și 3 luni, în timp ce RSP, IWM și IEF prezintă scăderi, sugerând o preferință pentru active cu creștere.",
     "watchlist": [
+      "XLE",
       "XLK",
       "XLV",
-      "XLE",
       "XLI",
       "XLY",
-      "XLP",
+      "XLB",
       "RSP",
-      "IWM"
+      "IBIT"
     ],
-    "caveat": "Analiza se bazează exclusiv pe datele furnizate și nu include informații suplimentare."
+    "caveat": "Datele nu confirmă un trend de creștere garantat și pot exista variații neașteptate."
   }
 }
