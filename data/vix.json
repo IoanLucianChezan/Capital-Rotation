@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T17:40:07.350Z",
+  "updatedAt": "2026-09-20T17:40:33.135Z",
   "indices": [
     {
       "name": "VIX9D",
@@ -35,12 +35,12 @@
     {
       "label": "M1",
       "value": null,
-      "unavailable": "Twelve Data nu este configurat."
+      "unavailable": "Contractul nu este disponibil momentan prin furnizorul de date."
     },
     {
       "label": "M2",
       "value": null,
-      "unavailable": "Twelve Data nu este configurat."
+      "unavailable": "Contractul nu este disponibil momentan prin furnizorul de date."
     }
   ],
   "futuresStructure": null,

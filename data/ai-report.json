@@ -1,68 +1,66 @@
 {
-  "updatedAt": "2026-09-20T16:59:21.917Z",
+  "updatedAt": "2026-09-20T17:40:34.563Z",
   "marketDate": "2026-09-18",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o tendință de rotație favorabilă sectorului Energie, urmat de IT și Sănătate, în context de randamente moderate pe termen scurt și creșteri moderate ale PIB-ului industrial.",
+    "marketRegime": "Datele indică o rotație moderată, cu tehnologia și energia în avans, dar cu semne de încetinire în sectorul industrial.",
     "earlyRotation": [
       {
-        "symbol": "XLE",
-        "thesis": "Sectorul Energie prezintă cea mai ridicată scor de rotație (74) și creșteri relative pozitive pe 1 și 3 luni.",
-        "confirmation": "Performanța pozitivă a sectorului pe 1 și 3 luni confirmă potențialul de creștere.",
-        "invalidation": "Scorul de rotație scăzut pe 5 zile ar putea indica volatilitate pe termen scurt."
+        "symbol": "XLK",
+        "thesis": "Sectorul IT prezintă un scor de rotație de 63 și creșteri relative de 4.2% pe 1 lună, sugerând potențial de performanță.",
+        "confirmation": "Confirmarea lipsește, deoarece datele relative pe 3 luni sunt negative.",
+        "invalidation": "Nu există dovezi de rezistență pe termen scurt, iar volumul relativ este moderat."
       },
       {
-        "symbol": "XLK",
-        "thesis": "Sectorul IT are un scor de rotație de 63 și creșteri relative pozitive pe 1 lună.",
-        "confirmation": "Creșterea relative pe 1 lună susține potențialul de rotație.",
-        "invalidation": "Scorul de rotație scăzut pe 3 luni ar putea semnala o corecție pe termen mediu."
+        "symbol": "XLE",
+        "thesis": "Energia are cel mai mare scor de rotație (74) și creșteri relative de 17.6% pe 3 luni, indicând potențial de creștere.",
+        "confirmation": "Confirmarea lipsește, deoarece variația pe 1 lună este pozitivă dar mică.",
+        "invalidation": "Nu există semne de rezistență pe termen scurt."
       },
       {
         "symbol": "XLV",
-        "thesis": "Sectorul Sănătate are scor de rotație 67 și creșteri relative pozitive pe 3 luni.",
-        "confirmation": "Creșterea pe 3 luni susține potențialul de rotație.",
-        "invalidation": "Scorul de rotație scăzut pe 1 lună ar putea indica o corecție pe termen scurt."
+        "thesis": "Sănătatea are un scor de rotație de 67 și creșteri relative de 10.7% pe 3 luni, sugerând potențial de performanță."
       }
     ],
     "leaders": [
       {
-        "symbol": "XLE",
-        "comment": "Performanța pozitivă pe 1 și 3 luni și scorul ridicat de rotație îl fac liderul sectorului."
+        "symbol": "XLK",
+        "comment": "Tehnologia a înregistrat creșteri relative de 4.2% pe 1 lună și 10.3% pe 3 luni."
       },
       {
-        "symbol": "XLK",
-        "comment": "Scorul ridicat de rotație și creșterea pe 1 lună îl plasează în topul liderilor."
+        "symbol": "XLE",
+        "comment": "Energia a înregistrat creșteri relative de 17.6% pe 3 luni, cea mai mare dintre sectoare."
       },
       {
         "symbol": "XLV",
-        "comment": "Creșterea pe 3 luni și scorul de rotație îl poziționează ca lider."
+        "comment": "Sănătatea a înregistrat creșteri relative de 10.7% pe 3 luni."
       }
     ],
     "weakening": [
       {
         "symbol": "XLI",
-        "comment": "Scorul scăzut de rotație și performanța negativă pe 1 și 3 luni indică slăbire."
+        "comment": "Industria a înregistrat scăderi relative de 5.7% pe 1 lună și 8.2% pe 3 luni."
       },
       {
-        "symbol": "XLY",
-        "comment": "Scorul de rotație zero și performanța negativă pe 1 și 3 luni sugerează slăbire."
+        "symbol": "XLP",
+        "comment": "Consum de bază a înregistrat scăderi relative de 3.4% pe 1 lună și 2.6% pe 3 luni."
       },
       {
-        "symbol": "XLB",
-        "comment": "Scorul scăzut de rotație și performanța negativă pe 1 și 3 luni indică slăbire."
+        "symbol": "XLU",
+        "comment": "Utilitățile au înregistrat scăderi relative de 5.7% pe 1 lună și 10.2% pe 3 luni."
       }
     ],
-    "crossAsset": "IBIT are performanță pozitivă pe 1 și 3 luni, în timp ce RSP, IWM și IEF prezintă scăderi, sugerând o preferință pentru active cu creștere.",
+    "crossAsset": "Datele cross-asset arată că IBIT are cea mai mare creștere relative pe 1 lună (19.6%) și pe 3 luni (27.2%), în timp ce IWM și RSP au scăderi relative semnificative.",
     "watchlist": [
-      "XLE",
       "XLK",
+      "XLE",
       "XLV",
       "XLI",
-      "XLY",
-      "XLB",
+      "XLP",
+      "XLU",
       "RSP",
-      "IBIT"
+      "IWM"
     ],
-    "caveat": "Datele nu confirmă un trend de creștere garantat și pot exista variații neașteptate."
+    "caveat": "Analiza se bazează exclusiv pe datele furnizate și nu include informații suplimentare."
   }
 }
