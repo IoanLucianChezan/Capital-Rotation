@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Structura indicilor și futures VIX." />
+    <title>VIX · Sector Rotation Monitor</title>
+    <link rel="stylesheet" href="assets/styles.css?v=20260920-2" />
+  </head>
+  <body>
+    <main class="page-shell vix-page">
+      <header><div class="topbar"><p class="eyebrow">ETF market monitor</p><nav class="site-nav" aria-label="Navigație principală"><a href="weekly.html?v=20260920-2">Sector Rotation Weekly</a><a href="cross-asset.html?v=20260920-2">Cross-asset</a><a class="active" href="vix.html?v=20260920-2">VIX</a><a href="ai-report.html?v=20260920-2">Raport AI</a><a href="info.html?v=20260920-2">Info</a></nav></div><h1>VIX și structura volatilității</h1><p id="vix-status" class="status">Se încarcă datele…</p></header>
+      <section id="vix-indices" class="vix-cards" aria-label="Indici de volatilitate"></section>
+      <section class="vix-grid">
+        <article class="vix-panel"><h2>Structura indicilor</h2><dl class="vix-metrics"><div><dt>VIX9D / VIX</dt><dd id="vix9d-vix">—</dd></div><div><dt>VIX / VIX3M</dt><dd id="vix-vix3m">—</dd></div></dl><p>VIX vs VIX3M: <strong id="index-structure" class="vix-badge">—</strong></p><small>Acesta este raportul dintre indici. Nu este denumit contango sau backwardation.</small></article>
+        <article class="vix-panel"><h2>Futures VIX</h2><div class="table-wrap"><table class="vix-table"><thead><tr><th>Scadență</th><th>Simbol</th><th>Valoare</th><th>Variație</th><th>Variație %</th></tr></thead><tbody id="futures-rows"></tbody></table></div><p>M1 → M2: <strong id="futures-structure" class="vix-badge">—</strong></p><p>Diferență M1–M2: <strong id="m1-m2">—</strong></p></article>
+      </section>
+      <section class="vix-panel vix-reading"><div><h2>Interpretare</h2><p id="vix-reading" class="muted">—</p></div><button id="reload-vix" type="button">Reîncarcă</button></section>
+      <section class="methodology"><strong>Notă importantă.</strong> CONTANGO și BACKWARDATION se aplică exclusiv curbei futures VIX. Pentru comparația VIX cu VIX3M folosim numai NORMAL / UPWARD SLOPING sau INVERTED.</section>
+    </main>
+    <script type="module" src="assets/vix.js"></script>
+  </body>
+</html>

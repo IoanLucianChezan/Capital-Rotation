@@ -1,0 +1,52 @@
+{
+  "updatedAt": "2026-09-20T17:40:07.350Z",
+  "indices": [
+    {
+      "name": "VIX9D",
+      "value": 12.27,
+      "change": -1.12,
+      "changePercent": -9.128,
+      "asOf": "2026-09-18T16:15:01",
+      "source": "Cboe delayed"
+    },
+    {
+      "name": "VIX",
+      "value": 14.81,
+      "change": -0.63,
+      "changePercent": -4.2539,
+      "asOf": "2026-09-18T16:15:01",
+      "source": "Cboe delayed"
+    },
+    {
+      "name": "VIX3M",
+      "value": 18.24,
+      "change": -0.31,
+      "changePercent": -1.6996,
+      "asOf": "2026-09-18T16:15:01",
+      "source": "Cboe delayed"
+    }
+  ],
+  "ratios": {
+    "vix9dToVix": 0.8284942606347062,
+    "vixToVix3m": 0.811951754385965
+  },
+  "indexStructure": "NORMAL / UPWARD SLOPING",
+  "futures": [
+    {
+      "label": "M1",
+      "value": null,
+      "unavailable": "Twelve Data nu este configurat."
+    },
+    {
+      "label": "M2",
+      "value": null,
+      "unavailable": "Twelve Data nu este configurat."
+    }
+  ],
+  "futuresStructure": null,
+  "futuresM1M2Percent": null,
+  "methodology": {
+    "indexStructure": "VIX comparat cu VIX3M: NORMAL / UPWARD SLOPING când VIX este sub VIX3M; INVERTED când VIX este peste sau egal cu VIX3M.",
+    "futuresStructure": "CONTANGO și BACKWARDATION sunt folosite exclusiv pentru futures VIX, pe baza diferenței procentuale M2 față de M1."
+  }
+}
