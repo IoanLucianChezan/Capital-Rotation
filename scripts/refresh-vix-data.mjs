@@ -18,6 +18,7 @@ async function cboeIndex(name, symbol) {
 
 async function twelveQuote(label, candidates) {
   if (!TWELVE_KEY) return { label, value: null, unavailable: "Twelve Data nu este configurat." };
+  const diagnostics = [];
   for (const symbol of candidates) {
     const url = new URL("https://api.twelvedata.com/quote");
     url.search = new URLSearchParams({ symbol, apikey: TWELVE_KEY });
@@ -26,9 +27,10 @@ async function twelveQuote(label, candidates) {
       const body = await response.json();
       const value = Number(body.close ?? body.price);
       if (response.ok && Number.isFinite(value) && value > 0) return { label, symbol: body.symbol || symbol, value, change: Number.isFinite(Number(body.change)) ? Number(body.change) : null, changePercent: Number.isFinite(Number(body.percent_change)) ? Number(body.percent_change) : null, source: "Twelve Data" };
-    } catch { /* încearcă următorul format de simbol */ }
+      diagnostics.push(`${symbol}: ${body.message || body.code || `HTTP ${response.status}`}`);
+    } catch (error) { diagnostics.push(`${symbol}: ${error.message}`); }
   }
-  return { label, value: null, unavailable: "Contractul nu este disponibil momentan prin furnizorul de date." };
+  return { label, value: null, unavailable: "Contractul nu este disponibil momentan prin furnizorul de date.", diagnostic: diagnostics.join(" | ").slice(0, 300) };
 }
 
 const indexResults = await Promise.all(indices.map(([name, symbol]) => cboeIndex(name, symbol)));
