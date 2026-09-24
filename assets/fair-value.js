@@ -12,17 +12,32 @@ const calculator = { DCF: dcf, PE: pe, PEG: peg, DDM: ddm, EV_EBITDA: evEbitda, 
 const input = (name, value, step="any") => `<label>${labels[name] || name}<input data-company="${name}" type="${["ticker","name","sector"].includes(name) ? "text" : "number"}" step="${step}" value="${value ?? ""}" /></label>`;
 function save() { localStorage.setItem("fair-value-company", JSON.stringify(state.company)); }
 function readCompany() { try { Object.assign(state.company, JSON.parse(localStorage.getItem("fair-value-company"))); } catch { /* prima utilizare */ } }
-const keyStorage = "fair-value-finnhub-key";
+const keyStorage = "fair-value-finnhub-key", twelveKeyStorage = "fair-value-twelve-key";
 const pickNumber = (source, keys) => { for (const key of keys) { const value = Number(source?.[key]); if (Number.isFinite(value)) return value; } return null; };
 function companyFromFinnhub(ticker, quote, profile, metrics) {
   const sharesOutstanding = pickNumber(profile, ["shareOutstanding"]), fcfPerShare = pickNumber(metrics, ["fcfPerShareAnnual", "fcfPerShareTTM"]), freeCashFlow = pickNumber(metrics, ["freeCashFlowAnnual", "freeCashFlowTTM"]) ?? (fcfPerShare != null && sharesOutstanding != null ? fcfPerShare * sharesOutstanding : null);
   const raw = { ticker, name:profile?.name, sector:profile?.finnhubIndustry, currentPrice:pickNumber(quote,["c"]), marketCap:pickNumber(profile,["marketCapitalization"]), revenueGrowth:pickNumber(metrics,["revenueGrowthTTMYoy","revenueGrowth5Y"]), netIncome:pickNumber(metrics,["netIncomeAnnual","netIncomeTTM"]), eps:pickNumber(metrics,["epsNormalizedAnnual","epsBasicExclExtraItemsAnnual","epsAnnual","epsTTM"]), forwardEps:pickNumber(metrics,["epsEstimate","epsForward"]), epsGrowth:pickNumber(metrics,["epsGrowthTTMYoy","epsGrowth5Y"]), freeCashFlow, fcfGrowth:pickNumber(metrics,["fcfGrowth5Y"]), ebitda:pickNumber(metrics,["ebitdaAnnual","ebitdaTTM"]), cash:pickNumber(metrics,["cash","cashAnnual"]), debt:pickNumber(metrics,["totalDebt","totalDebtAnnual"]), sharesOutstanding, dividendPerShare:pickNumber(metrics,["dividendPerShareAnnual","dividendPerShareTTM"]), dividendGrowth:pickNumber(metrics,["dividendGrowthRate5Y"]), payoutRatio:pickNumber(metrics,["payoutRatioAnnual","payoutRatioTTM"]), bookValuePerShare:pickNumber(metrics,["bookValuePerShareAnnual","bookValuePerShareQuarterly"]), roe:pickNumber(metrics,["roeTTM","roeAnnual"]), historicalPE:pickNumber(metrics,["peAnnual","peTTM"]), historicalEvEbitda:pickNumber(metrics,["evToEbitdaAnnual","evToEbitdaTTM"]), historicalPB:pickNumber(metrics,["pbAnnual","pbQuarterly"]) };
   return Object.fromEntries(Object.entries(raw).filter(([, value]) => value !== null && value !== undefined && value !== ""));
 }
+function percentChange(current, previous) { return Number.isFinite(current) && Number.isFinite(previous) && previous !== 0 ? (current / previous - 1) * 100 : null; }
+function twelveCompanyFromStatements(incomeRows = [], balanceRows = [], cashflowRows = []) {
+  const income = incomeRows[0] || {}, previousIncome = incomeRows[1] || {}, balance = balanceRows[0] || {}, previousBalance = balanceRows[1] || {}, cashflow = cashflowRows[0] || {}, previousCashflow = cashflowRows[1] || {};
+  const shares = pickNumber(income, ["diluted_shares_outstanding", "basic_shares_outstanding"]), previousShares = pickNumber(previousIncome, ["diluted_shares_outstanding", "basic_shares_outstanding"]), cash = pickNumber(balance.assets?.current_assets, ["cash_and_cash_equivalents", "cash", "cash_equivalents"]), debt = (pickNumber(balance.liabilities?.current_liabilities, ["short_term_debt"]) || 0) + (pickNumber(balance.liabilities?.non_current_liabilities, ["long_term_debt"]) || 0), equity = pickNumber(balance.shareholders_equity, ["total_shareholders_equity"]), previousEquity = pickNumber(previousBalance.shareholders_equity, ["total_shareholders_equity"]), dividend = shares ? Math.abs(pickNumber(cashflow.financing_activities, ["common_dividends"]) || 0) / shares : null, previousDividend = previousShares ? Math.abs(pickNumber(previousCashflow.financing_activities, ["common_dividends"]) || 0) / previousShares : null;
+  const raw = { netIncome:pickNumber(income,["net_income"]), eps:pickNumber(income,["eps_diluted","eps_basic"]), epsGrowth:percentChange(pickNumber(income,["eps_diluted","eps_basic"]), pickNumber(previousIncome,["eps_diluted","eps_basic"])), revenueGrowth:percentChange(pickNumber(income,["sales"]), pickNumber(previousIncome,["sales"])), freeCashFlow:pickNumber(cashflow,["free_cash_flow"]), fcfGrowth:percentChange(pickNumber(cashflow,["free_cash_flow"]), pickNumber(previousCashflow,["free_cash_flow"])), ebitda:pickNumber(income,["ebitda"]), cash, debt:debt || null, sharesOutstanding:shares, dividendPerShare:dividend, dividendGrowth:percentChange(dividend, previousDividend), payoutRatio:shares && pickNumber(income,["net_income"]) ? dividend * shares / pickNumber(income,["net_income"]) * 100 : null, bookValuePerShare:shares && equity ? equity / shares : null, roe:equity ? pickNumber(income,["net_income"]) / equity * 100 : null };
+  return Object.fromEntries(Object.entries(raw).filter(([, value]) => value !== null && Number.isFinite(value)));
+}
+const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+async function twelveStatements(ticker, key) {
+  const request = async (path) => { const url = new URL(`https://api.twelvedata.com/${path}`); url.search = new URLSearchParams({ symbol:ticker, apikey:key, period:"annual" }); const response = await fetch(url); const body = await response.json(); if (!response.ok || body.status === "error") throw new Error(body.message || "Twelve Data nu a putut furniza situațiile financiare."); return body; };
+  const income = await request("income_statement"); await wait(8_000);
+  const balance = await request("balance_sheet"); await wait(8_000);
+  const cashflow = await request("cash_flow");
+  return twelveCompanyFromStatements(income.income_statement, balance.balance_sheet, cashflow.cash_flow);
+}
 function setApiKeyFeedback(message) { byId("api-key-feedback").textContent = message; }
-function readApiKey() { byId("finnhub-api-key").value = localStorage.getItem(keyStorage) || ""; }
-function saveApiKey() { const key = byId("finnhub-api-key").value.trim(); if (!key) { setApiKeyFeedback("Introdu cheia înainte de salvare sau apasă „Șterge cheia”."); return; } localStorage.setItem(keyStorage, key); setApiKeyFeedback("Cheia a fost salvată doar în browserul acestui dispozitiv."); }
-function removeApiKey() { localStorage.removeItem(keyStorage); byId("finnhub-api-key").value = ""; setApiKeyFeedback("Cheia locală a fost ștearsă."); }
+function readApiKey() { byId("finnhub-api-key").value = localStorage.getItem(keyStorage) || ""; byId("twelve-api-key").value = localStorage.getItem(twelveKeyStorage) || ""; }
+function saveApiKey() { const key = byId("finnhub-api-key").value.trim(), twelveKey = byId("twelve-api-key").value.trim(); if (!key) { setApiKeyFeedback("Cheia Finnhub este necesară pentru prețul curent. Introdu cheia sau apasă „Șterge cheile”."); return; } localStorage.setItem(keyStorage, key); if (twelveKey) localStorage.setItem(twelveKeyStorage, twelveKey); else localStorage.removeItem(twelveKeyStorage); setApiKeyFeedback(twelveKey ? "Cheile au fost salvate numai în browserul acestui dispozitiv. Twelve Data va completa situațiile financiare." : "Cheia Finnhub a fost salvată local. Adaugă și Twelve Data pentru situațiile financiare complete."); }
+function removeApiKey() { localStorage.removeItem(keyStorage); localStorage.removeItem(twelveKeyStorage); byId("finnhub-api-key").value = ""; byId("twelve-api-key").value = ""; setApiKeyFeedback("Cheile locale au fost șterse."); }
 function renderCompany() {
   byId("company-fields").innerHTML = fields.map((field) => input(field, state.company[field], field.includes("Price") || field.includes("eps") || field === "currentPrice" ? ".01" : "any")).join("");
   ["isBank","isInsurance","isReit"].forEach((field) => { byId(`${field}-flag`).checked = Boolean(state.company[field]); });
@@ -66,11 +81,11 @@ function syncCompany() { document.querySelectorAll("[data-company]").forEach((el
 async function loadCompany() {
   const ticker = document.querySelector('[data-company="ticker"]')?.value.trim().toUpperCase();
   if (!ticker) { setFeedback("Introdu mai întâi tickerul companiei, de exemplu <strong>MSFT</strong>.", "error"); return; }
-  const localFinnhubKey = localStorage.getItem(keyStorage);
+  const localFinnhubKey = localStorage.getItem(keyStorage), localTwelveKey = localStorage.getItem(twelveKeyStorage);
   if (!localFinnhubKey && !window.FAIR_VALUE_API_URL) { setFeedback("Adaugă cheia Finnhub din „Setare cheie Finnhub pentru acest browser” pentru a încărca automat datele.", "error"); return; }
   const button = byId("load-company");
   button.disabled = true; button.textContent = "Se încarcă…";
-  setFeedback(`Se încarcă datele pentru <strong>${ticker}</strong>…`, "loading");
+  setFeedback(localTwelveKey ? `Se încarcă datele pentru <strong>${ticker}</strong>, inclusiv situațiile financiare. Poate dura până la 20 secunde din cauza limitei Twelve Data…` : `Se încarcă datele pentru <strong>${ticker}</strong>…`, "loading");
   try {
     let payload;
     if (localFinnhubKey) {
@@ -78,7 +93,9 @@ async function loadCompany() {
       const responses = await Promise.all([fetch(endpoint("quote")), fetch(endpoint("stock/profile2")), fetch(endpoint("stock/metric", { metric:"all" }))]);
       if (responses.some((response) => !response.ok)) throw new Error("Finnhub nu a putut furniza datele pentru acest ticker. Verifică cheia și tickerul.");
       const [quote, profile, metricResponse] = await Promise.all(responses.map((response) => response.json()));
-      payload = { company:companyFromFinnhub(ticker, quote, profile, metricResponse.metric || {}), source:"Finnhub (cheie locală)" };
+      const finnhubCompany = companyFromFinnhub(ticker, quote, profile, metricResponse.metric || {});
+      const twelveCompany = localTwelveKey ? await twelveStatements(ticker, localTwelveKey) : {};
+      payload = { company:{ ...finnhubCompany, ...twelveCompany }, source:localTwelveKey ? "Finnhub + Twelve Data (chei locale)" : "Finnhub (cheie locală)" };
       if (!payload.company.currentPrice && !payload.company.name) throw new Error("Nu am găsit date pentru acest ticker în Finnhub.");
     } else {
       const response = await fetch(`${window.FAIR_VALUE_API_URL.replace(/\/$/, "")}/company?ticker=${encodeURIComponent(ticker)}`);
