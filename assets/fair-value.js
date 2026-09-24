@@ -42,5 +42,15 @@ function renderResult(result) {
 }
 function renderCombined() { const combinedResult = combined(state.company, state.results); byId("combined-result").innerHTML = combinedResult ? `<div class="fair-main-result"><span>Combined Fair Value</span><strong>${money.format(combinedResult.fairValue)}</strong><small><b class="${combinedResult.upsideDownsidePct >= 0 ? "pos" : "neg"}">${pct.format(combinedResult.upsideDownsidePct / 100)}</b> față de prețul curent</small></div><p>Overall confidence: <strong>${Math.round(combinedResult.confidenceScore)}/100 · ${combinedResult.confidenceLevel}</strong></p><ul class="breakdown">${combinedResult.breakdown.map((item) => `<li>${methodNames[item.method]}: ${money.format(item.fairValue)} · ${pct.format(item.weight)}</li>`).join("")}</ul>` : "<p class=\"muted\">Adaugă minimum două metode valide cu Confidence Score de cel puțin 40.</p>"; }
 function calculate() { const current = calculator[state.method](state.company, assumptions()); renderResult(current); if (current) { state.results = [...state.results.filter((item) => item.method !== current.method), current]; renderCombined(); } }
-function syncCompany() { document.querySelectorAll("[data-company]").forEach((element) => { state.company[element.dataset.company] = ["ticker","name","sector"].includes(element.dataset.company) ? element.value.trim() : element.value === "" ? null : Number(element.value); }); ["isBank","isInsurance","isReit"].forEach((field) => { state.company[field] = byId(`${field}-flag`).checked; }); save(); renderCompany(); renderMethods(); renderCombined(); }
+function updateCompanyFeedback() {
+  const available = relevance(state.company).filter((item) => item.status !== "not_recommended");
+  const names = available.map((item) => methodNames[item.method]);
+  const priceMissing = !(Number(state.company.currentPrice) > 0);
+  const feedback = byId("company-feedback");
+  feedback.classList.add("visible");
+  feedback.innerHTML = names.length
+    ? `Datele au fost salvate local. Metode disponibile: <strong>${names.join(", ")}</strong>${priceMissing ? ". Adaugă și Preț curent pentru a calcula diferența față de fair value." : ". Alege metoda și apasă „Calculează Fair Value”."}`
+    : "Datele au fost salvate local. Pentru o estimare, completează Preț curent și cel puțin una dintre: Free Cash Flow, EPS + Net income, Dividend/acțiune, EBITDA sau Book value (pentru bancă/REIT).";
+}
+function syncCompany() { document.querySelectorAll("[data-company]").forEach((element) => { state.company[element.dataset.company] = ["ticker","name","sector"].includes(element.dataset.company) ? element.value.trim() : element.value === "" ? null : Number(element.value); }); ["isBank","isInsurance","isReit"].forEach((field) => { state.company[field] = byId(`${field}-flag`).checked; }); save(); renderCompany(); renderMethods(); renderCombined(); updateCompanyFeedback(); }
 byId("save-company").addEventListener("click", syncCompany); byId("calculate").addEventListener("click", calculate); byId("clear-results").addEventListener("click", () => { state.results = []; renderCombined(); }); readCompany(); renderCompany(); renderMethods(); renderCombined();
