@@ -12,6 +12,17 @@ const calculator = { DCF: dcf, PE: pe, PEG: peg, DDM: ddm, EV_EBITDA: evEbitda, 
 const input = (name, value, step="any") => `<label>${labels[name] || name}<input data-company="${name}" type="${["ticker","name","sector"].includes(name) ? "text" : "number"}" step="${step}" value="${value ?? ""}" /></label>`;
 function save() { localStorage.setItem("fair-value-company", JSON.stringify(state.company)); }
 function readCompany() { try { Object.assign(state.company, JSON.parse(localStorage.getItem("fair-value-company"))); } catch { /* prima utilizare */ } }
+const keyStorage = "fair-value-finnhub-key";
+const pickNumber = (source, keys) => { for (const key of keys) { const value = Number(source?.[key]); if (Number.isFinite(value)) return value; } return null; };
+function companyFromFinnhub(ticker, quote, profile, metrics) {
+  const sharesOutstanding = pickNumber(profile, ["shareOutstanding"]), fcfPerShare = pickNumber(metrics, ["fcfPerShareAnnual", "fcfPerShareTTM"]), freeCashFlow = pickNumber(metrics, ["freeCashFlowAnnual", "freeCashFlowTTM"]) ?? (fcfPerShare != null && sharesOutstanding != null ? fcfPerShare * sharesOutstanding : null);
+  const raw = { ticker, name:profile?.name, sector:profile?.finnhubIndustry, currentPrice:pickNumber(quote,["c"]), marketCap:pickNumber(profile,["marketCapitalization"]), revenueGrowth:pickNumber(metrics,["revenueGrowthTTMYoy","revenueGrowth5Y"]), netIncome:pickNumber(metrics,["netIncomeAnnual","netIncomeTTM"]), eps:pickNumber(metrics,["epsNormalizedAnnual","epsBasicExclExtraItemsAnnual","epsAnnual","epsTTM"]), forwardEps:pickNumber(metrics,["epsEstimate","epsForward"]), epsGrowth:pickNumber(metrics,["epsGrowthTTMYoy","epsGrowth5Y"]), freeCashFlow, fcfGrowth:pickNumber(metrics,["fcfGrowth5Y"]), ebitda:pickNumber(metrics,["ebitdaAnnual","ebitdaTTM"]), cash:pickNumber(metrics,["cash","cashAnnual"]), debt:pickNumber(metrics,["totalDebt","totalDebtAnnual"]), sharesOutstanding, dividendPerShare:pickNumber(metrics,["dividendPerShareAnnual","dividendPerShareTTM"]), dividendGrowth:pickNumber(metrics,["dividendGrowthRate5Y"]), payoutRatio:pickNumber(metrics,["payoutRatioAnnual","payoutRatioTTM"]), bookValuePerShare:pickNumber(metrics,["bookValuePerShareAnnual","bookValuePerShareQuarterly"]), roe:pickNumber(metrics,["roeTTM","roeAnnual"]), historicalPE:pickNumber(metrics,["peAnnual","peTTM"]), historicalEvEbitda:pickNumber(metrics,["evToEbitdaAnnual","evToEbitdaTTM"]), historicalPB:pickNumber(metrics,["pbAnnual","pbQuarterly"]) };
+  return Object.fromEntries(Object.entries(raw).filter(([, value]) => value !== null && value !== undefined && value !== ""));
+}
+function setApiKeyFeedback(message) { byId("api-key-feedback").textContent = message; }
+function readApiKey() { byId("finnhub-api-key").value = localStorage.getItem(keyStorage) || ""; }
+function saveApiKey() { const key = byId("finnhub-api-key").value.trim(); if (!key) { setApiKeyFeedback("Introdu cheia înainte de salvare sau apasă „Șterge cheia”."); return; } localStorage.setItem(keyStorage, key); setApiKeyFeedback("Cheia a fost salvată doar în browserul acestui dispozitiv."); }
+function removeApiKey() { localStorage.removeItem(keyStorage); byId("finnhub-api-key").value = ""; setApiKeyFeedback("Cheia locală a fost ștearsă."); }
 function renderCompany() {
   byId("company-fields").innerHTML = fields.map((field) => input(field, state.company[field], field.includes("Price") || field.includes("eps") || field === "currentPrice" ? ".01" : "any")).join("");
   ["isBank","isInsurance","isReit"].forEach((field) => { byId(`${field}-flag`).checked = Boolean(state.company[field]); });
@@ -55,14 +66,25 @@ function syncCompany() { document.querySelectorAll("[data-company]").forEach((el
 async function loadCompany() {
   const ticker = document.querySelector('[data-company="ticker"]')?.value.trim().toUpperCase();
   if (!ticker) { setFeedback("Introdu mai întâi tickerul companiei, de exemplu <strong>MSFT</strong>.", "error"); return; }
-  if (!window.FAIR_VALUE_API_URL) { setFeedback("Conexiunea Finnhub nu este încă activată. Worker-ul Cloudflare trebuie configurat o singură dată cu cheia secretă.", "error"); return; }
+  const localFinnhubKey = localStorage.getItem(keyStorage);
+  if (!localFinnhubKey && !window.FAIR_VALUE_API_URL) { setFeedback("Adaugă cheia Finnhub din „Setare cheie Finnhub pentru acest browser” pentru a încărca automat datele.", "error"); return; }
   const button = byId("load-company");
   button.disabled = true; button.textContent = "Se încarcă…";
   setFeedback(`Se încarcă datele pentru <strong>${ticker}</strong>…`, "loading");
   try {
-    const response = await fetch(`${window.FAIR_VALUE_API_URL.replace(/\/$/, "")}/company?ticker=${encodeURIComponent(ticker)}`);
-    const payload = await response.json();
-    if (!response.ok) throw new Error(payload.error || "Datele nu au putut fi încărcate.");
+    let payload;
+    if (localFinnhubKey) {
+      const endpoint = (path, extra = {}) => { const url = new URL(`https://finnhub.io/api/v1/${path}`); url.search = new URLSearchParams({ symbol:ticker, token:localFinnhubKey, ...extra }); return url; };
+      const responses = await Promise.all([fetch(endpoint("quote")), fetch(endpoint("stock/profile2")), fetch(endpoint("stock/metric", { metric:"all" }))]);
+      if (responses.some((response) => !response.ok)) throw new Error("Finnhub nu a putut furniza datele pentru acest ticker. Verifică cheia și tickerul.");
+      const [quote, profile, metricResponse] = await Promise.all(responses.map((response) => response.json()));
+      payload = { company:companyFromFinnhub(ticker, quote, profile, metricResponse.metric || {}), source:"Finnhub (cheie locală)" };
+      if (!payload.company.currentPrice && !payload.company.name) throw new Error("Nu am găsit date pentru acest ticker în Finnhub.");
+    } else {
+      const response = await fetch(`${window.FAIR_VALUE_API_URL.replace(/\/$/, "")}/company?ticker=${encodeURIComponent(ticker)}`);
+      payload = await response.json();
+      if (!response.ok) throw new Error(payload.error || "Datele nu au putut fi încărcate.");
+    }
     Object.assign(state.company, payload.company);
     state.results = [];
     save(); renderCompany(); renderMethods(); renderCombined();
@@ -71,4 +93,4 @@ async function loadCompany() {
   } catch (error) { setFeedback(error.message || "Datele nu au putut fi încărcate momentan.", "error"); }
   finally { button.disabled = false; button.textContent = "Încarcă date companie"; }
 }
-byId("save-company").addEventListener("click", syncCompany); byId("load-company").addEventListener("click", loadCompany); byId("calculate").addEventListener("click", calculate); byId("clear-results").addEventListener("click", () => { state.results = []; renderCombined(); }); readCompany(); renderCompany(); renderMethods(); renderCombined();
+byId("save-company").addEventListener("click", syncCompany); byId("load-company").addEventListener("click", loadCompany); byId("save-api-key").addEventListener("click", saveApiKey); byId("remove-api-key").addEventListener("click", removeApiKey); byId("calculate").addEventListener("click", calculate); byId("clear-results").addEventListener("click", () => { state.results = []; renderCombined(); }); readCompany(); readApiKey(); renderCompany(); renderMethods(); renderCombined();

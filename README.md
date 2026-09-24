@@ -24,3 +24,5 @@ Pentru ca butonul **Încarcă date companie** să completeze datele pentru un ti
 4. Pune acel URL în `config/fair-value-api.js`, la `window.FAIR_VALUE_API_URL`, apoi publică modificarea în GitHub.
 
 Worker-ul acceptă doar cereri pentru un ticker și are cache pentru a reduce apelurile către Finnhub. El completează numai câmpurile pe care le primește de la furnizor; verifică întotdeauna datele fundamentale și unitățile înainte de calcul.
+
+Ca alternativă pentru uz strict personal, Fair Value permite introducerea cheii direct în setarea locală din pagină. Cheia este păstrată în `localStorage` numai pe acel browser și nu este publicată în GitHub, însă este trimisă din browser către Finnhub la încărcarea companiei. Nu folosi această variantă pe un dispozitiv partajat și șterge cheia din aceeași setare când nu mai este necesară.
