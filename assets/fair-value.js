@@ -42,15 +42,33 @@ function renderResult(result) {
 }
 function renderCombined() { const combinedResult = combined(state.company, state.results); byId("combined-result").innerHTML = combinedResult ? `<div class="fair-main-result"><span>Combined Fair Value</span><strong>${money.format(combinedResult.fairValue)}</strong><small><b class="${combinedResult.upsideDownsidePct >= 0 ? "pos" : "neg"}">${pct.format(combinedResult.upsideDownsidePct / 100)}</b> față de prețul curent</small></div><p>Overall confidence: <strong>${Math.round(combinedResult.confidenceScore)}/100 · ${combinedResult.confidenceLevel}</strong></p><ul class="breakdown">${combinedResult.breakdown.map((item) => `<li>${methodNames[item.method]}: ${money.format(item.fairValue)} · ${pct.format(item.weight)}</li>`).join("")}</ul>` : "<p class=\"muted\">Adaugă minimum două metode valide cu Confidence Score de cel puțin 40.</p>"; }
 function calculate() { const current = calculator[state.method](state.company, assumptions()); renderResult(current); if (current) { state.results = [...state.results.filter((item) => item.method !== current.method), current]; renderCombined(); } }
+function setFeedback(message, kind = "success") { const feedback = byId("company-feedback"); feedback.className = `company-feedback visible ${kind}`; feedback.innerHTML = message; }
 function updateCompanyFeedback() {
   const available = relevance(state.company).filter((item) => item.status !== "not_recommended");
   const names = available.map((item) => methodNames[item.method]);
   const priceMissing = !(Number(state.company.currentPrice) > 0);
-  const feedback = byId("company-feedback");
-  feedback.classList.add("visible");
-  feedback.innerHTML = names.length
+  setFeedback(names.length
     ? `Datele au fost salvate local. Metode disponibile: <strong>${names.join(", ")}</strong>${priceMissing ? ". Adaugă și Preț curent pentru a calcula diferența față de fair value." : ". Alege metoda și apasă „Calculează Fair Value”."}`
-    : "Datele au fost salvate local. Pentru o estimare, completează Preț curent și cel puțin una dintre: Free Cash Flow, EPS + Net income, Dividend/acțiune, EBITDA sau Book value (pentru bancă/REIT).";
+    : "Datele au fost salvate local. Pentru o estimare, completează Preț curent și cel puțin una dintre: Free Cash Flow, EPS + Net income, Dividend/acțiune, EBITDA sau Book value (pentru bancă/REIT).", "success");
 }
 function syncCompany() { document.querySelectorAll("[data-company]").forEach((element) => { state.company[element.dataset.company] = ["ticker","name","sector"].includes(element.dataset.company) ? element.value.trim() : element.value === "" ? null : Number(element.value); }); ["isBank","isInsurance","isReit"].forEach((field) => { state.company[field] = byId(`${field}-flag`).checked; }); save(); renderCompany(); renderMethods(); renderCombined(); updateCompanyFeedback(); }
-byId("save-company").addEventListener("click", syncCompany); byId("calculate").addEventListener("click", calculate); byId("clear-results").addEventListener("click", () => { state.results = []; renderCombined(); }); readCompany(); renderCompany(); renderMethods(); renderCombined();
+async function loadCompany() {
+  const ticker = document.querySelector('[data-company="ticker"]')?.value.trim().toUpperCase();
+  if (!ticker) { setFeedback("Introdu mai întâi tickerul companiei, de exemplu <strong>MSFT</strong>.", "error"); return; }
+  if (!window.FAIR_VALUE_API_URL) { setFeedback("Conexiunea Finnhub nu este încă activată. Worker-ul Cloudflare trebuie configurat o singură dată cu cheia secretă.", "error"); return; }
+  const button = byId("load-company");
+  button.disabled = true; button.textContent = "Se încarcă…";
+  setFeedback(`Se încarcă datele pentru <strong>${ticker}</strong>…`, "loading");
+  try {
+    const response = await fetch(`${window.FAIR_VALUE_API_URL.replace(/\/$/, "")}/company?ticker=${encodeURIComponent(ticker)}`);
+    const payload = await response.json();
+    if (!response.ok) throw new Error(payload.error || "Datele nu au putut fi încărcate.");
+    Object.assign(state.company, payload.company);
+    state.results = [];
+    save(); renderCompany(); renderMethods(); renderCombined();
+    const loaded = Object.keys(payload.company).filter((field) => field !== "ticker" && field !== "name" && field !== "sector").length;
+    setFeedback(`Date încărcate din <strong>${payload.source || "sursa configurată"}</strong> pentru <strong>${state.company.ticker}</strong>: ${loaded} câmpuri. Verifică valorile fundamentale și unitățile înainte de calcul.`, "success");
+  } catch (error) { setFeedback(error.message || "Datele nu au putut fi încărcate momentan.", "error"); }
+  finally { button.disabled = false; button.textContent = "Încarcă date companie"; }
+}
+byId("save-company").addEventListener("click", syncCompany); byId("load-company").addEventListener("click", loadCompany); byId("calculate").addEventListener("click", calculate); byId("clear-results").addEventListener("click", () => { state.results = []; renderCombined(); }); readCompany(); renderCompany(); renderMethods(); renderCombined();
