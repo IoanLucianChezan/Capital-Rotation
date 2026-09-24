@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "refresh": "node scripts/refresh-market-data.mjs",
-    "check": "node --check scripts/refresh-market-data.mjs && node --check scripts/refresh-sector-rotation-history.mjs && node --check scripts/refresh-vix-data.mjs && node --check scripts/generate-ai-report.mjs && node --check assets/weekly.js && node --check assets/cross-asset.js && node --check assets/vix.js && node --check assets/ai-report.js"
+    "check": "node --check scripts/refresh-market-data.mjs && node --check scripts/refresh-sector-rotation-history.mjs && node --check scripts/refresh-vix-data.mjs && node --check scripts/generate-ai-report.mjs && node --check assets/valuation.js && node --check assets/fair-value.js && node --check assets/weekly.js && node --check assets/cross-asset.js && node --check assets/vix.js && node --check assets/ai-report.js",
+    "test": "node tests/valuation.test.mjs"
   }
 }
