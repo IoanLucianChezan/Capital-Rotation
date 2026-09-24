@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-09-23T00:08:45.088Z",
+  "updatedAt": "2026-09-24T00:18:06.442Z",
   "indices": [
     {
       "name": "VIX9D",
       "value": 12.13,
       "change": -1.01,
-      "changePercent": -7.6865,
+      "changePercent": -8.3265,
       "asOf": "2026-09-22T16:15:01",
       "source": "Cboe delayed"
     },
@@ -13,7 +13,7 @@
       "name": "VIX",
       "value": 14.21,
       "change": -0.66,
-      "changePercent": -4.4385,
+      "changePercent": -4.6446,
       "asOf": "2026-09-22T16:15:01",
       "source": "Cboe delayed"
     },
@@ -21,7 +21,7 @@
       "name": "VIX3M",
       "value": 17.61,
       "change": -0.47,
-      "changePercent": -2.5996,
+      "changePercent": -2.6689,
       "asOf": "2026-09-22T16:15:01",
       "source": "Cboe delayed"
     }
