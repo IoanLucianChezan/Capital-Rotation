@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-09-26T00:25:51.163Z",
-  "marketDate": "2026-09-24",
+  "updatedAt": "2026-09-29T01:35:42.667Z",
+  "marketDate": "2026-09-28",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o tendință de rotație favorabilă sectorului tehnologiei informației, comunicărilor și energiei, în context de creștere a randamentelor pe termen scurt și a spread-urilor de credit.",
+    "marketRegime": "Datele indică un regim de rotație moderat, cu sectorul sănătate în top, urmat de tehnologie și energie, în timp ce sectorul utilități și imobiliare prezintă scăderi semnificative.",
     "earlyRotation": [
       {
-        "symbol": "XLK",
-        "thesis": "Sectorul tehnologiei informației prezintă un scor de rotație de 81, peste media de 50, și performanță relativă pozitivă pe 1 și 3 luni.",
-        "confirmation": "Performanța relativă de 6.97% pe 1 lună și 1.02% pe 3 luni confirmă atracția investitorilor.",
-        "invalidation": "Scorul de rotație scăzut în ultimele 5 zile (0.035%) ar putea semnala o încetinire temporară. "
+        "symbol": "XLV",
+        "thesis": "Sectorul sănătate are cea mai înaltă scor de rotație (73) și performanță pozitivă pe termen scurt și mediu.",
+        "confirmation": "Performanța pozitivă pe 1 și 3 luni confirmă atractivitatea.",
+        "invalidation": "Scorul de rotație scăzut pe termen lung ar putea indica o limitare a creșterii."
       },
       {
-        "symbol": "XLC",
-        "thesis": "Sectorul comunicațiilor are cel mai mare scor de rotație (86) și creșteri relative de 0.55% pe 1 lună și 3.49% pe 3 luni.",
-        "confirmation": "Performanța pozitivă pe termen scurt și mediu susține interesul.",
-        "invalidation": "Scorul de rotație scăzut în ultimele 5 zile (0.0146%) ar putea indica o corecție. "
+        "symbol": "XLK",
+        "thesis": "Tehnologia informației are scor de rotație ridicat (66) și creșteri relative pe 1 și 3 luni.",
+        "confirmation": "Creșterea relative pe 3 luni susține potențialul de rotație.",
+        "invalidation": "Scorul de rotație scăzut pe termen lung ar putea semnala o plafonare."
       },
       {
         "symbol": "XLE",
-        "thesis": "Sectorul energiei are scor de rotație de 79 și creșteri relative de 0.70% pe 1 lună și 11.26% pe 3 luni.",
-        "confirmation": "Creșterea de 11.26% pe 3 luni confirmă atractivitatea.",
-        "invalidation": "Scorul de rotație scăzut în ultimele 5 zile (-0.029%) ar putea semnala o corecție. "
+        "thesis": "Energie are scor de rotație ridicat (65) și creșteri relative pe 3 luni, dar scăderi pe 1 lună.",
+        "confirmation": "Creșterea pe 3 luni confirmă potențialul de rotație.",
+        "invalidation": "Scăderea pe 1 lună ar putea indica volatilitate."
       }
     ],
     "leaders": [
       {
-        "symbol": "XLC",
-        "comment": "Cel mai ridicat scor de rotație și creșteri relative pozitive pe 1 și 3 luni. "
+        "symbol": "XLV",
+        "comment": "Performanță pozitivă pe 1 și 3 luni și scor de rotație ridicat."
       },
       {
         "symbol": "XLK",
-        "comment": "Scor de rotație ridicat și performanță relativă pozitivă pe 1 și 3 luni. "
+        "comment": "Creșteri relative pe 1 și 3 luni și scor de rotație în top."
       },
       {
         "symbol": "XLE",
-        "comment": "Scor de rotație ridicat și creșteri relative semnificative pe 3 luni. "
+        "comment": "Creșteri relative pe 3 luni, scor de rotație ridicat."
       }
     ],
     "weakening": [
       {
-        "symbol": "XLI",
-        "comment": "Scor de rotație scăzut și performanță relativă negativă pe 1 și 3 luni. "
+        "symbol": "XLB",
+        "comment": "Scăderi relative pe 1 și 3 luni și scor de rotație scăzut."
+      },
+      {
+        "symbol": "XLY",
+        "comment": "Scăderi relative pe 1 și 3 luni și scor de rotație scăzut."
       },
       {
         "symbol": "XLP",
-        "comment": "Scor de rotație scăzut și performanță relativă negativă pe 1 și 3 luni. "
-      },
-      {
-        "symbol": "XLU",
-        "comment": "Scor de rotație scăzut și performanță relativă negativă pe 1 și 3 luni. "
+        "comment": "Scăderi relative pe 1 și 3 luni și scor de rotație scăzut."
       }
     ],
-    "crossAsset": "Performanța activelor de referință indică o tendință de scădere pentru majoritatea ETF-urilor de acțiuni și obligațiuni, cu excepția IBIT, care înregistrează creșteri relative semnificative pe 3 luni.",
+    "crossAsset": "Datele indică scăderi pe majoritatea ETF-urilor de acțiuni și obligațiuni, cu excepția IBIT, care prezintă creșteri relative semnificative pe 1 și 3 luni.",
     "watchlist": [
+      "XLV",
       "XLK",
-      "XLC",
       "XLE",
-      "XLI",
+      "XLB",
+      "XLY",
       "XLP",
-      "XLU",
       "RSP",
-      "IWM"
+      "IBIT"
     ],
-    "caveat": "Datele oferă indicii, dar nu confirmă performanța viitoare."
+    "caveat": "Interpretarea se bazează exclusiv pe datele furnizate; nu există confirmări suplimentare."
   }
 }
