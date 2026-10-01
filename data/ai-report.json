@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-09-30T01:09:20.359Z",
-  "marketDate": "2026-09-29",
+  "updatedAt": "2026-10-01T01:09:22.657Z",
+  "marketDate": "2026-09-30",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o tendință de rotație favorabilă sectorului Sănătate, urmat de Tehnologia informației și Energie, în context de creștere moderată a randamentelor pe termen scurt și a spread-urilor de credit.",
+    "marketRegime": "Datele indică o tendință de rotație favorabilă sectorului Tehnologia informației, cu un scor de rotație de 79 și o creștere relativă de 5.5% în ultimul lună. Alte sectoare cu potențial de rotație includ Sănătate (56) și Energie (35).",
     "earlyRotation": [
       {
-        "symbol": "XLV",
-        "thesis": "Sectorul Sănătate prezintă cea mai ridicată scor de rotație (84) și creșteri relative pozitive pe 1 și 3 luni.",
-        "confirmation": "Performanța pozitivă pe 1 și 3 luni confirmă atractivitatea sectorului.",
-        "invalidation": "Scorul de rotație scăzut pe 1 lună ar putea indica o corecție viitoare."
+        "symbol": "XLK",
+        "thesis": "Sectorul Tehnologia informației prezintă un scor de rotație de 79 și o creștere relativă de 5.5% în ultima lună, sugerând o potențială atracție pentru investitori.",
+        "confirmation": "Performanța relativă de 5.5% confirmă interesul crescut în acest sector.",
+        "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea indica o schimbare de preferință în viitor."
       },
       {
-        "symbol": "XLK",
-        "thesis": "Tehnologia informației are un scor de rotație de 72 și creșteri relative pozitive pe 1 și 3 luni.",
-        "confirmation": "Creșterea relative pe 3 luni susține potențialul de creștere.",
-        "invalidation": "Scorul de rotație scăzut pe 1 lună ar putea semnala o corecție."
+        "symbol": "XLV",
+        "thesis": "Sectorul Sănătate are un scor de rotație de 56 și o creștere relativă de 3.3% în ultimele 3 luni, indicând o potențială susținere a investitorilor.",
+        "confirmation": "Creșterea relativă de 3.3% confirmă interesul moderat.",
+        "invalidation": "Performanța slabă în ultimele 3 luni ar putea reduce atractivitatea."
       },
       {
         "symbol": "XLE",
-        "thesis": "Sectorul Energie are un scor de rotație de 65 și creșteri relative pozitive pe 1 și 3 luni.",
-        "confirmation": "Creșterea relative pe 3 luni susține potențialul de creștere.",
-        "invalidation": "Scorul de rotație scăzut pe 1 lună ar putea indica o corecție."
+        "thesis": "Sectorul Energie are un scor de rotație de 35 și o creștere relativă de 14.2% în ultimele 3 luni, sugerând o potențială atracție.",
+        "confirmation": "Creșterea relativă de 14.2% confirmă interesul crescut.",
+        "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea indica o schimbare de preferință."
       }
     ],
     "leaders": [
       {
-        "symbol": "XLV",
-        "comment": "Performanța pozitivă pe 1 și 3 luni susține atractivitatea sectorului."
-      },
-      {
         "symbol": "XLK",
-        "comment": "Creșterea relative pe 3 luni indică potențial de creștere."
+        "comment": "Performanța relativă de 5.5% în ultima lună face din XLK liderul sectorial."
       },
       {
         "symbol": "XLE",
-        "comment": "Creșterea relative pe 3 luni susține potențialul de creștere."
+        "comment": "Creșterea relativă de 14.2% în ultimele 3 luni poziționează XLE ca lider."
+      },
+      {
+        "symbol": "XLV",
+        "comment": "Creșterea relativă de 3.3% în ultimele 3 luni susține poziția de lider."
       }
     ],
     "weakening": [
       {
+        "symbol": "XLF",
+        "comment": "Scorul de rotație de 3 și performanța relativă negativă indică slăbiciune."
+      },
+      {
         "symbol": "XLI",
-        "comment": "Scor de rotație scăzut și performanță negativă pe 1 și 3 luni indică slăbiciune."
+        "comment": "Scorul de rotație 0 și performanța relativă negativă arată slăbiciune."
       },
       {
         "symbol": "XLY",
-        "comment": "Scor de rotație scăzut și performanță negativă pe 1 și 3 luni indică slăbiciune."
-      },
-      {
-        "symbol": "XLB",
-        "comment": "Scor de rotație scăzut și performanță negativă pe 1 și 3 luni indică slăbiciune."
+        "comment": "Scorul de rotație 3 și performanța relativă negativă indică slăbiciune."
       }
     ],
-    "crossAsset": "Performanța IBIT a înregistrat creșteri relative semnificative pe 1 și 3 luni, în timp ce GLD a înregistrat o creștere pe 3 luni, indicând potențial de diversificare.",
+    "crossAsset": "Performanța activelor de referință indică o scădere a RSP și IWM, în timp ce IBIT înregistrează o creștere de 6.6% în ultima lună, sugerând o potențială rotație către activele de creștere.",
     "watchlist": [
-      "XLV",
       "XLK",
       "XLE",
+      "XLV",
+      "XLF",
       "XLI",
       "XLY",
-      "XLB",
-      "IBIT",
-      "GLD"
+      "RSP",
+      "IBIT"
     ],
-    "caveat": "Datele oferă indicii, dar nu garantează evoluția viitoare a pieței."
+    "caveat": "Datele oferă doar indicii și nu garantează evoluția viitoare a pieței."
   }
 }
