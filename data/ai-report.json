@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-10-02T01:24:28.166Z",
-  "marketDate": "2026-10-01",
+  "updatedAt": "2026-10-03T00:59:37.454Z",
+  "marketDate": "2026-10-02",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o piață cu tendințe mixte, cu rotație ridicată în tehnologie și energie, dar cu semnale de slabă performanță în sectorul financiar.",
+    "marketRegime": "Datele indică un regim de rotație moderată, cu tehnologia informației și energia în topul scorurilor, în timp ce sectorul financiar și industrial prezintă performanțe slabe.",
     "earlyRotation": [
       {
         "symbol": "XLK",
-        "thesis": "Sectorul tehnologiei informației prezintă o rotație de 73, susținută de creșteri relative pe termen scurt și mediu.",
-        "confirmation": "Performanța relativă pe 1 și 3 luni este pozitivă, iar volatilitatea relativă este moderată.",
-        "invalidation": "Macroadjustarea negativă de -4 ar putea indica presiune pe termen lung."
+        "thesis": "Sectorul tehnologiei informației are cel mai mare scor de rotație (73) și un ajustament macro pozitiv (+3).",
+        "confirmation": "Performanța relativă pe 1 lună este pozitivă (+8.24).",
+        "invalidation": "Scorul de rotație scade cu 4 din cauza ajustamentului macro negativ."
       },
       {
         "symbol": "XLE",
-        "thesis": "Sectorul energetic are o rotație de 70, cu creșteri relative pe 3 luni și pozitivă pe 5 zile.",
-        "confirmation": "Performanța pe 3 luni este pozitivă, iar volatilitatea relativă este moderată.",
-        "invalidation": "Valoarea pe 1 lună este negativă, sugerând incertitudine."
+        "thesis": "Energia are scor de rotație de 65 și ajustament macro pozitiv (+3).",
+        "confirmation": "Performanța relativă pe 3 luni este pozitivă (+15.79).",
+        "invalidation": "Performanța pe 1 lună este negativă (-4.09)."
       },
       {
-        "symbol": "XLV",
-        "thesis": "Sectorul sănătății are o rotație de 24, cu creșteri relative moderate pe 3 luni.",
-        "confirmation": "Performanța pe 3 luni este pozitivă, iar volatilitatea relativă este moderată.",
-        "invalidation": "Macroadjustarea pozitivă de 2 este modestă, fără semnale clare de impuls."
+        "symbol": "XLB",
+        "thesis": "Materialele au scor de rotație de 12 și ajustament macro pozitiv (+1).",
+        "confirmation": "Performanța relativă pe 3 luni este negativă (-8.45).",
+        "invalidation": "Performanța pe 1 lună este negativă (-8.31)."
       }
     ],
     "leaders": [
       {
         "symbol": "XLK",
-        "comment": "Tehnologia informației înregistrează cea mai mare rotație și creșteri relative pozitive."
+        "comment": "Tehnologia informației are cea mai mare rotație și performanță relativă pozitivă pe 1 lună."
       },
       {
         "symbol": "XLE",
-        "comment": "Energia prezintă rotație ridicată și creșteri relative pe termen mediu."
+        "comment": "Energia prezintă un scor de rotație ridicat și creștere pe 3 luni."
       },
       {
-        "symbol": "XLV",
-        "comment": "Sănătatea are rotație moderată și creșteri relative pe 3 luni."
+        "symbol": "XLB",
+        "comment": "Materialele au scor de rotație moderat și ajustament macro pozitiv."
       }
     ],
     "weakening": [
       {
         "symbol": "XLF",
-        "comment": "Sectorul financiar are rotație scăzută și performanță negativă pe 1 și 3 luni."
+        "comment": "Sectorul financiar are scor de rotație 0 și performanță relativă negativă pe 1 și 3 luni."
       },
       {
         "symbol": "XLI",
-        "comment": "Industriale prezintă rotație scăzută și performanță negativă pe 1 și 3 luni."
+        "comment": "Industriale au scor de rotație 7, dar performanță relativă negativă pe 3 luni."
       },
       {
         "symbol": "XLY",
-        "comment": "Consum discreționar are rotație scăzută și performanță negativă pe 1 și 3 luni."
+        "comment": "Consum discreționar are scor de rotație 8, dar performanță relativă negativă pe 1 și 3 luni."
       }
     ],
-    "crossAsset": "IBIT are performanță pozitivă pe 1 și 3 luni, indicând potențial de creștere în activele de tip ETF pe indici de creștere, în timp ce majoritatea altor active au performanță negativă.",
+    "crossAsset": "IBIT are performanță pozitivă pe 1 lună (+8.99%) și pe 3 luni (+29.70%), indicând o potențială atracție în sectorul de IT.",
     "watchlist": [
       "XLK",
       "XLE",
-      "XLV",
+      "XLB",
       "XLF",
       "XLI",
       "XLY",
-      "XLB",
-      "XLP"
+      "XLP",
+      "XLU"
     ],
-    "caveat": "Datele nu oferă confirmare completă a tendințelor, iar evoluția macroeconomică poate modifica perspectivele sectoriale."
+    "caveat": "Analiza se bazează exclusiv pe datele furnizate și nu include informații suplimentare."
   }
 }
