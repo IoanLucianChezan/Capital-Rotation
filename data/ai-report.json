@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-10-07T01:15:49.676Z",
-  "marketDate": "2026-10-06",
+  "updatedAt": "2026-10-08T01:37:15.454Z",
+  "marketDate": "2026-10-07",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică un mediu cu randamente moderate pe termen scurt și creșteri limitate pe termen lung, iar spread-urile de credit rămân stabile.",
+    "marketRegime": "Datele indică un mediu de rate moderate, cu creșteri mici la DGS2 și DGS10, dar un spread credit High Yield ușor redus.",
     "earlyRotation": [
       {
         "symbol": "XLK",
-        "thesis": "Sectorul tehnologiei prezintă performanță robustă, cu scor de rotație de 81 și creșteri relative de 6.7% în 1 lună.",
-        "confirmation": "Performanța tehnologică a fost susținută de creșterea relative de 6.8% în 3 luni.",
-        "invalidation": "Scorul de rotație scade cu 4% din cauza ajustării macro."
+        "thesis": "Sectorul IT prezintă performanță solidă, cu 5,7% în ultimele 30 de zile și un scor de rotație de 81.",
+        "confirmation": "Performanța pozitivă în ultimele 3 luni și un rvol sub 1 confirmă interesul.",
+        "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea indica o schimbare de sentiment."
+      },
+      {
+        "symbol": "XLV",
+        "thesis": "Sănătatea are un scor de rotație de 64 și creșteri în ultimele 3 luni de 0,7%.",
+        "confirmation": "Performanța pozitivă în ultimele 3 luni și un rvol peste 1 confirmă interesul.",
+        "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea indica o schimbare de sentiment."
       },
       {
         "symbol": "XLE",
-        "thesis": "Energie prezintă creșteri relative de 10.1% în 3 luni, indicând potențial de rotație.",
-        "confirmation": "Creșterea relative de 0.15% în 3 luni confirmă tendința pozitivă.",
-        "invalidation": "Scorul de rotație scade cu 3% din cauza ajustării macro."
-      },
-      {
-        "symbol": "XLB",
-        "thesis": "Materiale au scor de rotație de 25 și relative de -5.3% în 1 lună, dar potențial de rotație în medie.",
-        "confirmation": "Relative de -5.4% în 3 luni confirmă poziția de medie.",
-        "invalidation": "Scorul de rotație scade cu 1% din cauza ajustării macro."
+        "thesis": "Energie are un scor de rotație de 59 și creșteri în ultimele 3 luni de 12,2%.",
+        "confirmation": "Performanța pozitivă în ultimele 3 luni și un rvol sub 1 confirmă interesul.",
+        "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea indica o schimbare de sentiment."
       }
     ],
     "leaders": [
       {
+        "symbol": "XLV",
+        "comment": "Sectorul sănătate are cel mai mare scor de rotație și creșteri pozitive în ultimele 3 luni."
+      },
+      {
         "symbol": "XLK",
-        "comment": "Performanță tehnologică solidă, cu creșteri relative de peste 6% în 1 lună."
+        "comment": "Sectorul IT are un scor de rotație foarte ridicat și performanță pozitivă în ultimele 30 de zile."
       },
       {
         "symbol": "XLE",
-        "comment": "Sectorul energiei înregistrează creșteri relative de peste 10% în 3 luni."
-      },
-      {
-        "symbol": "XLB",
-        "comment": "Materiale au scor de rotație moderat și relative negative, dar potențial de rotație."
+        "comment": "Sectorul energie are un scor de rotație solid și creșteri semnificative în ultimele 3 luni."
       }
     ],
     "weakening": [
       {
-        "symbol": "XLF",
-        "comment": "Sectorul financiar înregistrează scăderi relative de peste 8% în 1 lună."
-      },
-      {
         "symbol": "XLI",
-        "comment": "Industriale prezintă relative negative de peste 3% în 1 lună."
+        "comment": "Sectorul industrial are scor de rotație scăzut și performanță negativă în ultimele 3 luni."
       },
       {
-        "symbol": "XLY",
-        "comment": "Consum discreționar are relative negative de peste 3% în 1 lună."
+        "symbol": "XLP",
+        "comment": "Sectorul consum de bază are scor de rotație scăzut și performanță negativă în ultimele 3 luni."
+      },
+      {
+        "symbol": "XLB",
+        "comment": "Sectorul materiale are scor de rotație scăzut și performanță negativă în ultimele 3 luni."
       }
     ],
-    "crossAsset": "IBIT a înregistrat o creștere de 7.2% în 1 lună și relative de 33% în 3 luni, indicând potențial de rotație în sectorul de tehnologie.",
+    "crossAsset": "IBIT a înregistrat o creștere de 6,4% în ultimele 30 de zile, în timp ce majoritatea ETF-urilor de acțiuni și obligațiuni au scăzut, indicând o preferință pentru activele de tip equity în creștere.",
     "watchlist": [
       "XLK",
+      "XLV",
       "XLE",
       "XLB",
-      "XLF",
+      "XLP",
       "XLI",
       "XLY",
-      "XLP",
       "XLC"
     ],
-    "caveat": "Interpretarea se bazează exclusiv pe datele furnizate; nu există confirmări suplimentare."
+    "caveat": "Datele nu confirmă o direcție clară și pot fi influențate de factori macroeconomici neprevăzuți."
   }
 }
