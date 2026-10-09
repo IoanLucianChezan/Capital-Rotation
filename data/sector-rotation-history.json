@@ -1100,5 +1100,88 @@
         "ratele în creștere apasă activele sensibile la durată"
       ]
     }
+  },
+  "2026-10-08": {
+    "XLK": {
+      "score": 66,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
+    },
+    "XLF": {
+      "score": 33,
+      "macroAdjustment": -1,
+      "macroReasons": [
+        "creditul se deteriorează",
+        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
+      ]
+    },
+    "XLI": {
+      "score": 18,
+      "macroAdjustment": 1,
+      "macroReasons": [
+        "producția industrială susține ciclicele",
+        "creditul se deteriorează"
+      ]
+    },
+    "XLY": {
+      "score": 16,
+      "macroAdjustment": -3,
+      "macroReasons": [
+        "creditul se deteriorează"
+      ]
+    },
+    "XLB": {
+      "score": 25,
+      "macroAdjustment": 1,
+      "macroReasons": [
+        "producția industrială susține ciclicele",
+        "creditul se deteriorează"
+      ]
+    },
+    "XLE": {
+      "score": 70,
+      "macroAdjustment": 3,
+      "macroReasons": [
+        "activitatea industrială susține cererea energetică"
+      ]
+    },
+    "XLC": {
+      "score": 41,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
+    },
+    "XLV": {
+      "score": 67,
+      "macroAdjustment": 2,
+      "macroReasons": [
+        "caracter defensiv într-un credit mai slab"
+      ]
+    },
+    "XLP": {
+      "score": 34,
+      "macroAdjustment": 2,
+      "macroReasons": [
+        "caracter defensiv într-un credit mai slab"
+      ]
+    },
+    "XLU": {
+      "score": 11,
+      "macroAdjustment": -2,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată",
+        "caracter defensiv într-un credit mai slab"
+      ]
+    },
+    "XLRE": {
+      "score": 20,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
+    }
   }
 }
