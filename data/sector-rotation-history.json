@@ -1432,5 +1432,88 @@
         "ratele în creștere apasă activele sensibile la durată"
       ]
     }
+  },
+  "2026-10-14": {
+    "XLK": {
+      "score": 66,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
+    },
+    "XLF": {
+      "score": 33,
+      "macroAdjustment": -1,
+      "macroReasons": [
+        "creditul se deteriorează",
+        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
+      ]
+    },
+    "XLI": {
+      "score": 5,
+      "macroAdjustment": 1,
+      "macroReasons": [
+        "producția industrială susține ciclicele",
+        "creditul se deteriorează"
+      ]
+    },
+    "XLY": {
+      "score": 22,
+      "macroAdjustment": -3,
+      "macroReasons": [
+        "creditul se deteriorează"
+      ]
+    },
+    "XLB": {
+      "score": 14,
+      "macroAdjustment": 1,
+      "macroReasons": [
+        "producția industrială susține ciclicele",
+        "creditul se deteriorează"
+      ]
+    },
+    "XLE": {
+      "score": 88,
+      "macroAdjustment": 3,
+      "macroReasons": [
+        "activitatea industrială susține cererea energetică"
+      ]
+    },
+    "XLC": {
+      "score": 7,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
+    },
+    "XLV": {
+      "score": 92,
+      "macroAdjustment": 2,
+      "macroReasons": [
+        "caracter defensiv într-un credit mai slab"
+      ]
+    },
+    "XLP": {
+      "score": 77,
+      "macroAdjustment": 2,
+      "macroReasons": [
+        "caracter defensiv într-un credit mai slab"
+      ]
+    },
+    "XLU": {
+      "score": 30,
+      "macroAdjustment": -2,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată",
+        "caracter defensiv într-un credit mai slab"
+      ]
+    },
+    "XLRE": {
+      "score": 20,
+      "macroAdjustment": -4,
+      "macroReasons": [
+        "ratele în creștere apasă activele sensibile la durată"
+      ]
+    }
   }
 }
