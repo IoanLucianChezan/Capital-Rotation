@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-10-16T00:09:08.024Z",
-  "marketDate": "2026-10-14",
+  "updatedAt": "2026-10-17T00:12:27.257Z",
+  "marketDate": "2026-10-15",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o tendință de rotație favorabilă sectorului sănătate, energie și consum de bază, în timp ce industriile și consumul discreționar par să se confrunte cu presiuni.",
+    "marketRegime": "Datele indică un mediu cu randamente moderate ale obligațiunilor și creșteri moderate ale inflației, sugerând o volatilitate moderată în piață.",
     "earlyRotation": [
       {
         "symbol": "XLV",
-        "thesis": "Sectorul sănătate prezintă un scor de rotație de 92 și creșteri relative de 2.15% pe 1 lună și 5% pe 3 luni, sugerând o potențială consolidare.",
-        "confirmation": "Performanța pozitivă pe termen scurt și mediu confirmă interesul investitorilor.",
+        "thesis": "Sectorul sănătate prezintă performanță solidă, cu creșteri relative de 3,26% pe 1 lună și 6,16% pe 3 luni, susținut de scorul de rotație de 92.",
+        "confirmation": "Performanța recentă și scorul de rotație susțin această poziție.",
         "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea indica o schimbare de sentiment."
       },
       {
         "symbol": "XLE",
-        "thesis": "Energie are un scor de rotație de 88 și creșteri relative de 0.97% pe 1 lună și 16% pe 3 luni, indicând o potențială rezistență.",
-        "confirmation": "Creșterea pe termen mediu susține o perspectivă optimistă.",
+        "thesis": "Energie are cea mai mare creștere pe 3 luni (11,56%) și un scor de rotație de 88, indicând potențial de continuare.",
+        "confirmation": "Creșterea pe 1 lună de 1,60% confirmă tendința.",
         "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea reduce atractivitatea."
       },
       {
         "symbol": "XLP",
-        "thesis": "Consum de bază are un scor de rotație de 77 și creșteri relative de 1.17% pe 1 lună, dar scăderi pe 3 luni, sugerând volatilitate.",
-        "confirmation": "Performanța pe termen scurt confirmă interesul temporar.",
-        "invalidation": "Scăderea pe 3 luni indică posibilă retragere a capitalului."
+        "thesis": "Consum de bază are un scor de rotație de 77 și creșteri pe 1 lună de 1,67% și pe 3 luni de -2,09%, sugerând stabilitate.",
+        "confirmation": "Performanța pe 1 lună susține poziția.",
+        "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea indica o schimbare de sentiment."
       }
     ],
     "leaders": [
       {
         "symbol": "XLV",
-        "comment": "Performanța pozitivă pe termen scurt și mediu indică interes crescut."
+        "comment": "Performanță robustă pe 1 și 3 luni, susținută de scorul de rotație."
       },
       {
         "symbol": "XLE",
-        "comment": "Creșterea pe 3 luni susține potențialul de rezistență."
+        "comment": "Creșteri semnificative pe 3 luni, indicând potențial de continuare."
       },
       {
         "symbol": "XLP",
-        "comment": "Performanța pe termen scurt indică interes temporar."
+        "comment": "Stabilitate pe 1 lună, dar scădere pe 3 luni."
       }
     ],
     "weakening": [
       {
         "symbol": "XLI",
-        "comment": "Scorul de rotație foarte scăzut și scăderi relative pe 1 și 3 luni indică presiune."
+        "comment": "Performanță slabă pe 1 și 3 luni, scor de rotație scăzut."
       },
       {
-        "symbol": "XLY",
-        "comment": "Scorul de rotație moderat și scăderi relative pe 3 luni sugerează slăbire."
+        "symbol": "XLC",
+        "comment": "Scădere pe 1 și 3 luni, scor de rotație scăzut."
       },
       {
-        "symbol": "XLB",
-        "comment": "Scorul de rotație scăzut și scăderi relative pe 1 și 3 luni indică slăbire."
+        "symbol": "XLF",
+        "comment": "Scădere pe 1 și 3 luni, scor de rotație scăzut."
       }
     ],
-    "crossAsset": "RSP și IWM prezintă scăderi pe 1 lună și relative negative, în timp ce IBIT înregistrează creșteri semnificative, sugerând o preferință pentru activele de creștere.",
+    "crossAsset": "RSP și IWM prezintă scăderi pe 1 lună, în timp ce IBIT înregistrează creșteri semnificative, indicând potențial de diversificare.",
     "watchlist": [
-      "XLV",
-      "XLE",
-      "XLP",
+      "XLK",
+      "XLF",
       "XLI",
       "XLY",
       "XLB",
-      "RSP",
-      "IWM"
+      "XLE",
+      "XLC",
+      "XLV"
     ],
-    "caveat": "Interpretările se bazează exclusiv pe datele furnizate și nu includ informații suplimentare."
+    "caveat": "Datele oferă indicii, dar nu garantează evoluția viitoare a pieței."
   }
 }
