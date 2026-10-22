@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-10-21T00:26:23.420Z",
-  "marketDate": "2026-10-19",
+  "updatedAt": "2026-10-22T00:29:39.708Z",
+  "marketDate": "2026-10-20",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o putere a sectorului de energie și a consumului de bază, cu creșteri relative semnificative, în timp ce tehnologia și industria prezintă performanțe moderate sau negative.",
+    "marketRegime": "Datele indică o piață cu volatilitate moderată, fără semne clare de schimbare de regim macroeconomic.",
     "earlyRotation": [
       {
         "symbol": "XLP",
-        "thesis": "Sectorul de consum de bază are cea mai mare scor de rotație (92) și performanță pozitivă pe termen scurt, sugerând o potențială consolidare.",
-        "confirmation": "Performanța pozitivă pe 1M și 3M confirmă tendința de creștere.",
-        "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea indica o schimbare de sentiment."
+        "thesis": "Sectorul consumului de bază prezintă cea mai mare creștere relativă pe 1 lună (7.69%) și un scor de rotație de 90, sugerând potențial de creștere.",
+        "confirmation": "Performanța pozitivă pe 1 lună și scorul de rotație susțin această perspectivă.",
+        "invalidation": "Scorul de rotație scăzut pe 3 luni (-8.74%) ar putea indica o corecție viitoare."
       },
       {
         "symbol": "XLE",
-        "thesis": "Sectorul energetic are cel mai mare scor de rotație (84) și creșteri relative semnificative pe 1M și 3M.",
-        "confirmation": "Creșterea de 13% pe 3M confirmă puterea sectorului.",
-        "invalidation": "Macroadjustment pozitiv de 3 ar putea indica o creștere a costurilor de producție."
+        "thesis": "Energie a înregistrat cea mai mare creștere relativă pe 1 lună (9.40%) și un scor de rotație de 83, indicând potențial de creștere.",
+        "confirmation": "Creșterea pe 3 luni (11.92%) și performanța pozitivă pe 1 lună susțin această perspectivă.",
+        "invalidation": "Scorul de rotație scăzut pe 3 luni (-8.74%) ar putea indica o corecție viitoare."
       },
       {
         "symbol": "XLV",
-        "thesis": "Sectorul sănătate are scor de rotație ridicat (81) și creșteri relative pe 1M și 3M.",
-        "confirmation": "Creșterea de 7% pe 3M confirmă tendința de creștere.",
-        "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea indica o schimbare de sentiment."
+        "thesis": "Sănătate a înregistrat creșteri consistente pe 1 lună (6.97%) și 3 luni (9.89%) cu un scor de rotație de 79.",
+        "confirmation": "Performanța pozitivă pe 1 lună și 3 luni susține potențialul de creștere.",
+        "invalidation": "Scorul de rotație scăzut pe 3 luni (-8.74%) ar putea indica o corecție viitoare."
       }
     ],
     "leaders": [
       {
-        "symbol": "XLP",
-        "comment": "Performanță pozitivă pe 1M și 3M, scor de rotație ridicat."
+        "symbol": "XLE",
+        "comment": "Energie a înregistrat cea mai mare creștere relativă pe 1 lună și 3 luni, indicând performanță puternică."
       },
       {
-        "symbol": "XLE",
-        "comment": "Creșteri relative semnificative pe 1M și 3M, scor de rotație mare."
+        "symbol": "XLP",
+        "comment": "Consum de bază a înregistrat cea mai mare creștere relativă pe 1 lună, susținând performanța sectorului."
       },
       {
         "symbol": "XLV",
-        "comment": "Creșteri relative pe 1M și 3M, scor de rotație ridicat."
+        "comment": "Sănătate a înregistrat creșteri consistente pe 1 și 3 luni, indicând reziliență."
       }
     ],
     "weakening": [
       {
         "symbol": "XLI",
-        "comment": "Scor de rotație scăzut, performanță negativă pe 1M și 3M."
+        "comment": "Industriale prezintă scăderi semnificative pe 1 lună și 3 luni, indicând slăbiciune."
       },
       {
         "symbol": "XLC",
-        "comment": "Scor de rotație 0, performanță negativă pe 1M și 3M."
+        "comment": "Servicii de comunicații au scăderi pe 1 lună și 3 luni, indicând slăbiciune."
       },
       {
         "symbol": "XLF",
-        "comment": "Scor de rotație scăzut, performanță negativă pe 1M și 3M."
+        "comment": "Financiare au scăderi pe 3 luni, indicând slăbiciune."
       }
     ],
-    "crossAsset": "RSP și IWM prezintă scăderi pe 1M, IEF și HYG au scăderi moderate, GLD scade pe 1M, IBIT are creștere mică pe 1M, dar creștere semnificativă pe 3M.",
+    "crossAsset": "Performanța activelor de referință indică o preferință pentru titlurile de stat pe termen scurt (RSP) și o scădere a performanței ETF-urilor de acțiuni mici (IWM).",
     "watchlist": [
       "XLP",
       "XLE",
       "XLV",
+      "XLB",
+      "XLF",
       "XLI",
       "XLC",
-      "XLF",
-      "RSP",
-      "IWM"
+      "XLU"
     ],
-    "caveat": "Datele nu confirmă un trend de creștere pe termen lung și nu includ informații macroeconomice suplimentare."
+    "caveat": "Datele nu includ informații macroeconomice actualizate, deci interpretările sunt limitate la performanța recentă a sectorului."
   }
 }
