@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-10-24T00:22:22.378Z",
-  "marketDate": "2026-10-22",
+  "updatedAt": "2026-10-27T01:16:54.880Z",
+  "marketDate": "2026-10-26",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Randamentul pe 10 ani scade cu 0,19%, indicând o ușoară presiune pe ratele de credit. Indicele de producție industrială crește cu 0,99% în ultimele 3 luni, iar inflația CPI a crescut cu 3,73% în aceeași perioadă.",
+    "marketRegime": "Datele indică o tendință de creștere a randamentelor pe termen lung, cu scăderi moderate ale DGS2 și DGS10, dar un spread credit high‑yield în creștere.",
     "earlyRotation": [
       {
-        "symbol": "XLP",
-        "thesis": "Sectorul consumului de bază prezintă cea mai mare creștere relativă pe 1 lună, sugerând o potențială reziliență în condiții de volatilitate.",
-        "confirmation": "Relative1m de 9,67% și relative3m de 3,58% confirmă performanța pozitivă.",
-        "invalidation": "Un scădere a relative3m sub 0,5% ar putea indica o schimbare de sentiment."
+        "symbol": "XLE",
+        "thesis": "Sectorul energiei prezintă cele mai puternice semnale de rotație, cu un scor de 80 și creșteri semnificative pe 1 și 3 luni.",
+        "confirmation": "Performanța pozitivă pe 1 și 3 luni confirmă interesul pentru acest sector.",
+        "invalidation": "Scăderea rvol ar putea indica o volatilitate crescută."
       },
       {
         "symbol": "XLV",
-        "thesis": "Sectorul sănătății are cea mai mare creștere pe 1 lună și pe 3 luni, indicând o susținere continuă.",
-        "confirmation": "Relative1m de 7,91% și relative3m de 8,13% susțin această tendință.",
-        "invalidation": "O scădere a relative1m sub 5% ar putea semnala un răspuns negativ."
+        "thesis": "Sănătatea are un scor de 81 și creșteri consistente pe 1 și 3 luni, sugerând potențial de rotație.",
+        "confirmation": "Creșterea relative1m și relative3m susține această perspectivă.",
+        "invalidation": "Rvol moderat ar putea reduce atractivitatea."
       },
       {
-        "symbol": "XLE",
-        "thesis": "Sectorul energiei are cea mai mare creștere pe 1 lună și pe 3 luni, reflectând prețuri energetice ridicate.",
-        "confirmation": "Relative1m de 8,84% și relative3m de 9,95% confirmă performanța.",
-        "invalidation": "O scădere a relative1m sub 5% ar putea indica un răspuns negativ."
+        "symbol": "XLB",
+        "thesis": "Materialele au un scor de 63 și creșteri pe 1 lună, indicând interes de rotație.",
+        "confirmation": "Performanța pe 1 lună susține potențialul de rotație.",
+        "invalidation": "Scăderea relative3m ar putea semnala un răspuns slab pe termen mediu."
       }
     ],
     "leaders": [
       {
-        "symbol": "XLP",
-        "comment": "Performanță relativă pe 1 lună de 9,67% și pe 3 luni de 3,58%."
-      },
-      {
         "symbol": "XLE",
-        "comment": "Performanță relativă pe 1 lună de 8,84% și pe 3 luni de 9,95%."
+        "comment": "Performanța excelentă pe 1 și 3 luni, cu un scor de rotație de 80."
       },
       {
         "symbol": "XLV",
-        "comment": "Performanță relativă pe 1 lună de 7,91% și pe 3 luni de 8,13%."
+        "comment": "Creșteri consistente pe 1 și 3 luni, scor de rotație 81."
+      },
+      {
+        "symbol": "XLB",
+        "comment": "Scor de rotație 63 și creșteri pe 1 lună."
       }
     ],
     "weakening": [
       {
-        "symbol": "XLK",
-        "comment": "Relative1m de -6,15% și relative3m de 0,29% indică o scădere a interesului."
+        "symbol": "XLI",
+        "comment": "Scor de rotație scăzut și performanță slabă pe 1 și 3 luni."
       },
       {
         "symbol": "XLC",
-        "comment": "Relative1m de -4,07% și relative3m de -2,33% sugerează o slăbire a sectorului."
+        "comment": "Scor de rotație foarte scăzut și performanță negativă pe 1 și 3 luni."
       },
       {
-        "symbol": "XLI",
-        "comment": "Relative1m de -1,48% și relative3m de -12,11% indică o performanță slabă."
+        "symbol": "XLY",
+        "comment": "Scor de rotație moderat, dar performanță negativă pe 3 luni."
       }
     ],
-    "crossAsset": "Indicele RSP a crescut cu 3,27% pe 1 lună, în timp ce IWM a scăzut cu 1,86%. IEF a crescut cu 1,12% pe 1 lună, iar HYG a scăzut cu 1,28%. GLD a scăzut cu 6,08% pe 1 lună, iar IBIT a scăzut cu 3,80% pe 1 lună.",
+    "crossAsset": "RSP și IWM au performanțe mixte pe 1 lună, în timp ce IEF și HYG au creșteri moderate pe 1 lună, dar scăderi pe 3 luni. GLD și IBIT au scăderi pe 1 lună, dar IBIT are creșteri pe 3 luni.",
     "watchlist": [
-      "XLP",
       "XLE",
       "XLV",
-      "XLU",
       "XLB",
+      "XLP",
+      "XLY",
       "XLI",
       "XLC",
-      "XLK"
+      "XLU"
     ],
-    "caveat": "Datele reflectă doar performanța recentă și nu garantează evoluții viitoare."
+    "caveat": "Interpretarea se bazează exclusiv pe datele furnizate; nu există confirmări suplimentare."
   }
 }
