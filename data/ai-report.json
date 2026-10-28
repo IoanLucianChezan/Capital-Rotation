@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-10-27T01:16:54.880Z",
-  "marketDate": "2026-10-26",
+  "updatedAt": "2026-10-28T01:02:22.909Z",
+  "marketDate": "2026-10-27",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o tendință de creștere a randamentelor pe termen lung, cu scăderi moderate ale DGS2 și DGS10, dar un spread credit high‑yield în creștere.",
+    "marketRegime": "Datele indică o tendință de rotație favorabilă sectorului Energie, cu performanță pozitivă pe termen scurt și mediu, în contrast cu sectorul Servicii de comunicații, care prezintă scăderi semnificative.",
     "earlyRotation": [
       {
         "symbol": "XLE",
-        "thesis": "Sectorul energiei prezintă cele mai puternice semnale de rotație, cu un scor de 80 și creșteri semnificative pe 1 și 3 luni.",
-        "confirmation": "Performanța pozitivă pe 1 și 3 luni confirmă interesul pentru acest sector.",
-        "invalidation": "Scăderea rvol ar putea indica o volatilitate crescută."
-      },
-      {
-        "symbol": "XLV",
-        "thesis": "Sănătatea are un scor de 81 și creșteri consistente pe 1 și 3 luni, sugerând potențial de rotație.",
-        "confirmation": "Creșterea relative1m și relative3m susține această perspectivă.",
-        "invalidation": "Rvol moderat ar putea reduce atractivitatea."
+        "thesis": "Sectorul Energie ar putea beneficia de creșterea randamentelor pe termen scurt și mediu, susținut de performanța pozitivă a ETF-ului.",
+        "confirmation": "Performanța pozitivă a XLE în ultimele 3 luni și 3 luni confirmă potențialul de rotație.",
+        "invalidation": "Scăderea randamentului pe termen lung ar putea invalida această perspectivă."
       },
       {
         "symbol": "XLB",
-        "thesis": "Materialele au un scor de 63 și creșteri pe 1 lună, indicând interes de rotație.",
-        "confirmation": "Performanța pe 1 lună susține potențialul de rotație.",
-        "invalidation": "Scăderea relative3m ar putea semnala un răspuns slab pe termen mediu."
+        "thesis": "Materialele ar putea fi atractive datorită creșterii relative pe termen scurt, dar performanța pe termen lung este slabă.",
+        "confirmation": "XLB a înregistrat creșteri relative în ultimele 3 luni.",
+        "invalidation": "Performanța slabă pe termen lung ar putea invalida rotația."
+      },
+      {
+        "symbol": "XLK",
+        "thesis": "Tehnologia informației ar putea fi atractivă pe termen scurt, dar performanța pe termen lung este moderată.",
+        "confirmation": "XK a înregistrat creșteri relative pe termen scurt.",
+        "invalidation": "Performanța slabă pe termen lung ar putea invalida rotația."
       }
     ],
     "leaders": [
       {
         "symbol": "XLE",
-        "comment": "Performanța excelentă pe 1 și 3 luni, cu un scor de rotație de 80."
-      },
-      {
-        "symbol": "XLV",
-        "comment": "Creșteri consistente pe 1 și 3 luni, scor de rotație 81."
+        "comment": "XLE a înregistrat cea mai mare creștere relative pe termen scurt și mediu, indicând potențial de lider."
       },
       {
         "symbol": "XLB",
-        "comment": "Scor de rotație 63 și creșteri pe 1 lună."
+        "comment": "XLB a înregistrat creșteri relative pe termen scurt, susținând poziția de lider."
+      },
+      {
+        "symbol": "XLK",
+        "comment": "XLK a înregistrat creșteri relative pe termen scurt, susținând poziția de lider."
       }
     ],
     "weakening": [
       {
-        "symbol": "XLI",
-        "comment": "Scor de rotație scăzut și performanță slabă pe 1 și 3 luni."
-      },
-      {
         "symbol": "XLC",
-        "comment": "Scor de rotație foarte scăzut și performanță negativă pe 1 și 3 luni."
+        "comment": "XLC a înregistrat scăderi relative semnificative pe termen scurt și mediu, indicând slăbiciune."
       },
       {
-        "symbol": "XLY",
-        "comment": "Scor de rotație moderat, dar performanță negativă pe 3 luni."
+        "symbol": "XLI",
+        "comment": "XLI a înregistrat scăderi relative semnificative pe termen scurt și mediu, indicând slăbiciune."
+      },
+      {
+        "symbol": "XLP",
+        "comment": "XLP a înregistrat scăderi relative semnificative pe termen scurt și mediu, indicând slăbiciune."
       }
     ],
-    "crossAsset": "RSP și IWM au performanțe mixte pe 1 lună, în timp ce IEF și HYG au creșteri moderate pe 1 lună, dar scăderi pe 3 luni. GLD și IBIT au scăderi pe 1 lună, dar IBIT are creșteri pe 3 luni.",
+    "crossAsset": "Datele indică o performanță pozitivă a RSP și IEF pe termen scurt, dar scăderi semnificative pentru IWM, HYG și GLD. IBIT prezintă o creștere semnificativă pe termen mediu, sugerând potențial de rotație.",
     "watchlist": [
       "XLE",
-      "XLV",
       "XLB",
-      "XLP",
-      "XLY",
-      "XLI",
+      "XLK",
       "XLC",
-      "XLU"
+      "XLI",
+      "XLP",
+      "RSP",
+      "IEF"
     ],
-    "caveat": "Interpretarea se bazează exclusiv pe datele furnizate; nu există confirmări suplimentare."
+    "caveat": "Datele oferă indicii, dar nu confirmă performanța viitoare."
   }
 }
