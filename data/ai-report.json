@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-10-29T01:38:35.285Z",
-  "marketDate": "2026-10-28",
+  "updatedAt": "2026-10-30T01:42:05.847Z",
+  "marketDate": "2026-10-29",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o tendință de rotație favorabilă sectorului Energie, cu un scor de rotație de 75 și creșteri relative semnificative pe 1 și 3 luni. Alte sectoare cu potențial de rotație includ Tehnologia informației și Sănătatea.",
+    "marketRegime": "Datele indică o creștere moderată a randamentelor pe termen scurt, cu DGS2 scăzut și DGS10 în creștere moderată, sugerând un mediu de rate în creștere. Indicele de producție industrială crește, iar CPI a înregistrat o creștere semnificativă, indicând presiune inflaționistă.",
     "earlyRotation": [
       {
         "symbol": "XLE",
-        "thesis": "Sectorul Energie prezintă cele mai puternice semnale de rotație, cu creșteri relative de peste 10% pe 1 și 3 luni și un scor de rotație de 75.",
-        "confirmation": "Performanța pozitivă a sectorului Energie este susținută de creșterea randamentului pe 10 ani și de creșterea producției industriale.",
-        "invalidation": "O scădere a randamentului pe 10 ani sau o scădere a producției industriale ar putea slăbi semnalele."
-      },
-      {
-        "symbol": "XLK",
-        "thesis": "Tehnologia informației are un scor de rotație de 62 și creșteri relative de peste 4% pe 3 luni, indicând potențial de creștere.",
-        "confirmation": "Creșterea relative pe 3 luni și un rvol moderat susțin semnalele.",
-        "invalidation": "O scădere a randamentului pe 2 ani ar putea reduce atractivitatea sectorului."
+        "thesis": "Sectorul energetic prezintă cele mai bune scoruri de rotație, cu creșteri semnificative pe termen scurt și mediu.",
+        "confirmation": "Performanța XLE a fost susținută de creșterea randamentelor pe termen lung și de creșterea CPI.",
+        "invalidation": "Scorul de rotație ar putea fi afectat dacă ratele de pe termen lung ar scădea brusc."
       },
       {
         "symbol": "XLV",
-        "thesis": "Sectorul Sănătate are cel mai mare scor de rotație (79) și creșteri relative de peste 5% pe 3 luni.",
-        "confirmation": "Performanța pozitivă este susținută de creșterea randamentului pe 10 ani și de creșterea producției industriale.",
-        "invalidation": "O scădere a randamentului pe 10 ani ar putea slăbi semnalele."
+        "thesis": "Sectorul sănătății are un scor de rotație ridicat și performanță pozitivă pe termen scurt și mediu.",
+        "confirmation": "XVL a înregistrat creșteri consistente pe 1 și 3 luni.",
+        "invalidation": "O scădere a randamentelor pe termen lung ar putea reduce atractivitatea sectorului."
+      },
+      {
+        "symbol": "XLB",
+        "thesis": "Materialele au un scor de rotație foarte ridicat și performanță pozitivă pe termen scurt și mediu.",
+        "confirmation": "XLB a înregistrat creșteri pe 1 și 3 luni.",
+        "invalidation": "Scăderea randamentelor pe termen lung ar putea diminua potențialul de creștere."
       }
     ],
     "leaders": [
       {
         "symbol": "XLE",
-        "comment": "Sectorul Energie domină în termeni de rotație și creșteri relative pe 1 și 3 luni."
+        "comment": "Performanță puternică pe 1 și 3 luni, susținută de creșterea randamentelor pe termen lung."
       },
       {
         "symbol": "XLV",
-        "comment": "Sectorul Sănătate are cel mai mare scor de rotație și creșteri relative consistente."
+        "comment": "Creșteri consistente pe 1 și 3 luni, indicând potențial de creștere."
       },
       {
-        "symbol": "XLK",
-        "comment": "Tehnologia informației prezintă semnale de rotație solide și creșteri relative pe 3 luni."
+        "symbol": "XLB",
+        "comment": "Scor de rotație foarte ridicat și creșteri pe 1 și 3 luni."
       }
     ],
     "weakening": [
       {
         "symbol": "XLC",
-        "comment": "Sectorul Servicii de comunicații are scor de rotație scăzut și performanță negativă pe 1 și 3 luni."
+        "comment": "Scăderi semnificative pe 1 și 3 luni, cu performanță slabă pe termen scurt."
       },
       {
         "symbol": "XLI",
-        "comment": "Sectorul Industrial are scor de rotație scăzut și performanță negativă pe 1 și 3 luni."
+        "comment": "Scăderi pe 3 luni și performanță slabă pe termen scurt."
       },
       {
-        "symbol": "XLRE",
-        "comment": "Sectorul Imobiliare / REIT are scor de rotație scăzut și performanță negativă pe 1 și 3 luni."
+        "symbol": "XLU",
+        "comment": "Scăderi pe 3 luni și performanță slabă pe termen scurt."
       }
     ],
-    "crossAsset": "Performanța ETF-urilor de pe piața largă (RSP) este moderată, în timp ce IWM și IEF au performanțe slabe pe 1 lună. HYG și GLD au performanțe negative, iar IBIT are o creștere semnificativă pe 3 luni, indicând potențial de rotație în sectorul de obligațiuni corporative.",
+    "crossAsset": "RSP și IWM au performanțe pozitive pe 1 lună, dar IWM are o scădere semnificativă pe 3 luni. IEF are performanță pozitivă pe 1 lună, dar scade pe 3 luni. HYG și GLD au performanțe negative pe 1 lună și pe 3 luni. IBIT are performanță negativă pe 1 lună, dar crește pe 3 luni.",
     "watchlist": [
       "XLE",
       "XLV",
-      "XLK",
-      "XLP",
-      "XLY",
       "XLB",
-      "XLF",
-      "XLI"
+      "XLC",
+      "XLI",
+      "XLU",
+      "XLRE",
+      "RSP"
     ],
-    "caveat": "Datele nu confirmă un trend de creștere garantat; interpretarea trebuie făcută cu prudență."
+    "caveat": "Datele reflectă doar performanța recentă și nu garantează rezultate viitoare."
   }
 }
