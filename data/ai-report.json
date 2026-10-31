@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-10-30T01:42:05.847Z",
-  "marketDate": "2026-10-29",
+  "updatedAt": "2026-10-31T01:27:17.063Z",
+  "marketDate": "2026-10-30",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o creștere moderată a randamentelor pe termen scurt, cu DGS2 scăzut și DGS10 în creștere moderată, sugerând un mediu de rate în creștere. Indicele de producție industrială crește, iar CPI a înregistrat o creștere semnificativă, indicând presiune inflaționistă.",
+    "marketRegime": "Datele indică un mediu cu randamente moderate pe termen scurt și creșteri ușoare pe termen lung, dar cu volatilitate ridicată în sectorul tehnologic.",
     "earlyRotation": [
       {
-        "symbol": "XLE",
-        "thesis": "Sectorul energetic prezintă cele mai bune scoruri de rotație, cu creșteri semnificative pe termen scurt și mediu.",
-        "confirmation": "Performanța XLE a fost susținută de creșterea randamentelor pe termen lung și de creșterea CPI.",
-        "invalidation": "Scorul de rotație ar putea fi afectat dacă ratele de pe termen lung ar scădea brusc."
-      },
-      {
         "symbol": "XLV",
-        "thesis": "Sectorul sănătății are un scor de rotație ridicat și performanță pozitivă pe termen scurt și mediu.",
-        "confirmation": "XVL a înregistrat creșteri consistente pe 1 și 3 luni.",
-        "invalidation": "O scădere a randamentelor pe termen lung ar putea reduce atractivitatea sectorului."
+        "thesis": "Sectorul sănătății prezintă creșteri consistente pe termen scurt și mediu, susținut de performanța pozitivă a ETF-ului.",
+        "confirmation": "Performanța XLV a înregistrat +12.32% în ultimele 30 de zile.",
+        "invalidation": "Nu există semne de scădere în ultimele 5 zile."
       },
       {
-        "symbol": "XLB",
-        "thesis": "Materialele au un scor de rotație foarte ridicat și performanță pozitivă pe termen scurt și mediu.",
-        "confirmation": "XLB a înregistrat creșteri pe 1 și 3 luni.",
-        "invalidation": "Scăderea randamentelor pe termen lung ar putea diminua potențialul de creștere."
+        "symbol": "XLP",
+        "thesis": "Consum de bază a înregistrat creșteri solide, indicând reziliență în condiții de piață incertă.",
+        "confirmation": "XLP a crescut +12.40% în ultimele 30 de zile.",
+        "invalidation": "Nu există scăderi semnificative în ultimele 5 zile."
+      },
+      {
+        "symbol": "XLE",
+        "thesis": "Sectorul energetic a înregistrat creșteri semnificative, susținut de randamentele pe termen lung pozitive.",
+        "confirmation": "XLE a crescut +12.76% în ultimele 30 de zile.",
+        "invalidation": "Nu există scăderi notabile în ultimele 5 zile."
       }
     ],
     "leaders": [
       {
         "symbol": "XLE",
-        "comment": "Performanță puternică pe 1 și 3 luni, susținută de creșterea randamentelor pe termen lung."
+        "comment": "Randamentele pe termen lung pozitive și creșterea de 12.76% în ultimele 30 de zile indică un lider în sectorul energetic."
       },
       {
         "symbol": "XLV",
-        "comment": "Creșteri consistente pe 1 și 3 luni, indicând potențial de creștere."
+        "comment": "Performanța de 12.32% în ultimele 30 de zile și creșterea pe termen mediu fac din XLV un lider în sănătate."
       },
       {
-        "symbol": "XLB",
-        "comment": "Scor de rotație foarte ridicat și creșteri pe 1 și 3 luni."
+        "symbol": "XLP",
+        "comment": "Creșterea de 12.40% în ultimele 30 de zile și reziliența în consum de bază îl plasează ca lider."
       }
     ],
     "weakening": [
       {
         "symbol": "XLC",
-        "comment": "Scăderi semnificative pe 1 și 3 luni, cu performanță slabă pe termen scurt."
+        "comment": "Performanța slabă de -8.05% în ultimele 30 de zile și scăderea de 10.02% pe termen mediu indică slăbiciune."
       },
       {
         "symbol": "XLI",
-        "comment": "Scăderi pe 3 luni și performanță slabă pe termen scurt."
+        "comment": "Scăderea de 8.35% pe termen mediu și performanța slabă de 0.35% în ultimele 30 de zile sugerează slăbiciune."
       },
       {
-        "symbol": "XLU",
-        "comment": "Scăderi pe 3 luni și performanță slabă pe termen scurt."
+        "symbol": "XLK",
+        "comment": "Scăderea de 8.17% în ultimele 30 de zile și volatilitatea ridicată indică slăbiciune în tehnologie."
       }
     ],
-    "crossAsset": "RSP și IWM au performanțe pozitive pe 1 lună, dar IWM are o scădere semnificativă pe 3 luni. IEF are performanță pozitivă pe 1 lună, dar scade pe 3 luni. HYG și GLD au performanțe negative pe 1 lună și pe 3 luni. IBIT are performanță negativă pe 1 lună, dar crește pe 3 luni.",
+    "crossAsset": "RSP a înregistrat o creștere de 4.45% în ultimele 30 de zile, IWM a avut o creștere mică de 0.11%, iar IEF a crescut 2.75%. HYG a crescut 0.69%, GLD a scăzut 7.05%, iar IBIT a scăzut 9.59%.",
     "watchlist": [
-      "XLE",
       "XLV",
-      "XLB",
+      "XLP",
+      "XLE",
       "XLC",
       "XLI",
-      "XLU",
-      "XLRE",
-      "RSP"
+      "XLK",
+      "RSP",
+      "IEF"
     ],
-    "caveat": "Datele reflectă doar performanța recentă și nu garantează rezultate viitoare."
+    "caveat": "Datele sunt limitate la informațiile furnizate și nu includ perspective macroeconomice extinse."
   }
 }

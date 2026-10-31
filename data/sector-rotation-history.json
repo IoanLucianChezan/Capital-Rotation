@@ -2287,5 +2287,76 @@
         "ratele în scădere ajută activele sensibile la durată"
       ]
     }
+  },
+  "2026-10-30": {
+    "XLK": {
+      "score": 50,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "ratele în scădere ajută activele sensibile la durată"
+      ]
+    },
+    "XLF": {
+      "score": 54,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLI": {
+      "score": 43,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "producția industrială susține ciclicele"
+      ]
+    },
+    "XLY": {
+      "score": 51,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLB": {
+      "score": 94,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "producția industrială susține ciclicele"
+      ]
+    },
+    "XLE": {
+      "score": 86,
+      "macroAdjustment": 3,
+      "macroReasons": [
+        "activitatea industrială susține cererea energetică"
+      ]
+    },
+    "XLC": {
+      "score": 10,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "ratele în scădere ajută activele sensibile la durată"
+      ]
+    },
+    "XLV": {
+      "score": 84,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLP": {
+      "score": 83,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLU": {
+      "score": 48,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "ratele în scădere ajută activele sensibile la durată"
+      ]
+    },
+    "XLRE": {
+      "score": 54,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "ratele în scădere ajută activele sensibile la durată"
+      ]
+    }
   }
 }
