@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-10-31T01:27:17.063Z",
-  "marketDate": "2026-10-30",
+  "updatedAt": "2026-11-03T03:21:46.579Z",
+  "marketDate": "2026-11-02",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică un mediu cu randamente moderate pe termen scurt și creșteri ușoare pe termen lung, dar cu volatilitate ridicată în sectorul tehnologic.",
+    "marketRegime": "Datele indică o scădere a randamentului pe termen scurt, cu DGS2 și DGS10 în scădere, iar CPI în creștere moderată.",
     "earlyRotation": [
       {
         "symbol": "XLV",
-        "thesis": "Sectorul sănătății prezintă creșteri consistente pe termen scurt și mediu, susținut de performanța pozitivă a ETF-ului.",
-        "confirmation": "Performanța XLV a înregistrat +12.32% în ultimele 30 de zile.",
-        "invalidation": "Nu există semne de scădere în ultimele 5 zile."
+        "thesis": "Sectorul sănătate prezintă cea mai mare creștere relativă pe 1 lună (13.36%) și 3 luni (16.37%), sugerând potențial de rotație pozitivă.",
+        "confirmation": "Performanța relativă superioară confirmă interesul investitorilor.",
+        "invalidation": "Dacă macro-adjustamentul rămâne pozitiv, poate limita creșterea."
+      },
+      {
+        "symbol": "XLB",
+        "thesis": "Materialele au cea mai mare creștere relativă pe 1 lună (12.12%) și 3 luni (5.70%), indicând potențial de rotație.",
+        "confirmation": "Performanța relativă susține rotația.",
+        "invalidation": "Un rvol ridicat (1.79) ar putea indica volatilitate crescută."
       },
       {
         "symbol": "XLP",
-        "thesis": "Consum de bază a înregistrat creșteri solide, indicând reziliență în condiții de piață incertă.",
-        "confirmation": "XLP a crescut +12.40% în ultimele 30 de zile.",
-        "invalidation": "Nu există scăderi semnificative în ultimele 5 zile."
-      },
-      {
-        "symbol": "XLE",
-        "thesis": "Sectorul energetic a înregistrat creșteri semnificative, susținut de randamentele pe termen lung pozitive.",
-        "confirmation": "XLE a crescut +12.76% în ultimele 30 de zile.",
-        "invalidation": "Nu există scăderi notabile în ultimele 5 zile."
+        "thesis": "Consum de bază are creșteri relative pe 1 lună (15.07%) și 3 luni (8.89%), sugerând potențial de rotație.",
+        "confirmation": "Performanța relativă susține rotația.",
+        "invalidation": "Macro-adjustamentul moderat (2) ar putea reduce impulsul."
       }
     ],
     "leaders": [
       {
-        "symbol": "XLE",
-        "comment": "Randamentele pe termen lung pozitive și creșterea de 12.76% în ultimele 30 de zile indică un lider în sectorul energetic."
+        "symbol": "XLV",
+        "comment": "Performanță relativă de 13.36% pe 1 lună și 16.37% pe 3 luni, cea mai ridicată dintre sectoare."
       },
       {
-        "symbol": "XLV",
-        "comment": "Performanța de 12.32% în ultimele 30 de zile și creșterea pe termen mediu fac din XLV un lider în sănătate."
+        "symbol": "XLB",
+        "comment": "Creștere relativă de 12.12% pe 1 lună și 5.70% pe 3 luni, cea mai ridicată dintre sectoare."
       },
       {
         "symbol": "XLP",
-        "comment": "Creșterea de 12.40% în ultimele 30 de zile și reziliența în consum de bază îl plasează ca lider."
+        "comment": "Creștere relativă de 15.07% pe 1 lună și 8.89% pe 3 luni, cea mai ridicată dintre sectoare."
       }
     ],
     "weakening": [
       {
+        "symbol": "XLK",
+        "comment": "Sectorul IT are scăderi relative pe 1 lună și 3 luni, indicând potențial de rotație negativă."
+      },
+      {
         "symbol": "XLC",
-        "comment": "Performanța slabă de -8.05% în ultimele 30 de zile și scăderea de 10.02% pe termen mediu indică slăbiciune."
+        "comment": "Sectorul comunicații are scăderi relative pe 1 lună și 3 luni, indicând potențial de rotație negativă."
       },
       {
         "symbol": "XLI",
-        "comment": "Scăderea de 8.35% pe termen mediu și performanța slabă de 0.35% în ultimele 30 de zile sugerează slăbiciune."
-      },
-      {
-        "symbol": "XLK",
-        "comment": "Scăderea de 8.17% în ultimele 30 de zile și volatilitatea ridicată indică slăbiciune în tehnologie."
+        "comment": "Sectorul industrial are scăderi relative pe 3 luni, indicând potențial de rotație negativă."
       }
     ],
-    "crossAsset": "RSP a înregistrat o creștere de 4.45% în ultimele 30 de zile, IWM a avut o creștere mică de 0.11%, iar IEF a crescut 2.75%. HYG a crescut 0.69%, GLD a scăzut 7.05%, iar IBIT a scăzut 9.59%.",
+    "crossAsset": "RSP și IEF prezintă creșteri relative pe 1 lună, în timp ce IWM și HYG au scăderi relative, indicând diferențe de performanță între activele de valoare și cele de creștere.",
     "watchlist": [
       "XLV",
+      "XLB",
       "XLP",
+      "XLF",
       "XLE",
-      "XLC",
+      "XLY",
       "XLI",
-      "XLK",
-      "RSP",
-      "IEF"
+      "XLK"
     ],
-    "caveat": "Datele sunt limitate la informațiile furnizate și nu includ perspective macroeconomice extinse."
+    "caveat": "Interpretarea se bazează exclusiv pe datele furnizate; nu există confirmare a cauzelor macroeconomice."
   }
 }
