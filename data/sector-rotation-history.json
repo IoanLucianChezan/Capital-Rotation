@@ -2383,7 +2383,7 @@
       ]
     },
     "XLY": {
-      "score": 73,
+      "score": 79,
       "macroAdjustment": -3,
       "macroReasons": [
         "creditul se deteriorează"
@@ -2405,7 +2405,7 @@
       ]
     },
     "XLC": {
-      "score": 8,
+      "score": 14,
       "macroAdjustment": 4,
       "macroReasons": [
         "ratele în scădere ajută activele sensibile la durată"
@@ -2419,7 +2419,7 @@
       ]
     },
     "XLP": {
-      "score": 86,
+      "score": 92,
       "macroAdjustment": 2,
       "macroReasons": [
         "caracter defensiv într-un credit mai slab"
