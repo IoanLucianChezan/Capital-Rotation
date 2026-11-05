@@ -1,68 +1,64 @@
 {
-  "updatedAt": "2026-11-04T01:59:51.202Z",
-  "marketDate": "2026-11-02",
+  "updatedAt": "2026-11-05T02:02:25.510Z",
+  "marketDate": "2026-11-04",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică un mediu cu rate ale dobânzilor în scădere și inflație moderată, sugerând o posibilă continuare a tendinței de rotație către sectoare cu performanță relativă ridicată.",
+    "marketRegime": "Datele indică o piață cu rotație activă, sectorul financiar și tehnologia informației având scoruri ridicate, dar cu performanță relativă scăzută în ultimele 30 de zile.",
     "earlyRotation": [
       {
-        "symbol": "XLB",
-        "thesis": "Sectorul materialelor are cea mai mare scor de rotație și performanță relativă pozitivă în ultimele 3 luni.",
-        "confirmation": "Performanța relativă de 12.12% și creșterea de 9.21% în 1 lună confirmă tendința.",
-        "invalidation": "Scorul de rotație de 91 ar putea indica o limitare a creșterii viitoare."
+        "symbol": "XLF",
+        "thesis": "Sectorul financiar prezintă un scor de rotație de 87 și o creștere relativă de 11.2% în ultimele 30 de zile, sugerând o potențială atracție pentru investitori.",
+        "confirmation": "Performanța relativă pozitivă în 1M confirmă interesul pentru acest sector.",
+        "invalidation": "Scorul de rotație ridicat poate indica o corecție viitoare dacă performanța relativă scade."
       },
       {
-        "symbol": "XLP",
-        "thesis": "Sectorul consumului de bază prezintă performanță relativă de 15.07% și creștere de 12.87% în 1 lună.",
-        "confirmation": "Creșterea de 1 lună de 12.87% susține potențialul de rotație.",
-        "invalidation": "Scorul de rotație de 92 ar putea indica o limitare a creșterii viitoare."
+        "symbol": "XLY",
+        "thesis": "Sectorul de consum discreționar are un scor de rotație de 87 și creștere relativă de 11.1% în 1M, indicând potențial de creștere.",
+        "confirmation": "Creșterea relativă susține atracția sectorului.",
+        "invalidation": "Scorul de rotație ridicat ar putea semnala o posibilă corecție dacă performanța relativă scade."
       },
       {
         "symbol": "XLV",
-        "thesis": "Sectorul sănătății are cea mai mare performanță relativă de 13.36% și creștere de 11.08% în 1 lună.",
-        "confirmation": "Performanța relativă pozitivă confirmă potențialul de rotație.",
-        "invalidation": "Scorul de rotație de 92 ar putea indica o limitare a creșterii viitoare."
+        "thesis": "Sectorul de sănătate are cel mai mare scor de rotație (92) și creștere relativă de 15.1% în 1M, sugerând o atracție puternică.",
+        "confirmation": "Creșterea relativă susține potențialul de creștere.",
+        "invalidation": "Scorul de rotație ridicat ar putea indica o corecție dacă performanța relativă scade."
       }
     ],
     "leaders": [
       {
-        "symbol": "XLP",
-        "comment": "Performanța relativă de 15.07% și creșterea de 12.87% în 1 lună indică un lider puternic."
+        "symbol": "XLF",
+        "comment": "Performanță relativă de 11.2% în 1M și scor de rotație de 87."
+      },
+      {
+        "symbol": "XLY",
+        "comment": "Performanță relativă de 11.1% în 1M și scor de rotație de 87."
       },
       {
         "symbol": "XLV",
-        "comment": "Performanța relativă de 13.36% și creșterea de 11.08% în 1 lună îl fac un lider semnificativ."
-      },
-      {
-        "symbol": "XLB",
-        "comment": "Performanța relativă de 12.12% și creșterea de 9.21% în 1 lună îl poziționează ca lider."
+        "comment": "Performanță relativă de 15.1% în 1M și scor de rotație de 92."
       }
     ],
     "weakening": [
       {
-        "symbol": "XLC",
-        "comment": "Performanța relativă de -6.84% și scăderea de 9.12% în 1 lună indică slăbire."
-      },
-      {
-        "symbol": "XLI",
-        "comment": "Performanța relativă de 2.14% dar scăderea de 6.46% în 3 luni sugerează slăbire."
-      },
-      {
         "symbol": "XLK",
-        "comment": "Performanța relativă de -10.53% și scăderea de 12.81% în 1 lună indică slăbire."
+        "comment": "Scor de rotație de 14 și performanță relativă de -11.0% în 1M."
+      },
+      {
+        "symbol": "XLC",
+        "comment": "Scor de rotație de 28 și performanță relativă de -4.4% în 1M."
       }
     ],
-    "crossAsset": "RSP și IEF prezintă creșteri moderate în ultimele 1 lună, în timp ce IWM și HYG au scăderi. GLD și IBIT au scăderi semnificative, indicând o potențială retragere a capitalului din aur și din obligațiuni corporative de înalt risc.",
+    "crossAsset": "RSP a înregistrat o creștere de 5.2% în 1M, IWM a înregistrat o creștere de 0.9%, iar IEF a înregistrat o creștere de 2.8% în 1M, indicând o preferință pentru activele de creștere și obligațiuni pe termen scurt.",
     "watchlist": [
-      "RSP",
-      "IWM",
-      "IEF",
-      "HYG",
-      "GLD",
-      "IBIT",
-      "XLP",
-      "XLV"
+      "XLF",
+      "XLY",
+      "XLV",
+      "XLK",
+      "XLC",
+      "XLB",
+      "XLE",
+      "XLRE"
     ],
-    "caveat": "Interpretarea se bazează exclusiv pe datele furnizate; nu există confirmări suplimentare privind cauzele macroeconomice."
+    "caveat": "Analiza se bazează exclusiv pe datele furnizate și nu include informații suplimentare."
   }
 }
