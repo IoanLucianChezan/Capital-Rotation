@@ -1,36 +1,36 @@
 {
-  "updatedAt": "2026-11-07T01:42:57.314Z",
+  "updatedAt": "2026-11-10T03:59:13.278Z",
   "indices": [
     {
       "name": "VIX9D",
-      "value": 27.18,
-      "change": -5.48,
-      "changePercent": -16.7789,
-      "asOf": "2026-11-06T16:15:01",
+      "value": 19.88,
+      "change": -7.3,
+      "changePercent": -36.7203,
+      "asOf": "2026-11-09T16:15:01",
       "source": "Cboe delayed"
     },
     {
       "name": "VIX",
-      "value": 25.64,
-      "change": -2.54,
-      "changePercent": -9.0135,
-      "asOf": "2026-11-06T16:15:01",
+      "value": 19.92,
+      "change": -5.72,
+      "changePercent": -28.7149,
+      "asOf": "2026-11-09T16:15:01",
       "source": "Cboe delayed"
     },
     {
       "name": "VIX3M",
-      "value": 24.6,
-      "change": -0.95,
-      "changePercent": -3.7182,
-      "asOf": "2026-11-06T16:15:01",
+      "value": 20.85,
+      "change": -3.75,
+      "changePercent": -17.9856,
+      "asOf": "2026-11-09T16:15:01",
       "source": "Cboe delayed"
     }
   ],
   "ratios": {
-    "vix9dToVix": 1.0600624024960998,
-    "vixToVix3m": 1.0422764227642276
+    "vix9dToVix": 0.9979919678714858,
+    "vixToVix3m": 0.9553956834532374
   },
-  "indexStructure": "INVERTED",
+  "indexStructure": "NORMAL / UPWARD SLOPING",
   "futures": [
     {
       "label": "M1",

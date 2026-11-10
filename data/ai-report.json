@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-11-07T01:42:58.758Z",
-  "marketDate": "2026-11-05",
+  "updatedAt": "2026-11-10T03:59:14.659Z",
+  "marketDate": "2026-11-09",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o tendință de creștere moderată în sectorul financiar, cu un randament pe 10 ani ușor scăzut și un spread de credit high‑yield în creștere, sugerând o atmosferă de risc moderat.",
+    "marketRegime": "Rate cuts likely, inflation easing, employment robust, industrial output up, high yield spreads widening, equity rotation favoring high‑growth sectors.",
     "earlyRotation": [
       {
         "symbol": "XLF",
-        "thesis": "Sectorul financiar prezintă performanță pozitivă pe termen scurt, cu creșteri relative de 12.7% în 1 lună și 5% în 3 luni.",
-        "confirmation": "Performanța pozitivă în ultimele 3 luni confirmă potențialul de rotație.",
-        "invalidation": "Scăderea de 0.0017 în 3 luni ar putea indica începutul unei corecții."
+        "thesis": "Sectorul financiar are cea mai mare scor de rotație, cu creșteri relative de 9.3% pe 1 lună și 2.6% pe 3 luni, indicând interes crescut.",
+        "confirmation": "Performanța relative superioară față de indicele S&P 500 confirmă atracția.",
+        "invalidation": "Scorul de rotație scăzut al altor sectoare ar putea reduce momentum."
       },
       {
         "symbol": "XLY",
-        "thesis": "Sectorul de consum discreționar are creșteri relative de 11.3% în 1 lună și 3.3% în 3 luni, indicând interesul investitorilor.",
-        "confirmation": "Performanța pozitivă în ultimele 3 luni susține această tendință.",
-        "invalidation": "Scăderea de 0.0185 în 3 luni ar putea semnala o încetinire."
+        "thesis": "Consum discreționar prezintă creșteri relative de 10.6% pe 1 lună și 3.8% pe 3 luni, susținând potențialul de creștere.",
+        "confirmation": "Performanța pozitivă pe termen scurt și mediu confirmă tendința.",
+        "invalidation": "Scorul de rotație scăzut al sectorului industrial ar putea indica un context de rotație limitată."
       },
       {
-        "symbol": "XLB",
-        "thesis": "Materialele au creșteri relative de 12.5% în 1 lună și 4.2% în 3 luni, sugerând o rotație favorabilă.",
-        "confirmation": "Performanța pozitivă în ultimele 3 luni confirmă potențialul.",
-        "invalidation": "Scăderea de 0.0100 în 3 luni ar putea indica o corecție."
+        "symbol": "XLP",
+        "thesis": "Consum de bază are creșteri relative de 12.3% pe 1 lună și 9.6% pe 3 luni, sugerând reziliență.",
+        "confirmation": "Performanța pozitivă pe termen scurt și mediu confirmă tendința.",
+        "invalidation": "Scorul de rotație scăzut al sectorului tehnologic ar putea indica un context de rotație limitată."
       }
     ],
     "leaders": [
       {
+        "symbol": "XLF",
+        "comment": "Performanța financiară superioară indică potențial de creștere în sector."
+      },
+      {
+        "symbol": "XLY",
+        "comment": "Creșterea consumului discreționar susține potențialul de creștere."
+      },
+      {
         "symbol": "XLP",
-        "comment": "Sectorul de consum de bază a înregistrat creșteri relative de peste 17% în 1 lună și 12% în 3 luni, indicând o performanță solidă."
-      },
-      {
-        "symbol": "XLV",
-        "comment": "Sectorul sănătate a înregistrat creșteri relative de peste 15% în 1 lună și 16% în 3 luni, sugerând o performanță robustă."
-      },
-      {
-        "symbol": "XLRE",
-        "comment": "Sectorul imobiliar a înregistrat creșteri relative de peste 14% în 1 lună și 3.7% în 3 luni, indicând o rezistență moderată."
+        "comment": "Rezistența consumului de bază indică stabilitate."
       }
     ],
     "weakening": [
       {
         "symbol": "XLI",
-        "comment": "Industriale prezintă scăderi relative de 2.5% în 1 lună și 7% în 3 luni, indicând o slăbire a performanței."
+        "comment": "Scăderea performanței relative și a scorului de rotație indică slăbire."
       },
       {
-        "symbol": "XLC",
-        "comment": "Serviciile de comunicații au scăderi relative de 0.5% în 1 lună și 1% în 3 luni, sugerând o încetinire."
+        "symbol": "XLK",
+        "comment": "Performanța slabă pe termen scurt și mediu indică slăbire."
       },
       {
         "symbol": "XLE",
-        "comment": "Energie prezintă scăderi relative de 3% în 1 lună și 12% în 3 luni, indicând o slăbire semnificativă."
+        "comment": "Performanța slabă pe termen scurt indică slăbire."
       }
     ],
-    "crossAsset": "RSP și IEF au performanțe pozitive pe 1 lună, în timp ce IWM și GLD au scăderi, indicând o preferință pentru activele de valoare și obligațiuni pe termen scurt.",
+    "crossAsset": "RSP și IEF prezintă creșteri relative, indicând interes pentru activele de creștere și obligațiuni pe termen scurt, în timp ce HYG și GLD au performanțe negative relative, sugerând o preferință pentru securități cu rating mai înalt și aurul ca refugiu.",
     "watchlist": [
       "XLF",
       "XLY",
-      "XLB",
       "XLP",
-      "XLV",
-      "XLRE",
+      "XLI",
+      "XLK",
       "XLE",
-      "XLI"
+      "XLV",
+      "XLRE"
     ],
-    "caveat": "Datele oferă indicii, dar nu confirmă performanța viitoare; monitorizați evoluția macro și a indicatorilor de piață."
+    "caveat": "Datele nu confirmă o direcție clară și pot exista variații neașteptate."
   }
 }
