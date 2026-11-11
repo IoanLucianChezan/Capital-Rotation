@@ -2607,21 +2607,22 @@
   },
   "2026-11-09": {
     "XLK": {
-      "score": 21,
-      "macroAdjustment": 4,
+      "score": 13,
+      "macroAdjustment": -4,
       "macroReasons": [
-        "ratele în scădere ajută activele sensibile la durată"
+        "ratele în creștere apasă activele sensibile la durată"
       ]
     },
     "XLF": {
-      "score": 80,
-      "macroAdjustment": -3,
+      "score": 82,
+      "macroAdjustment": -1,
       "macroReasons": [
-        "creditul se deteriorează"
+        "creditul se deteriorează",
+        "ratele mai ridicate susțin marjele bancare, cu risc de credit"
       ]
     },
     "XLI": {
-      "score": 20,
+      "score": 16,
       "macroAdjustment": 1,
       "macroReasons": [
         "producția industrială susține ciclicele",
@@ -2636,7 +2637,7 @@
       ]
     },
     "XLB": {
-      "score": 64,
+      "score": 58,
       "macroAdjustment": 1,
       "macroReasons": [
         "producția industrială susține ciclicele",
@@ -2651,14 +2652,14 @@
       ]
     },
     "XLC": {
-      "score": 38,
-      "macroAdjustment": 4,
+      "score": 30,
+      "macroAdjustment": -4,
       "macroReasons": [
-        "ratele în scădere ajută activele sensibile la durată"
+        "ratele în creștere apasă activele sensibile la durată"
       ]
     },
     "XLV": {
-      "score": 74,
+      "score": 80,
       "macroAdjustment": 2,
       "macroReasons": [
         "caracter defensiv într-un credit mai slab"
@@ -2672,18 +2673,18 @@
       ]
     },
     "XLU": {
-      "score": 79,
-      "macroAdjustment": 6,
+      "score": 71,
+      "macroAdjustment": -2,
       "macroReasons": [
-        "ratele în scădere ajută activele sensibile la durată",
+        "ratele în creștere apasă activele sensibile la durată",
         "caracter defensiv într-un credit mai slab"
       ]
     },
     "XLRE": {
-      "score": 94,
-      "macroAdjustment": 4,
+      "score": 86,
+      "macroAdjustment": -4,
       "macroReasons": [
-        "ratele în scădere ajută activele sensibile la durată"
+        "ratele în creștere apasă activele sensibile la durată"
       ]
     }
   }
