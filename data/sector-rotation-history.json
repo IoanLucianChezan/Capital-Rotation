@@ -2773,40 +2773,32 @@
   },
   "2026-11-12": {
     "XLK": {
-      "score": 23,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "ratele în scădere ajută activele sensibile la durată"
-      ]
+      "score": 25,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLF": {
-      "score": 75,
-      "macroAdjustment": -3,
-      "macroReasons": [
-        "creditul se deteriorează"
-      ]
+      "score": 72,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLI": {
-      "score": 53,
-      "macroAdjustment": 1,
+      "score": 56,
+      "macroAdjustment": 4,
       "macroReasons": [
-        "producția industrială susține ciclicele",
-        "creditul se deteriorează"
+        "producția industrială susține ciclicele"
       ]
     },
     "XLY": {
-      "score": 82,
-      "macroAdjustment": -3,
-      "macroReasons": [
-        "creditul se deteriorează"
-      ]
+      "score": 85,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLB": {
-      "score": 65,
-      "macroAdjustment": 1,
+      "score": 68,
+      "macroAdjustment": 4,
       "macroReasons": [
-        "producția industrială susține ciclicele",
-        "creditul se deteriorează"
+        "producția industrială susține ciclicele"
       ]
     },
     "XLE": {
@@ -2817,40 +2809,29 @@
       ]
     },
     "XLC": {
-      "score": 19,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "ratele în scădere ajută activele sensibile la durată"
-      ]
+      "score": 12,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLV": {
-      "score": 74,
-      "macroAdjustment": 2,
-      "macroReasons": [
-        "caracter defensiv într-un credit mai slab"
-      ]
+      "score": 68,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLP": {
-      "score": 67,
-      "macroAdjustment": 2,
-      "macroReasons": [
-        "caracter defensiv într-un credit mai slab"
-      ]
+      "score": 65,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLU": {
-      "score": 66,
-      "macroAdjustment": 6,
-      "macroReasons": [
-        "ratele în scădere ajută activele sensibile la durată",
-        "caracter defensiv într-un credit mai slab"
-      ]
+      "score": 54,
+      "macroAdjustment": 0,
+      "macroReasons": []
     },
     "XLRE": {
-      "score": 74,
-      "macroAdjustment": 4,
-      "macroReasons": [
-        "ratele în scădere ajută activele sensibile la durată"
-      ]
+      "score": 64,
+      "macroAdjustment": 0,
+      "macroReasons": []
     }
   }
 }
