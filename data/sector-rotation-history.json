@@ -2833,5 +2833,68 @@
       "macroAdjustment": 0,
       "macroReasons": []
     }
+  },
+  "2026-11-16": {
+    "XLK": {
+      "score": 0,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLF": {
+      "score": 77,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLI": {
+      "score": 23,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "producția industrială susține ciclicele"
+      ]
+    },
+    "XLY": {
+      "score": 65,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLB": {
+      "score": 66,
+      "macroAdjustment": 4,
+      "macroReasons": [
+        "producția industrială susține ciclicele"
+      ]
+    },
+    "XLE": {
+      "score": 45,
+      "macroAdjustment": 3,
+      "macroReasons": [
+        "activitatea industrială susține cererea energetică"
+      ]
+    },
+    "XLC": {
+      "score": 27,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLV": {
+      "score": 61,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLP": {
+      "score": 84,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLU": {
+      "score": 62,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    },
+    "XLRE": {
+      "score": 57,
+      "macroAdjustment": 0,
+      "macroReasons": []
+    }
   }
 }
