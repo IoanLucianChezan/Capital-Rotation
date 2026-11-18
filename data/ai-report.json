@@ -1,68 +1,68 @@
 {
-  "updatedAt": "2026-11-17T04:21:59.415Z",
-  "marketDate": "2026-11-16",
+  "updatedAt": "2026-11-18T03:24:33.113Z",
+  "marketDate": "2026-11-17",
   "source": "Groq openai/gpt-oss-20b",
   "report": {
-    "marketRegime": "Datele indică o piață cu volatilitate moderată, marile sectoare de consum și tehnologie înregistrând performanțe variabile, iar randamentele pe termen scurt crescând.",
+    "marketRegime": "Datele indică un mediu cu randamente moderate pe termen scurt și un potențial de creștere a sectorului financiar, dar cu incertitudini macroeconomice moderate.",
     "earlyRotation": [
       {
         "symbol": "XLP",
-        "thesis": "Sectorul de consum de bază are cea mai mare scor de rotație, indicând potențial de creștere relativă.",
-        "confirmation": "Performanța relative1m de 8.74% confirmă tendința pozitivă.",
-        "invalidation": "Scorul de rotație scăzut în ultimele 3 luni ar putea semnala o schimbare de sentiment."
+        "thesis": "Sectorul consumului de bază prezintă cea mai ridicată scor de rotație, indicând o preferință a investitorilor pentru stabilitate și fluxuri de numerar solide.",
+        "confirmation": "Performanța relativă de 9.31% pe 1 lună susține această tendință.",
+        "invalidation": "O scădere a volumului de vânzări pe termen scurt ar putea diminua atractivitatea."
+      },
+      {
+        "symbol": "XLV",
+        "thesis": "Sectorul sănătății are cea mai mare scor de rotație și performanță relativă de peste 10% pe 1 lună, sugerând o preferință pentru valoare defensivă.",
+        "confirmation": "Creșterea constantă a volumului de vânzări confirmă interesul investitorilor.",
+        "invalidation": "O schimbare de reglementare majoră ar putea afecta negativ sectorul."
       },
       {
         "symbol": "XLF",
-        "thesis": "Sectorul financiar prezintă un scor de rotație ridicat, sugerând oportunități de creștere.",
-        "confirmation": "Relative1m de 7.84% susține această perspectivă.",
-        "invalidation": "Volatilitatea rvol de 1.17 ar putea indica risc crescut."
-      },
-      {
-        "symbol": "XLY",
-        "thesis": "Consumul discreționar are un scor de rotație solid, indicând potențial de performanță.",
-        "confirmation": "Relative1m de 8.11% confirmă tendința pozitivă.",
-        "invalidation": "Scorul de rotație scăzut în ultimele 3 luni ar putea semnala o schimbare de sentiment."
+        "thesis": "Sectorul financiar are un scor de rotație semnificativ și performanță relativă pozitivă, indicând o preferință pentru expunerea la servicii financiare.",
+        "confirmation": "Performanța de 8.09% pe 1 lună susține această alegere.",
+        "invalidation": "Scăderea ratelor de credit ar putea reduce atractivitatea."
       }
     ],
     "leaders": [
       {
-        "symbol": "XLV",
-        "comment": "Sectorul sănătate înregistrează cea mai mare creștere relative1m de 9.37%, indicând performanță excelentă."
-      },
-      {
         "symbol": "XLP",
-        "comment": "Consum de bază are relative1m de 8.74%, susținând poziția de lider."
+        "comment": "Performanța de 9.31% pe 1 lună și scorul de rotație de 72 indică un lider clar în sectorul consumului de bază."
       },
       {
-        "symbol": "XLY",
-        "comment": "Consum discreționar are relative1m de 8.11%, consolidând poziția de lider."
+        "symbol": "XLV",
+        "comment": "Sectorul sănătății, cu scor de rotație de 66 și performanță relativă de 10%, se evidențiază ca lider."
+      },
+      {
+        "symbol": "XLF",
+        "comment": "Sectorul financiar, cu scor de rotație de 62 și performanță relativă de 8%, este un lider în portofoliu."
       }
     ],
     "weakening": [
       {
-        "symbol": "XLI",
-        "comment": "Sectorul industrial are relative1m de 1.80% și relative3m scăzută, indicând slăbire."
-      },
-      {
-        "symbol": "XLE",
-        "comment": "Sectorul energetic are relative1m de -3.61%, semnalând slăbire."
-      },
-      {
         "symbol": "XLK",
-        "comment": "Tehnologia informației are relative1m de -7.15%, indicând slăbire."
+        "comment": "Sectorul tehnologiei informației are o performanță relativă negativă de -7.77% pe 1 lună, indicând o slăbire."
+      },
+      {
+        "symbol": "XLI",
+        "comment": "Sectorul industrial are o performanță relativă negativă de -4.69% pe 3 luni, sugerând o slăbire."
+      },
+      {
+        "symbol": "XLC",
+        "comment": "Sectorul comunicațiilor are o performanță relativă negativă de -0.68% pe 3 luni, indicând o slăbire."
       }
     ],
-    "crossAsset": "RSP și IWM prezintă creșteri relative1m, în timp ce GLD și IBIT înregistrează scăderi, reflectând divergențe între activele de echitate și cele de aur.",
+    "crossAsset": "RSP și IEF prezintă creșteri pe 1 lună, în timp ce GLD și IBIT înregistrează scăderi semnificative, indicând o preferință pentru activele de valoare și o aversiune față de aur și obligațiuni corporative de înalt risc.",
     "watchlist": [
       "XLP",
-      "XLF",
-      "XLY",
       "XLV",
-      "XLB",
-      "XLI",
+      "XLF",
       "XLK",
-      "XLE"
+      "XLI",
+      "XLC",
+      "XLE",
+      "XLU"
     ],
-    "caveat": "Interpretarea se bazează exclusiv pe datele furnizate; nu există confirmări suplimentare privind evoluția macroeconomică."
+    "caveat": "Datele oferă indicii, dar nu garantează evoluția viitoare a pieței."
   }
 }
